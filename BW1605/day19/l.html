@@ -25,7 +25,7 @@
             list-style: none;
             position: absolute;
             top: 350px;
-            left: 450px;
+            left: 260px;
         }
         #wrap li
         {
@@ -83,12 +83,12 @@
         obj2[0].style.color = "#fff";
 
         //默认被选中颜色
-        time = setInterval("turn();", 4000);
+        time = setInterval("turn();", 1000);
         obj1.onmouseover = function () {
             clearInterval(time);
         }
         obj1.onmouseout = function () {
-            time = setInterval("turn();", 5000);
+            time = setInterval("turn();", 1000);
         }
 
         for (var num = 0; num < obj2.length; num++) {
@@ -97,7 +97,7 @@
                 clearInterval(time);
             }
             obj2[num].onmouseout = function () {
-                time = setInterval("turn();", 5000);
+                time = setInterval("turn();", 1000);
             }
         }
 

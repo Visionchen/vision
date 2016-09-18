@@ -113,5 +113,20 @@ top.onmouseout = function () {
             }
         }
     }
+    le.onclick = function () {
+        cur--;
+        if(cur<0){
+            cur=len - 1;
+        }
+        mao();
+    }
+    rig.onclick = function () {
+        cur++;
+        if(cur==len){
+            cur=0;
+        }
+        mao();
+    }
+
 
 };
