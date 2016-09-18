@@ -1,0 +1,201 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.top {
+    height: 50px;
+    background-color: #000000;
+    font-size: 14px;
+    color: white;
+    font-family: 微软雅黑;
+
+}
+
+#m {
+    padding: 14px 800px 12px 170px;
+    text-decoration: none;
+    color: #666666;
+    float: left;
+}
+
+.r a:link {
+    text-decoration: none;
+    color: white;
+}
+
+.r a:hover {
+    text-decoration: none;
+    color: #666666;
+}
+
+.shouye {
+    float: left;
+    height: 26px;
+
+}
+
+.li {
+    list-style-type: none;
+    float: left;
+    width: 70px;
+    text-align: center;
+    height: 40px;
+    padding-top: 11px;
+}
+
+.da {
+    width: 1122px;
+    height: 60px;
+    margin: 120px auto;
+
+}
+
+.left {
+    width: 33%;
+    float: left;
+}
+
+.tu {
+
+    padding-left: 20px;
+    float: left;
+    padding-top: 4px;
+}
+
+.ti {
+
+    padding-left: 60px;
+    float: left;
+    padding-top: 4px;
+}
+
+.zi {
+    font-size: 22px;
+    padding-top: 2px;
+
+    float: left;
+    padding-left: 25px;
+}
+
+.xi {
+    font-size: 14px;
+    clear: left;
+    padding-left: 25px;
+}
+
+.zo {
+    width: 34%;
+    height: 60px;
+    border-left: 1px solid rgb(225, 225, 225);
+    border-right: 1px solid rgb(225, 225, 225);
+    margin: 0px auto;
+    padding: auto;
+    float: left;
+}
+
+.rig {
+    height: 60px;
+    float: left;
+}
+
+.middle {
+    width: 223px;
+    height: 50px;
+}
+
+.tt {
+    padding-left: 60px;
+    float: left;
+    padding-top: 4px;
+}
+
+.hr {
+    width: 97%;
+    margin: 60px auto;
+    height: 10px;
+    clear: left;
+    padding-top: 70px;
+}
+
+.bo {
+    width: 600px;
+    height: 14px;
+    line-height: 14px;
+    margin: 40px auto;
+}
+
+.ll {
+    list-style-type: none;
+    float: left;
+    width: 115px;
+    text-align: center;
+    height: 14px;
+    border-right: 1px solid rgb(225, 225, 225);
+}
+
+.lo {
+    list-style-type: none;
+    float: left;
+    width: 115px;
+    text-align: center;
+    height: 14px;
+}
+
+.bt {
+    width: 800px;
+    height: 14px;
+    line-height: 14px;
+    padding-left: 200px;
+    margin-bottom: 40px;
+
+}
+
+.lp {
+    list-style-type: none;
+    float: left;
+    height: 14px;
+    border-right: 1px solid rgb(225, 225, 225);
+}
+
+.lu {
+    list-style-type: none;
+    float: left;
+    height: 14px;
+}
+
+.ll a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.lo a:link {
+    text-decoration: none;
+    color: black;
+}
+
+ul .ll a:hover {
+    text-decoration: underline;
+    color: #cd7f32;
+}
+
+ul .lo a:hover {
+    text-decoration: underline;
+    color: #cd7f32;
+}
+
+span a:link {
+    text-decoration: none;
+    color: black;
+}
+
+span a:hover {
+    text-decoration: underline;
+    color: #cd7f32;
+}
+
+.class {
+
+}
+
+

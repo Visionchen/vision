@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var ary = ['tom', 'jim', 'liLei', 'lucy'];
+    var elem='lily';
+    function unShift (ary,elem) {
+        for (var i=ary.length;i>0;i--){
+            ary[i]=ary[i-1];
+        }
+        ary[0]=elem;
+        return ary;
+    }
+    ary=unShift (ary,elem);
+    alert(ary);
+</script>
+</body>
+</html>

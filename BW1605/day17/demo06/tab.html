@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <style>
+        * {margin:0; padding:0}
+        ul,li {list-style-type: none;}
+        .cf:after {content: ''; display: table; clear:both;}
+        .cf {*zoom:1}
+        .container {width:800px; margin: 20px auto; font-size: 14px}
+        .tab-head li {float:left; background: lightblue; margin-right: 10px; padding: 6px 15px; cursor: pointer}
+        .tab-content {position: relative}
+        .tab-content li {background: lightgrey; width: 600px; height: 300px; line-height: 300px; text-align: center; position: absolute; left:0; top:0}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <ul class="tab-head cf">
+        <li id="ta">中国</li>
+        <li id="tb">韩国</li>
+    </ul>
+    <ul class="tab-content">
+        <li id="ca">中国就是牛</li>
+        <li id="cb">韩国就是渣</li>
+    </ul>
+</div>
+
+
+<script>
+
+    window.onload = function () {
+
+        var ta = document.getElementById('ta');
+        var tb = document.getElementById('tb');
+        var ca = document.getElementById('ca');
+        var cb = document.getElementById('cb');
+
+        ta.style.backgroundColor = 'lightgrey';
+        cb.style.display = 'none';
+
+
+        // 韩国
+        tb.onclick = function () {
+
+            tb.style.backgroundColor = 'lightgrey';
+            ta.style.backgroundColor = 'lightblue';
+
+            ca.style.display = 'none';
+            cb.style.display = 'block';
+
+        };
+
+        // 中国
+        ta.onclick = function () {
+
+            ta.style.backgroundColor = 'lightgrey';
+            tb.style.backgroundColor = 'lightblue';
+
+            cb.style.display = 'none';
+            ca.style.display = 'block';
+
+        };
+
+
+
+    };
+
+</script>
+
+
+</body>
+</html>

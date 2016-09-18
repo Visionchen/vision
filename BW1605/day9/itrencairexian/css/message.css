@@ -1,0 +1,252 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "微软雅黑";
+}
+
+.back {
+    height: 52px;
+    width: 100%;
+    background-color: rgb(48, 57, 62);
+}
+
+.head {
+    height: 52px;
+    width: 1089px;
+    margin: auto;
+
+}
+
+.sho {
+    margin-left: 71px;
+}
+
+.gs {
+    margin-left: 40px;
+}
+
+.wo {
+    margin-left: 40px;
+}
+
+.ko {
+
+}
+
+.ko li {
+    list-style-type: none;
+
+    color: #cccccc;
+    font-size: 15px;
+    float: left;
+    height: 52px;
+    line-height: 50px;
+    text-align: center;
+
+}
+
+.head_right {
+    float: right;
+    margin-left: 498px;
+    background-color: rgb(67, 82, 89);
+}
+
+select {
+    position: absolute;
+    top: 0px;
+    width: 150px;
+    height: 52px;
+    text-indent: 1em;
+    color: white;
+    background-color: rgb(67, 82, 89);
+}
+
+.geren {
+    width: 200px;
+    height: 700px;
+    border: 1px solid rgb(230, 230, 230);
+    margin-right: 43px;
+    float: left;
+
+}
+
+.zhongxin {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: black;
+    font-size: 15px;
+    text-indent: 1em;
+    font-weight: bold;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+img {
+    vertical-align: middle;
+}
+
+.hao {
+    width: 100%;
+    height: 46px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 46px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+dd {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+    text-indent: 40px;
+}
+
+.yellow {
+    background-color: rgb(251, 183, 76);
+}
+
+.da {
+    width: 840px;
+    height: 700px;
+    float: left;
+    border: 1px solid rgb(230, 230, 230);
+
+}
+
+.daa {
+    width: 800px;
+    height: 671px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.mian {
+    width: 70px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 40px;
+    font-weight: bold;
+    float: left;
+    border-bottom: 2px solid rgb(251, 183, 76);
+}
+
+.mianh {
+    width: 730px;
+    height: 40px;
+    float: left;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.comtent {
+    width: 100%;
+    height: 48px;
+    font-size: 12px;
+    clear: left;
+    border-bottom: 1px dashed rgb(230, 230, 230);
+}
+
+.tixing {
+    width: 84px;
+    height: 48px;
+    line-height: 48px;
+    float: left;
+    color: rgb(251, 183, 76);
+}
+
+.ti_body {
+    width: 504px;
+    height: 48px;
+    line-height: 48px;
+    float: left;
+
+    color: rgb(50, 50, 50);
+}
+
+.time {
+    width: 140px;
+    height: 48px;
+    color: rgb(50, 50, 50);
+    line-height: 48px;
+    float: left;
+
+}
+
+.see {
+    width: 66px;
+    height: 48px;
+    line-height: 48px;
+    float: left;
+
+    color: rgb(205, 205, 205);
+}
+
+.tixing_qi {
+    width: 84px;
+    height: 48px;
+    line-height: 48px;
+    float: left;
+    color: rgb(251, 183, 76);
+}
+
+.bott {
+    width: 320px;
+    line-height: 23px;
+    font-size: 16px;
+    height: 24px;
+    text-align: center;
+    clear: left;
+    margin: 40px auto;
+
+}
+
+.bott li {
+    list-style-type: none;
+    float: left;
+    border: 1px solid rgb(230, 230, 230);
+    width: 24px;
+    margin-right: 4px;
+}
+
+#bzi {
+    width: 60px;
+    color: rgb(230, 230, 230);
+
+}
+
+#bh {
+    width: 60px;
+}
+
+#sheng {
+    height: 24px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: none;
+}
+
+#san {
+    margin-right: 0px;
+}
+
+.btm {
+    background-color: rgb(10, 28, 48);
+    width: 100%;
+    height: 170px;
+    clear: left;
+}
+
+.div {
+    width: 1087px;
+    height: 700px;
+    margin: 25px auto;
+}
+
+
+
+
+
+

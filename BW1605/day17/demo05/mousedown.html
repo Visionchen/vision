@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #wrap {height:200px; background: lightblue}
+    </style>
+</head>
+<body>
+
+<div id="wrap"></div>
+
+<script>
+
+
+    window.onload = function () {
+
+
+        var div = document.getElementById('wrap');
+
+        // 给div添加鼠标按下事件
+        div.onmousedown = function (event) {
+
+           if(event) {
+               if (event.button == 0) {
+                   alert('按了左键');
+               } else if (event.button == 1) {
+                   alert('按了中间键');
+               } else if (event.button == 2) {
+                   alert('按了右键')
+               }
+           } else {
+               if (window.event.button == 1) {
+                   alert('按了左键');
+               } else if (window.event.button == 4) {
+                   alert('按了中间键');
+               } else if (window.event.button == 2) {
+                   alert('按了右键')
+               }
+           }
+
+        };
+
+
+    };
+
+
+
+</script>
+
+
+</body>
+</html>

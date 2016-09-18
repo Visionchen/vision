@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    setTimeout("code()", 2000);
+    setTimeout("console.log('message')", 2000);
+    setTimeout(code, 2000);
+    setTimeout(function () {
+        console.log('message');
+    }, 2000);
+
+
+
+    function code() {
+        console.log('message');
+    }
+
+</script>
+
+</body>
+</html>

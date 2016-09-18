@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <select id="day">
+        <option value="0">-=请选择=-</option>
+        <option value="1">周一</option>
+        <option value="2">周二</option>
+        <option value="3">周三</option>
+        <option value="4">周四</option>
+        <option value="5">周五</option>
+        <option value="6">周六</option>
+        <option value="7">周日</option>
+    </select>
+    <input type="button" value="吃啥？" onclick="eat()">
+</div>
+
+<div id="info"></div>
+
+
+<script>
+
+    function eat() {
+        // 获取下拉框的值
+        var val = document.getElementById('day').value;
+
+        var egg;
+
+        if(val === '0') {
+            egg = '请选择';
+        } else if(val == '1') {
+            egg = '皮蛋';
+        } else if(val == '2') {
+            egg = '蒸蛋';
+        } else if(val == '3') {
+            egg = '水蛋';
+        } else if(val == '4') {
+            egg = '煮蛋';
+        } else if(val == '5') {
+            egg = '卤蛋';
+        } else if(val == '6') {
+            egg = '煎蛋';
+        } else if(val == '7') {
+            egg = '鸡蛋';
+        }
+
+        document.getElementById('info').innerHTML = egg;
+    }
+
+</script>
+
+</body>
+</html>

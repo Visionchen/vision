@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        * {margin:0; padding: 0}
+        ul,li {
+            list-style-type: none;
+        }
+        .cf:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+        .cf {
+            *zoom:1;
+        }
+
+
+        .tab {
+            width:500px;
+            margin:100px auto 0;
+            background: #efefef;
+        }
+        .tab-head {
+
+        }
+        .tab-head li {
+            float:left;
+            border:1px solid #ccc;
+            width:100px;
+            height:30px;
+            text-align: center;
+            line-height: 30px;
+            font-size:12px;
+            cursor: pointer;
+            position: relative;
+            background: #efefef;
+            top:1px;
+        }
+        .tab-head li.focus {
+            border-bottom:1px solid #efefef;
+            color:#f60;
+        }
+        .cd  {
+            border:1px solid #ccc;
+            height:300px;
+            text-align: center;
+            line-height: 300px;
+            font-size:12px
+        }
+        .w,.q {
+            display: none;
+        }
+    </style>
+
+</head>
+<body><div class="tab">
+    <ul class="tab-head cf" id="t">
+        <li id="first" class="focus">高信价比毛憋</li>
+        <li >口碑推荐毛憋</li>
+        <li >最佳推荐毛憋</li>
+    </ul>
+    <ul class="cf cd" id="ni">
+        <li >怎么了</li>
+        <li class="w">你累了</li>
+        <li class="q">说好的</li>
+    </ul>
+</div>
+<script>
+    window.onload = function() {
+        var li = document.getElementById('t').getElementsByTagName('li');
+        var lo = document.getElementById('ni').getElementsByTagName('li');
+        for (var i = 0; i < li.length; i++) {
+            li[i].indexs= i;
+            li[i].onmouseover = function () {
+                for (var j = 0; j < li.length; j++) {
+                    if (j == this.indexs) {
+                        this.className = 'focus';
+                        lo[j].style.display = 'block';
+                    } else {
+                        li[j].className = '';
+                        lo[j].style.display='none';
+                    }
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+//    2、求100~999中所有的水仙花数。
+
+    // 循环条件：100~999
+    // 循环体： 获取当前数字的个位、十位数、百位数 求立方和
+
+    for(var i = 100; i <= 999; i++) {
+        // 获取 个位
+        var gw = i % 10;
+        // 获取  十位
+        var sw = parseInt(i % 100 / 10);  // parseInt ：转换为整数
+        // 获取 百位
+        var bw = parseInt(i / 100);
+
+        // 求  三个数的立方和
+        var sum = gw * gw * gw + sw * sw * sw + bw * bw * bw;
+        // sum 和 i
+        if(sum == i) {
+            console.log(i);
+        }
+
+    }
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="https://www.baidu.com/s" id="myform">
+    <input type="text" name="wd" id="txt">
+    <input type="submit" value="百度一下，你就知道">
+</form>
+
+
+<script>
+    window.onload = function () {
+
+
+        var form = document.getElementById('myform');
+        form.onsubmit = function () {
+
+            var txt = document.getElementById('txt').value;
+            if(txt == '') {
+                alert('关键字不能为空');
+                return false; // 阻止表单提交
+            }
+
+
+        };
+
+
+
+
+    };
+</script>
+
+
+</body>
+</html>

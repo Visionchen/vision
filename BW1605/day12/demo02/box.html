@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<input type="button" value="警告框" onclick="fun()" >
+<input type="button" value="确定框" onclick="fun1()" >
+<input type="button" value="输入框" onclick="fun2()" >
+
+<script>
+
+
+    // 向控制台输出信息
+    console.log('这是一个神奇的网站');
+    console.info('这是一个神奇的网站');
+    console.warn('这是一个神奇的网站');
+    console.error('这是一个神奇的网站');
+
+
+
+    function fun() {
+        alert('你好，发生一个错误！');
+    }
+
+    function fun1() {
+        var result = confirm('确认删除吗？');
+        console.log('您选择的是：' + result);
+    }
+
+    function fun2() {
+
+        var info = prompt('请输入您的年龄', '18');
+
+        alert('您的年龄为：' + info);
+
+    }
+</script>
+
+</body>
+</html>

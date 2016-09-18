@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="show"></div>
+
+<script>
+
+
+
+    var now = new Date();
+    var year = now.getFullYear();
+    var month = format(now.getMonth() + 1);
+    var date = format(now.getDate());
+    var hour = format(now.getHours());
+    var minutes = format(now.getMinutes());
+    var second = format(now.getSeconds());
+
+    var info = year + '-' + month + '-' + date + ' ' + hour + ':' + minutes + ':' + second;
+
+    document.querySelector('.show').innerHTML = info;
+
+    // 格式化数字，返回2位数的字符串
+    function format(number) {
+        if(number < 10) {
+            return '0' + number;
+        } else {
+            return '' + number;
+        }
+    }
+
+
+
+
+</script>
+
+
+</body>
+</html>

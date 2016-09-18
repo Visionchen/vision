@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="p"></p>
+<script>
+
+    var b=0;
+    for (var i=1900;i<=2032;i++,b++){
+        if ((i % 4==0 && i % 100 !==0)||(i % 400==0)){
+            if (b%5==0 ){
+                document.write(i+'<br>');
+            }
+            else {
+                document.write(i+"&nbsp;");
+            }
+        }
+    }
+
+
+
+
+</script>
+</body>
+</html>

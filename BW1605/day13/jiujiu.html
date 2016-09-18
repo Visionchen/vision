@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            font-family: '微软雅黑';
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 600px;
+            height: 300px;
+            margin: auto;
+
+        }
+        th {
+            background-color: #CCCCCC;border-collapse: collapse;box-shadow: 1px 1px 1px #cccccc;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>九九归一</h1>
+
+    <script>
+        document.write("<table cellpadding='0'>");
+            for (var x = 1; x <= 9; x++) {
+                document.write("<tr>");
+                for (var y = 1; y <= x; y++) {
+                    document.writeln('<th>'+x + 'x' + y + '=' + (x * y) +'</th>');
+                }
+
+                document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</body>
+</html>

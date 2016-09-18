@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #wrap {height:200px; background: lightblue}
+    </style>
+</head>
+<body>
+
+<div id="wrap"></div>
+
+<script>
+
+
+    window.onload = function () {
+
+
+        var div = document.getElementById('wrap');
+
+        div.onmousemove = function (event) {
+
+            var event = event || window.event;
+
+            var info = 'X: ' + event.clientX + ' Y: ' + event.clientY;
+
+            this.innerHTML = info;
+
+        };
+
+
+    };
+
+
+
+</script>
+
+
+</body>
+</html>

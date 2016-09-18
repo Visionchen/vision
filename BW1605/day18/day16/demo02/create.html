@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="wrap">
+
+</div>
+
+
+<script>
+    var wrap = document.getElementById('wrap');
+    //wrap.innerHTML = '<p>我是新增的p</p>';
+
+    // 创建p节点
+    var p = document.createElement('p');
+    // 创建文本节点
+    var txt = document.createTextNode('我是新增的p');
+    // 给p添加属性class，并设置值为info
+    p.setAttribute('class', 'info');
+
+    // 把txt节点放入p节点中
+    p.appendChild(txt);
+    // 把p标签加入wrap中
+    wrap.appendChild(p);
+
+
+    console.log(p.getAttribute('class')); // 获取p标签的class属性值
+
+
+</script>
+
+</body>
+</html>

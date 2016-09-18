@@ -1,0 +1,700 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "微软雅黑";
+}
+
+li {
+    list-style-type: none;
+}
+
+.header {
+    width: 100%;
+    height: 32px;
+    background-color: rgb(47, 58, 63);
+    height: 40px;
+}
+
+.header_middle {
+    width: 60%;
+    height: 40px;
+    margin: 0px auto;
+}
+
+.header_left {
+    color: #ffffff;
+    height: 40px;
+    width: 400px;
+    float: left;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.header_zhongone {
+    height: 40px;
+    float: left;
+}
+
+.header_zhongtwo {
+    height: 38px;
+    float: left;
+
+}
+
+.header_zhongtwo li {
+    float: left;
+    line-height: 38px;
+    font-size: 16px;
+    color: #ffffff;
+    float: left;
+    margin: 0px auto;
+    margin-left: 20px;
+    list-style-type: none;
+
+}
+
+#gs {
+    text-align: center; background-color: rgb(47, 58, 63);
+}
+#gs:hover {
+    background-color: rgb(76, 191, 251);
+    color: white;
+}
+
+.header_right {
+    line-height: 40px;
+    height: 40px;
+    float: right;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+#ga { background-color: rgb(47, 58, 63);
+    text-align: center;
+}
+
+#ga:hover {
+    background-color: rgb(76, 191, 251);
+    color: white;
+}
+
+.header_right {
+    line-height: 40px;
+    height: 40px;
+    float: right;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+#gb {
+    text-align: center; background-color: rgb(47, 58, 63);
+}
+#gb:hover {
+    background-color: rgb(76, 191, 251);
+    color: white;
+}
+
+.header_right {
+    line-height: 40px;
+    height: 40px;
+    float: right;
+    color: #ffffff;
+    font-size: 16px;
+}
+#gc {
+
+    color: white;
+    font-size: 16px;
+    background-color: rgb(47, 58, 63);
+    width: 130px; height: 40px;
+    float: left;
+}
+#gc li {float: left;  padding: 0px 3px 0px 9px;}
+
+#hf { background-color: rgb(47, 58, 63);
+    text-align: center;
+}
+
+#hf:hover {
+    background-color: rgb(76, 191, 251);
+    color: white;
+}
+#hn { background-color: rgb(47, 58, 63);
+    text-align: center;
+}
+
+#hn:hover {
+    background-color: rgb(76, 191, 251);
+    color: white;
+}
+
+.header_right {
+    line-height: 40px;
+    height: 40px;
+    float: right;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.body {
+    width: 960px;
+    height: 900px;
+
+    margin: 0px auto;
+}
+
+.body_left {
+    width: 660px;
+    height: 800px;
+
+    float: left;
+    margin-top: 20px;
+}
+
+.logoz {
+    height: 74px;
+    width: 663px;
+}
+
+.logo {
+    width: 160px;
+    height: 74px;
+    background-color: rgb(248, 188, 78);
+    float: left;
+    color: white;
+    text-align: center;
+
+}
+
+.xz {
+    padding: 5px 60px 0px 0px;
+}
+
+.dz {
+    padding: 11px 0px 0px 0px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.logo1 {
+    width: 400px;
+    height: 74px;
+    float: left;
+
+}
+
+.gz {
+    width: 630px;
+    height: 30px;
+
+    float: right;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.yq {
+    width: 630px;
+    height: 30px;
+
+    float: right;
+    font-size: 16px
+}
+
+.yq li {
+    float: left;
+    padding: 0px 5px 0px 0px;
+}
+
+.yq img {
+    vertical-align: middle;
+    padding: 0px 10px 0px 0px;
+}
+
+#tj {
+    width: 630px;
+    height: 30px;
+    float: right;
+}
+
+#tj li {
+    float: left;
+    width: 70px;
+    height: 28px;
+    padding: 2px 3px 0px 0px;
+    margin: 0px 6px 0px 6px;
+    background-color: rgb(196, 235, 232);
+    text-align: center;
+    color: blue;
+}
+
+.xiank {
+    width: 630px;
+    height: 40px;
+    float: right;
+    padding: 8px 0px 0px 0px;
+}
+
+.xian {
+    width: 660px;
+    height: 10px;
+    float: right;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #CCC;
+}
+
+.zt {
+    width: 630px;
+    height: 30px;
+    float: right;
+    font-size: 16px
+}
+
+.zwmsxk {
+    width: 1px;
+    height: 20px;
+    background-color: orange;
+    float: left;
+    margin-right: 10px;
+    padding: 3px 0px 0px 3px;
+}
+
+.zwms {
+    width: 299px;
+    height: 28px;
+    float: left;
+}
+
+.gzzz {
+    width: 630px;
+    height: 30px;
+    float: right;
+    font-size: 14px;
+    padding: 3px 0px 0px 0px;
+}
+
+.wzk1 {
+    width: 630px;
+    height: 140px;
+    float: right;
+    font-size: 14px;
+}
+
+.wzk1 li {
+    padding: 6px 5px 0px 5px;
+}
+
+.gzzz1 {
+    width: 630px;
+    height: 30px;
+    float: right;
+    font-size: 14px;
+    padding: 3px 0px 0px 0px;
+}
+
+.wzk2 {
+    width: 630px;
+    height: 140px;
+    float: right;
+    font-size: 14px;
+}
+
+.wzk2 li {
+    padding: 6px 5px 0px 5px;
+}
+
+.mk {
+    width: 630px;
+    height: 50px;
+    float: right;
+}
+
+.mk li {
+    float: left;
+    width: 120px;
+    height: 35px;
+    padding: 5px 3px 0px 0px;
+    margin: 0px 8px 3px 6px;
+    background-color: rgb(248, 188, 78);
+    text-align: center;
+    color: white;
+}
+
+#hs {
+    background-color: #CCCCCC;
+}
+
+.mk1 {
+    width: 630px;
+    height: 50px;
+    float: right;
+}
+
+.mk1 li {
+    float: left;
+    width: 120px;
+    height: 35px;
+    padding: 5px 3px 0px 0px;
+    margin: 0px 8px 3px 6px;
+    background-color: rgb(248, 188, 78);
+    text-align: center;
+    color: white;
+}
+
+.body_right {
+    width: 290px;
+    height: 900px;
+    float: right;
+    margin-top: 20px;
+}
+
+.body_right_header {
+    width: 290px;
+    height: 95px;
+    text-align: center;
+}
+
+.body_right_a {
+    width: 290px;
+    height: 30px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #CCCCCC;
+}
+
+.body_right_b {
+    width: 290px;
+    height: 38px;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 6px 0px 0px 0px;
+}
+
+.body_right_b_z {
+    width: 290px;
+    height: 100px;
+}
+
+.body_right_b_tp {
+    width: 40px;
+    height: 100px;
+    float: left;
+}
+
+.body_right_b_wz {
+    width: 240px;
+    height: 100px;
+    float: left;
+    line-height: 25px;
+}
+
+.body_right_c {
+    width: 290px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 6px 0px 0px 0px;
+}
+
+.body_right_c_x {
+    width: 222px;
+    height: 10px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #CCC;
+    float: right;
+}
+
+.body_right_d {
+    width: 290px;
+    height: 30px;
+}
+
+.body_right_d_one {
+
+    float: left;
+}
+
+.body_right_d_one li {
+    width: 65px;
+    height: 20px;
+    font-size: 14px;
+    float: left;
+    padding: 2px 3px 0px 0px;
+    margin: 0px 6px 0px 3px;
+    border: 1px solid #CCCCCC;
+    background-color: #ffffff;
+    text-align: center;
+    color: black;
+    border-radius: 3px;
+}
+
+.body_right_f {
+    width: 289px;
+    height: 30px;
+}
+
+.body_right_f_two {
+    float: left;
+}
+
+.body_right_f_two li {
+    width: 65px;
+    height: 20px;
+    font-size: 14px;
+    float: left;
+    padding: 2px 3px 0px 0px;
+    margin: 0px 6px 0px 3px;
+    border: 1px solid #CCCCCC;
+    background-color: #ffffff;
+    text-align: center;
+    color: black;
+    border-radius: 3px;
+}
+
+.body_right_g {
+    width: 290px;
+    height: 38px;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 6px 0px 0px 0px;
+}
+
+.wzxx {
+    width: 288px;
+    height: 50px;
+    float: left;
+}
+
+.wzxx li {
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.kkk {
+    width: 288px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 6px 0px 0px 0px;
+}
+
+.lll {
+    width: 220px;
+    height: 10px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #CCC;
+    float: right;
+}
+
+.hk {
+    width: 288px;
+    height: 300px;
+}
+
+.hk_a {
+    width: 260px;
+    height: 65px;
+    margin: 0 auto;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #CCC;
+    margin-bottom: 10px;
+}
+
+.hk_a_one {
+    width: 60px;
+    height: 58px;
+    float: left;
+    margin-right: 15px;
+}
+
+.hk_a_two {
+    width: 80px;
+    height: 58px;
+    float: left;
+    margin-right: 15px;
+}
+
+.pp {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.oo {
+    font-size: 14px;
+    color: red;
+}
+
+.ff {
+    color: #CCCCCC;
+    font-size: 14px;
+}
+
+.hk_a_three {
+    width: 60px;
+    height: 20px;
+    float: left;
+    color: #CCCCCC;
+    font-size: 14px;
+    margin-top: 38px;
+}
+
+.hk_b {
+    width: 260px;
+    height: 65px;
+    margin: 0 auto;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #CCC;
+    margin-bottom: 10px;
+}
+
+.hk_b_one {
+    width: 60px;
+    height: 58px;
+    float: left;
+    margin-right: 15px;
+}
+
+.hk_b_two {
+    width: 80px;
+    height: 58px;
+    float: left;
+    margin-right: 15px;
+}
+
+.pp1 {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.oo1 {
+    font-size: 14px;
+    color: red;
+}
+
+.ff1 {
+    color: #CCCCCC;
+    font-size: 14px;
+}
+
+.hk_b_three {
+    width: 60px;
+    height: 20px;
+    float: left;
+    color: #CCCCCC;
+    font-size: 14px;
+    margin-top: 38px;
+}
+
+.hk_c {
+    width: 260px;
+    height: 65px;
+    margin: 0 auto;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #CCC;
+}
+
+.hk_c_one {
+    width: 60px;
+    height: 58px;
+    float: left;
+    margin-right: 15px;
+}
+
+.hk_c_two {
+    width: 80px;
+    height: 58px;
+    float: left;
+    margin-right: 15px;
+}
+
+.pp2 {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.oo2 {
+    font-size: 14px;
+    color: red;
+}
+
+.ff2 {
+    color: #CCCCCC;
+    font-size: 14px;
+}
+
+.hk_c_three {
+    width: 60px;
+    height: 20px;
+    float: left;
+    color: #CCCCCC;
+    font-size: 14px;
+    margin-top: 38px;
+}
+
+.hk_d {
+    width: 260px;
+    height: 65px;
+    margin: 0 auto;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #CCC;
+    margin-bottom: 10px;
+}
+
+.hk_d_one {
+    width: 60px;
+    height: 58px;
+    float: left;
+    margin-right: 15px;
+}
+
+.hk_d_two {
+    width: 80px;
+    height: 58px;
+    float: left;
+    margin-right: 15px;
+}
+
+.pp3 {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.oo3 {
+    font-size: 14px;
+    color: red;
+}
+
+.ff3 {
+    color: #CCCCCC;
+    font-size: 14px;
+}
+
+.hk_d_three {
+    width: 60px;
+    height: 20px;
+    float: left;
+    color: #CCCCCC;
+    font-size: 14px;
+    margin-top: 38px;
+}
+
+.js {
+    width: 260px;
+    height: 30px;
+    margin: 0 auto;
+    font-size: 14px;
+    text-align: center;
+}
+
+

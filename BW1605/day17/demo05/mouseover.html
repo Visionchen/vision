@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #wrap {height:200px; background: lightblue}
+    </style>
+</head>
+<body>
+
+<div id="wrap"></div>
+
+<script>
+
+
+    window.onload = function () {
+
+
+        var div = document.getElementById('wrap');
+        // 添加鼠标移入事件
+        div.onmouseover = function () {
+
+            div.style.backgroundColor = 'red';
+            div.style.width = '50%';
+
+        };
+        // 添加鼠标移出事件
+        div.onmouseout = function () {
+
+            div.style.backgroundColor = 'green';
+
+        };
+
+
+
+    };
+
+
+
+</script>
+
+
+</body>
+</html>

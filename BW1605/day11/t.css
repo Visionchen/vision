@@ -1,0 +1,14 @@
+.yi {
+    width:600px;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+.er {
+    width: 400px;
+    height: 200px;
+    border: 1px solid red;
+    margin: 20px auto;
+}
+.er input {
+    width: 100px; height: 50px;
+}

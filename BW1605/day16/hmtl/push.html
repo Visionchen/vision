@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var ary = ['tom', 'jim', 'liLei', 'lucy'];
+//    function push(ary) {
+//        var last = 'lily';
+//        ary.length = ary.length + 1;
+//        ary[ary.length - 1] = last;
+//        return ary;
+//    }
+    var elem ='lily';
+    function push(ary,elem) {
+       ary[ary.length]=elem;
+        return ary;
+    }
+    ary = push(ary,elem);
+    alert(ary);
+</script>
+</body>
+</html>

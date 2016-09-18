@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #wrap {height:200px; background: lightblue}
+    </style>
+</head>
+<body>
+
+<div id="wrap"></div>
+
+<script>
+
+
+    window.onload = function () {
+
+
+        var div = document.getElementById('wrap');
+
+
+
+
+        window.onresize = function () {
+
+            var width = document.documentElement.clientWidth;  // 获取页面可视宽度
+            var height = document.documentElement.clientHeight;  // 获取页面可视高度
+
+
+            div.innerHTML = 'W: ' + width +  ' H: ' + height;
+
+        };
+
+
+    };
+
+
+
+</script>
+
+
+</body>
+</html>

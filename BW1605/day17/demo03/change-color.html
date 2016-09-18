@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="info">我们都是好好孩子</div>
+<input type="button" value="点我试试看" onclick="change()">
+
+<script>
+
+    function change() {
+        // 获取div元素 (其实是一个DOM对象)
+        var info = document.getElementById('info');
+        info.style.color = 'red';
+        info.style.fontSize = '30px';
+    }
+    
+</script>
+
+
+
+</body>
+</html>

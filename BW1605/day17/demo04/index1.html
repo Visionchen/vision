@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="button" value="暴击" id="btn">
+<input type="text" id="txt">
+
+<script>
+
+    document.getElementById('btn').onclick = function() {
+        alert('呵呵');
+    };
+
+    document.getElementById('txt').onkeydown = function(event) {
+        var e;
+        // 参数的event是firefox标准   （w3c标准）
+        // 直接写event是IE的标准
+        if(!event) {
+            e = window.event;
+        } else {
+            e = event;
+        }
+
+        alert(e.keyCode)
+
+    };
+
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+/* 注释
+
+
+页面中使用css样式：
+    1. 内联样式： <div style="height:20px; width:30px;"></div>
+    2. 内部样式表：   在<head>标签内加<style>标签
+    3. 外部样式表： 通过link标签去引用外部样式文件
+
+CSS选择器：
+    简单选择器：
+        1. 标签选择器
+        2. 类选择器
+        3. ID选择器
+    复合选择器：
+        1. 后代选择器：  div p {}   .sa p {}
+        2. 交集选择器：  div.a {}   div#sb {}
+        3. 并集选择器：  p,.a,div,h2.duang {}
+
+    全局选择器：* {margin:0; padding:0}
+
+语法：选择器 {声明1; 属性:值;}
+
+
+字体：font
+    font-size
+    font-weight
+    font-family
+    font-style
+
+文本：text
+    text-align
+    text-indent
+    text-decoration
+    text-shadow
+
+    color
+    line-height
+    letter-spacing
+
+背景：background
+    background-color
+    background-image:url()
+    background-position
+    background-repeat
+    background-attachment: scroll    fixed
+
+列表：list-style
+    list-style-type:none
+    list-style-image:
+    list-style-position
+
+超链接伪类：  :link  :visited  :hover  :active
+
+盒子模型：外边距（margin）、内边距（padding）、边框（border）、内容
+
+    margin:10px;
+    margin:10px 20px;
+    margin: 10px 20px 30px;
+    margin:10px 20px 30px 40px;
+
+    border: 1px solid red;
+    border-top:
+    border-top-color
+
+    border-color:#000;
+    border-color:#00 #111 #222 #333 #444;
+
+    border-style: none   solid   dashed  dotted
+
+
+    width  height
+
+浮动:
+    float:left right none
+
+定位:
+    position: static   relative  absolute   fixed(IE6不支持)
+    left  right  bottom  top
+
+透明：
+    opacity:0~1 (ie678不支持)
+    filter：alpha(opacity=80)
+
+    div {
+        opacity:0.5;
+        filter：alpha(opacity=50);
+    }
+
+
+*/

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;padding: 0;font-family: '微软雅黑';font-size: 12px;
+        }
+        .cf:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .contain {
+            width: 500px;height: 400px;margin: 120px auto;background: #efefef;
+        }
+        ul li{
+            list-style-type: none;float: left;padding: 8px 15px;border: 1px solid #ccc;
+            cursor: pointer;position:relative;top:1px;
+        }
+        #li1 {
+            color: #f60;  border-bottom:1px solid #efefef;
+        }
+        #xia1,#xia2 {
+            width:498px;height:365px;line-height:365px;text-align:center;
+            border: 1px solid #ccc;
+        }
+        #xia2 {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+<div class="contain">
+<ul class="cf">
+    <li id="li1">高性价比</li>
+    <li id="li2">口碑推荐</li>
+</ul>
+<div id="xia1">第一个选项内容:高信价比</div>
+<div id="xia2">第二个选项内容:口碑推荐</div>
+</div>
+<script>
+    window.onload=function () {
+        var li1 = document.getElementById('li1');
+        var li2 = document.getElementById('li2');
+        var xia1 = document.getElementById('xia1');
+        var xia2 = document.getElementById('xia2');
+
+</script>
+</body>
+</html>

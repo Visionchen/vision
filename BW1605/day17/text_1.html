@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    *{
+        margin: 0;padding: 0; font-family: '微软雅黑';font-size: 14px;
+    }
+    .head{
+          width: 100%;background: rgb(241,241,241);height: 40px;
+        border-bottom: 1px solid #CCCCCC;  border-top: 1px solid #CCCCCC;
+    }
+    #zi{
+        margin-left: 300px;width:58px;padding: 10px ;
+        border-left: 1px solid rgb(241,241,241);
+        border-right: 1px solid rgb(241,241,241);
+        cursor: pointer;
+    }
+    #ku{
+        width:400px;height: 250px;
+        margin-left: 300px;
+        border-left: 1px solid #CCCCCC;
+        border-bottom: 1px solid #CCCCCC;
+        border-right: 1px solid #CCCCCC;
+    }
+    </style>
+</head>
+<body>
+<div class="head">
+    <div id="zi">我的京东</div>
+</div>
+<div id="ku"></div>
+<script>
+    window.onload=function () {
+        var zi=document.getElementById('zi');
+        var ku=document.getElementById('ku');
+        zi.onfocus=function () {
+            zi.style.borderLeft='1px solid #CCCCCC';
+            zi.style.borderRight='1px solid #CCCCCC';
+        }
+
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red {
+            color: red;
+        }
+        .blue{
+            color: blue;
+        }
+
+
+    </style>
+</head>
+<body>
+<p id="h"></p>
+<script>
+    var p= "";
+    for (i = 0;i <100; i++){
+        if (i % 2 == '0'){
+            p = p + '<span class="blue">' + i + '</span>' + '<br>';
+        }else {
+            p = p + '<span class="red">' + i + '</span>' + '<br>';
+        }
+    }
+    document.getElementById("h").innerHTML = p;
+
+
+</script>
+</body>
+</html>

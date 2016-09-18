@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="button" value="暴击" id="btn">
+<input type="text" id="txt">
+
+<script>
+    var ss = document.getElementById('btn');
+    ss.onclick = function() {
+        alert('呵呵');
+    };
+
+    document.getElementById('txt').onkeydown = function(event) {
+
+        event = event || window.event;  // 获取事件对象
+
+        alert(event.keyCode);
+
+    };
+
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var ary =[13,3,9,34,27,6];
+    var max = 0;
+    var index = 0;
+    function getMax(ary) {
+
+        for (var i = 0; i < ary.length; i++) {
+            if (ary[i] > max) {
+                max = ary[i];
+                index = i;
+            }
+        }
+        return ary;
+    }
+    ary=getMax(ary);
+    alert(index);
+    alert(max);
+
+</script>
+</body>
+</html>

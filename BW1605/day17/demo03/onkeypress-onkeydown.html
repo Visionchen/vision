@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" onkeydown="down(event)" onkeypress="press(event)" id="txt">
+
+<script>
+    function down(event) {
+
+        console.log('keydown：' + event.keyCode);
+
+    }
+    function press(event) {
+
+        console.log('keypress：' + event.keyCode);
+
+    }
+</script>
+
+</body>
+</html>

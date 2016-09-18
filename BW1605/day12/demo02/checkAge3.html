@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    年龄：<input type="text" id="age">
+    <input type="button" value="判断是否成年" onclick="checkAge()">
+</div>
+<div id="info"></div>
+
+<script>
+
+    function checkAge() {
+        // 获取用户输入的年龄
+        var age = document.getElementById('age').value;
+        // 判断 年龄  是否大于等于18周岁
+
+        if(age > 120) {
+            document.getElementById('info').innerHTML = '年龄爆了';
+        } else if(age >= 18) {
+            document.getElementById('info').innerHTML = '成年';
+        } else if(age > 0) {
+            document.getElementById('info').innerHTML = '未成年';
+        } else {
+            document.getElementById('info').innerHTML = '不合法';
+        }
+
+
+
+//        if (age >= 18) {
+//            document.getElementById('info').innerHTML = '成年';
+//        } else {
+//            document.getElementById('info').innerHTML = '未成年';
+//        }
+
+    }
+
+</script>
+
+</body>
+</html>

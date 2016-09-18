@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {margin:0; padding: 0}
+    .top-bar {height:30px; background: #efefef; }
+    .top {width:900px; margin:0 auto; line-height: 30px}
+    body {
+        font-family: "Microsoft YaHei";
+        font-size:14px;
+    }
+    img {vertical-align: top}
+    ul {list-style-type: none}
+
+    .top-left {padding: 0 10px; float: left; position: relative;
+        border-left:1px solid #efefef;border-right:1px solid #efefef;}
+    .jd {
+        position: absolute;
+        width:200px; height: 200px; background: #fff; border: 1px solid #ccc;
+        left:-1px; top:30px; display: none; z-index: -1;
+    }</style>
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="top">
+        <div class="top-left" id="jd">
+            京东
+            <div class="jd" id="jdSon"></div>
+        </div>
+    </div>
+</div>
+<script>
+    var jd = document.getElementById('jd');
+    var jdSon = document.getElementById('jdSon');
+    jd.onmouseover = function () {
+
+        this.style.backgroundColor = '#fff';
+        this.style.borderLeft = '1px solid #ccc';
+        this.style.borderRight = '1px solid #ccc';
+        this.style.borderBottom = '1px solid #fff';
+
+        jdSon.style.display = 'block';
+
+    };
+    jd.onmouseout = function () {
+
+        this.style.backgroundColor = 'transparent';
+        this.style.borderLeft = '1px solid transparent';
+        this.style.borderRight = '1px solid transparent';
+        this.style.borderBottom = '1px solid transparent';
+
+        jdSon.style.display = 'none';
+
+    };
+
+
+</script>
+</body>
+</html>

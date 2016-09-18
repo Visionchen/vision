@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Microsoft YaHei';
+    font-size: 12px
+}
+
+.cf:after {
+    content: '';
+    display: table;
+    clear: both
+}
+
+.contain {
+    width: 800px;
+    height: 500px;
+    margin: 40px auto 0;
+}
+
+.content {
+    width: 740px;
+    height: 460px;
+    position: relative;
+}
+
+ul li {
+    list-style-type: none;
+    float: left;
+    cursor: pointer;
+}
+
+.im li {
+    display: none
+}
+
+.sum {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+
+.sum li.yi, .sum li:hover {
+    background: #f60;
+    color: white
+}
+
+.sum li {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    line-height: 20px;
+    text-align: center;
+    margin-right: 10px;
+    background-color: #ccc
+}
+

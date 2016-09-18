@@ -1,0 +1,45 @@
+* {margin:0; padding: 0}
+.top-bar {height:30px; background: #efefef; }
+.top {width:900px; margin:0 auto; line-height: 30px}
+body {
+    font-family: "Microsoft YaHei";
+    font-size:14px;
+}
+img {vertical-align: top}
+ul {list-style-type: none}
+
+.top-left {padding: 0 10px; float: left; position: relative; border-left:1px solid #efefef;border-right:1px solid #efefef;}
+.jd {
+    position: absolute;
+    width:200px; height: 200px; background: #fff; border: 1px solid #ccc;
+    left:-1px; top:30px; display: none; z-index: -1;
+}
+
+.main {
+    width:900px; margin: 10px auto 0;
+}
+
+.banner {
+    width:730px;
+    height:454px;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+}
+.banner-img li {
+    display:none;
+}
+.banner-nav {
+    position: absolute;
+    right:20px;
+    bottom: 20px;
+}
+.banner-nav li {
+    background: #ccc;
+    width:20px; height:20px; float: left; margin-left: 10px; text-align: center; line-height: 20px; font-size: 12px;
+    border-radius: 50%; cursor: pointer;
+}
+.banner-nav li:hover, .banner-nav li.focus {
+    background: #f60;
+    color:#fff;
+}

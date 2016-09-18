@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 微软雅黑;
+}
+
+.top {
+    width: 100%;
+    height: 54px;
+    background-color: rgb(48, 58, 63);
+
+}
+
+.top_zo {
+    width: 80%;
+    height: 54px;
+    line-height: 54px;
+    margin: 0px auto;
+    position: relative;
+}
+
+.rent {
+    height: 54px;
+    line-height: 54px;
+    float: left;
+    width: 180px;
+    position: absolute;
+    left: 10px;
+}
+
+.shou {
+    width: 30%;
+    height: 54px;
+    line-height: 54px;
+    float: left;
+    position: absolute;
+    left: 220px;
+}
+
+.shou li {
+    list-style-type: none;
+    text-align: center;
+    width: 80px;
+    float: left;
+    color: white;
+    font-family: 微软雅黑;
+    position: relative;
+}
+
+.shu {
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    width: 100px;
+    margin-left: 91%;
+    position: absolute;
+    right: 20px;
+}
+
+.zhuye {
+    width: 200px;
+    height: 860px;
+    border: 1px solid rgb(230, 230, 230);
+    margin: 30px 180px;
+    float: left;
+    position: relative;
+}
+
+.gre {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: black;
+    font-size: 18px;
+
+    text-indent: 1em;
+    font-weight: bold;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.hao {
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+
+}
+
+.back {
+    background-color: rgb(251, 183, 76);
+    color: white;
+}
+
+dd {
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    font-size: 18px;
+    text-indent: 2em;
+}
+
+.da {
+    width: 1030px;
+    height: 860px;
+    float: left;
+    margin-top: 30px;
+    border: 1px solid rgb(230, 230, 230);
+    position: absolute;
+    left: 410px;
+}
+
+.daa {
+    width: 1120px;
+    height: 671px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.mian {
+    width: 85px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: bold;
+    float: left;
+    border-bottom: 1px solid rgb(251, 183, 76);
+}
+
+.mianh {
+    width: 905px;
+    height: 40px;
+    float: left;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.gs {
+    width: 100%;
+    height: 40px;
+    clear: left;
+
+}
+
+.gsy {
+    width: 235px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    float: left;
+    font-weight: bold;
+}
+
+.gser {
+    width: 255px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    float: left;
+    font-weight: bold;
+}
+
+.gssa {
+    width: 240px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    float: left;
+    font-weight: bold;
+}
+
+.gssi {
+    width: 240px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    float: left;
+    font-weight: bold;
+
+}
+
+.yi {
+    width: 990px;
+    height: 180px;
+    border-bottom: 1px dashed rgb(230, 230, 230);
+}
+
+.huaw {
+    margin-top: 15px;
+    width: 140px;
+    text-align: center;
+    line-height: 118px;
+    font-size: 16px;
+    float: left;
+    font-weight: bold;
+    border: 1px solid red;
+}
+
+.huaz {
+    width: 240px;
+    height: 56px;
+    text-align: center;
+    line-height: 46px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.yier {
+    width: 1120px;
+    height: 120px;
+
+    margin-top: 16px;
+
+}
+
+.yier li {
+    list-style-type: none;
+    float: left;
+}
+
+.o {
+    width: 116px;
+    margin-left: 60px;
+
+}
+
+.p {
+    width: 280px;
+    text-align: center;
+    margin-left: 70px;
+    line-height: 22px;
+    margin-top: 35px;
+}
+
+.a {
+    width: 170px;
+    text-align: center;
+    line-height: 22px;
+    margin-top: 45px;
+    margin-right: 40px;
+
+}
+
+.l {
+    width: 160px;
+    text-align: center;
+    line-height: 22px;
+    margin-top: 25px;
+    margin-left: 36px;
+
+}
+
+.co {
+    color: rgb(251, 183, 76);
+}
+
+.bott {
+    width: 400px;
+    line-height: 23px;
+    font-size: 16px;
+    height: 23px;
+    text-align: center;
+    clear: left;
+    margin: 50px auto;
+}
+
+.bott li {
+    list-style-type: none;
+    float: left;
+    border: 1px solid rgb(230, 230, 230);
+    width: 23px;
+    margin: 5px;
+}
+
+#bzi {
+    width: 60px;
+    color: rgb(230, 230, 230);
+
+}
+
+#bh {
+    width: 60px;
+}
+
+#sheng {
+    height: 40px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: none;
+
+}
+
+#san {
+    margin-right: 0px;
+}
+
+#liu {
+    margin-left: 0px;
+}
+
+.btm {
+    background-color: black;
+    width: 100%;
+    height: 180px;
+    clear: left;
+}
+.div {
+
+}
+
+
+
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin: 0;padding: 0; font-family: '微软雅黑';
+        }
+        .contain {
+            width: 600px;height: 600px;margin: 20px auto;background: lightgray;
+        }
+        .cf:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+        ul li {
+            list-style-type: none;float: left;cursor: pointer;
+        }
+        .ha{
+            margin: 0px auto; background: lightgray;
+        }
+        .zo{
+            width: 100%;background: white;
+        }
+        .zo li{
+            background: lightblue;margin: 0px 12px;padding: 5px 10px;
+        }
+        .ha{
+            position: relative;background: lightgray;
+        }
+        .ha li{
+           position: absolute;
+            left: 0;top:0;
+            margin-left: 230px;
+            margin-top: 230px;
+        }
+        #zo_yi{
+            background: lightgray;
+        }
+        #ha_er,#ha_sa{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+<div class="contain">
+    <ul class="zo cf">
+        <li id="zo_yi">中国</li>
+        <li id="zo_er">韩国</li>
+        <li id="zo_sa">日本</li>
+    </ul>
+    <ul class="ha cf">
+        <li id="ha_yi">中国大好时光</li>
+        <li id="ha_er">韩国大好毛憋</li>
+        <li id="ha_sa">日本大好毛憋</li>
+
+    </ul>
+</div>
+<script>
+    window.onload=function () {
+        var zo_yi = document.getElementById('zo_yi');
+        var zo_er = document.getElementById('zo_er');
+        var zo_sa = document.getElementById('zo_sa');
+        var ha_yi = document.getElementById('ha_yi');
+        var ha_er = document.getElementById('ha_er');
+        var ha_sa = document.getElementById('ha_sa');
+        zo_yi.onmouseover = function () {
+            zo_yi.style.backgroundColor='lightgray';
+            zo_er.style.backgroundColor='lightblue';
+            zo_sa.style.backgroundColor='lightblue';
+            ha_er.style.display='none';
+            ha_yi.style.display='block';
+            ha_sa.style.display='none';
+
+        }
+        zo_er.onmouseover= function () {
+            zo_er.style.backgroundColor='lightgray';
+            zo_yi.style.backgroundColor='lightblue';
+            zo_sa.style.backgroundColor='lightblue';
+            ha_yi.style.display='none';
+            ha_er.style.display='block';
+            ha_sa.style.display='none';
+
+        }
+        zo_sa.onmouseover = function () {
+            zo_er.style.backgroundColor='lightblue';
+            zo_yi.style.backgroundColor='lightblue';
+            zo_sa.style.backgroundColor='lightgray';
+            ha_yi.style.display='none';
+            ha_er.style.display='none';
+            ha_sa.style.display='block';
+
+        }
+    }
+
+
+</script>
+</body>
+</html>

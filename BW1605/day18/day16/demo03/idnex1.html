@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {margin:5px; padding: 5px}
+    </style>
+</head>
+<body>
+
+<div class="aa" id="aa">
+    <div class="ba">
+        <div class="ca"></div>
+        <div class="cb"></div>
+    </div>
+    <div class="bb"></div>
+</div>
+<div class="ab"></div>
+
+
+<script>
+
+    var aa = document.getElementById('aa');
+    var list = aa.childNodes;
+
+
+    for(var i = 0, len = list.length; i < len; i++) {
+        console.log(list[i].nodeName);
+        // 判断是否是元素节点
+        if(list[i].nodeType == 1) {
+            list[i].style.border = '1px solid red';
+        }
+    }
+
+
+
+</script>
+</body>
+</html>

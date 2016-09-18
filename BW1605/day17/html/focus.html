@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #rui{
+            padding:4px;border-radius:5px;color:#ccc;outline: none;
+        }
+    </style>
+</head>
+<body>
+用户名：<input type="text"  id="rui" value="请输入用户名" >
+<script>
+        document.getElementById('rui').onfocus= function rui() {
+        document.getElementById('rui').style.color='#000';
+        var rui=document.getElementById('rui').value;
+        document.getElementById('rui').style.borderColor='red';
+        document.getElementById('rui').style.backgroundColor='yellow';
+        if(rui=='请输入用户名'){
+            document.getElementById('rui').value='';
+        }
+    }
+        document.getElementById('rui'). onblur=function eui() {
+
+        var rui=document.getElementById('rui').value;
+        document.getElementById('rui').style.borderColor='#000';
+        document.getElementById('rui').style.backgroundColor='#fff';
+        if(rui==''){
+            document.getElementById('rui').value='请输入用户名';
+            document.getElementById('rui').style.color='#ccc';
+
+        }
+    }
+
+
+
+
+</script>
+</body>
+</html>

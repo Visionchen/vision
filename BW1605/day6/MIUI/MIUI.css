@@ -1,0 +1,46 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.top{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    font-family: 微软雅黑;
+    border: 1px solid red;
+
+
+}
+.topzo {
+    width: 80%;
+    height: 50px;
+    margin: 0px auto;
+    border: 1px solid green;
+
+}
+#m {
+    line-height: 50px;
+    text-decoration: none;
+    color: #666666;
+    float: left;
+    font-size: 16px;
+}
+.topshou {
+    width: 36%;
+    height: 50px;
+    float: left;
+    margin-left: 850px;
+}
+.topshou li {
+    list-style: none;
+    color: #ffffff;
+    float: right;
+    width: 80px;
+    height:50px;
+    padding: 0px auto;
+    font-size: 14px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid yellow;
+
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #info {border:1px solid #f60; padding: 10px; line-height: 30px; font-family: "Microsoft YaHei"; margin-top: 30px; width:250px}
+    </style>
+</head>
+<body>
+
+<!--
+
+※ 需求：点击按钮时，把文本框的内容显示在#info的div中
+
+
+思路：给button添加点击事件，触发show()函数，在show函数中获取文本框的内容(.value)，并把内容设置到#info的div中(.innerHTML)
+
+-->
+
+<div>
+    <input type="text" id="userName">
+    <input type="button" value="显示用户名" onclick="show()">
+</div>
+<div id="info"></div>
+
+<script>
+
+    function show() {
+        // 获取文本框的内容
+        var userName = document.getElementById('userName').value;
+        // 获取显示信息的div
+        var info = document.getElementById('info');
+        // 把#info的div内容设置成userName
+        info.innerHTML = userName;
+    }
+</script>
+
+</body>
+</html>

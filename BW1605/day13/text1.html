@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red {
+            color: red;
+        }
+        .blue{
+            color: blue;
+        }
+
+
+    </style>
+</head>
+<body>
+<p id="a"></p>
+<span class="blue"></span>
+<script>
+
+
+    document.write("<table width='600px' >");
+    var i =1 ;
+    while(i<=9){
+        document.write("<tr>");
+        var j = 1;
+        while(j<=i){
+            document.write("<td>"+ j +"*"+ i +"="+ i*j +"</td>");
+            j++;
+        }
+        document.write("</tr>");
+        i++;
+    }
+    document.write("</table>");
+</script>
+</body>
+</html>

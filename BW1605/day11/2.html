@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="er">
+<input type="button" value="判断是否成年" onclick="anMui()">
+<div id="et"></div>
+<script>
+
+        function anMui() {
+
+            var no = document.getElementById('er').value;
+
+                if (no >= 18) {
+
+                    document.getElementById('et').innerHTML = '成年';
+
+                    } else {
+
+                    document.getElementById('et').innerHTML = '未成年';
+                            }
+
+                        }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="myDiv">
+    <p>我们都是大神</p>
+</div>
+
+<input type="button" value="显示div的内容" onclick="showDiv()">
+
+<input type="button" value="设置div的内容" onclick="setDiv()">
+
+
+
+<script>
+    
+    function showDiv() {
+
+        // 获取div元素（标签）
+        var div = document.getElementById('myDiv');
+
+        // 获取div元素里的内容
+        var txt = div.innerHTML;
+
+        // 输出内容
+        alert(txt);
+    }
+    
+    function setDiv() {
+        var div = document.getElementById('myDiv');
+
+        // 设置标签内容
+        div.innerHTML = '<p>我们都是渣渣</p>';
+
+    }
+    
+</script>
+
+
+</body>
+</html>

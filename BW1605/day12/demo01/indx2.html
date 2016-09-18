@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+用户名：<input type="text" id="userName">
+<!--
+
+onclick  点击事件，当点击按钮的时候触发
+
+
+-->
+<input type="button" value="查看用户输入的用户名" onclick="getName()">
+
+<input type="button" value="设置名称" onclick="setName()" >
+
+
+<script>
+
+    // 定义一个函数（包含js代码的一个容器）
+    function getName() {
+        // 获取文本框的内容
+        var name = document.getElementById('userName').value;
+
+        alert(name);
+
+    }
+    
+    function setName() {
+        // 设置文本框的内容
+        document.getElementById('userName').value = '老王';
+
+    }
+
+</script>
+
+
+
+</body>
+</html>

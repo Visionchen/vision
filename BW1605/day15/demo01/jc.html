@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>3、从文本框输入一个整数，点击按钮，计算此整数的阶乘</title>
+</head>
+<body>
+
+
+<input type="text" id="num">
+<input type="button" value="求阶乘" onclick="get()">
+
+<div id="info"></div>
+
+<script>
+
+    function get() {
+        // 获取文本框的值
+        var num = document.getElementById('num').value;
+        var sum = 1;
+        for(var i = num; i > 0; i--) {
+            sum *= i;
+        }
+
+        // 设置info的内容为num的阶乘结果
+        document.getElementById('info').innerHTML = sum;
+    }
+    
+</script>
+
+
+
+</body>
+</html>

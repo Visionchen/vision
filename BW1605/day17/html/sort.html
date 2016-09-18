@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //i是循环变量
+    //j也是循环变量，不过这个j还代表了数组里的数据编号
+    //先看j这层循环，你会发现它的每一次步进都对数组前面和后面的数进行比较 如果前面的大于后面的数，就把这两个数进行交换
+    //i=0的时候，把大的数放后面，到j循环结束后，数组里最大的数就放到最后了
+    ////当i=1时，j的循环就把倒数第二大的数放到了倒数第二位 依次类推，就完成了从小到大的排序
+    var ary =[13,3,9,34,27,9,6];
+//    for (var i = 0; i < ary.length - 1; i++) {
+//
+//        for (var j = 0; j < ary.length - 1 - i; j++) {
+//
+//            if (ary[j] > ary[j + 1]) {
+//                var t = ary[j];
+//                ary[j] = ary[j + 1];
+//                ary[j + 1] = t;
+//            }
+//        }
+//    }
+//    document.write(''+ary);
+
+    for (var i = 0; i < ary.length - 1; i++) {
+        for (var j = 0; j < ary.length - 1 - i; j++) {
+            if (ary[j] < ary[j + 1]) {
+                var t = ary[j];
+                ary[j] = ary[j + 1];
+                ary[j + 1] = t;
+            }
+        }
+    }
+    document.write(''+ary);
+</script>
+</body>
+</html>

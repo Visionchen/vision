@@ -1,0 +1,77 @@
+HTML标签：
+
+标题标签：
+    <h1></h1> ....  <h6></h6>
+段落标签：
+    <p></p>
+换行：
+    html5标准：<br>   或：  xhtml标准：<br/>
+水平线：
+    <hr>
+加粗标签：
+    <strong></strong>    <b></b>
+倾斜标签：
+    <em></em>   <i></i>
+注释：
+    <!-- -->
+图片标签：
+    <img src="图片路径" title="鼠标移上去后显示的文字" alt="图片加载失败后显示的文字" width="宽度" height="高度" border="图片边框">
+超链接：
+    <a href="链接地址" target="打开目标位置">链接文字<a>
+        href：如果不知道链接地址，写一个#（空链接）
+        target：
+            _self:默认值，当前窗口打开
+            _blank:新窗口打开
+无序列表：
+    <ul type="">
+        <li>列表项</li>
+    </ul>
+    type取值:
+        disc 圆点，默认值
+        square:黑方块
+        circle：圆圈
+有序列表：
+    <ol type="">
+        <li>列表项</li>
+    </ol>
+    type取值: 1  a  A  i   I
+
+定义列表：
+    <dl>
+        <dt></dt>
+        <dd></dd>
+    </dl>
+表格标签：
+    <table border="1" cellspacing="间距：单元格和单元格之间的距离" cellpadding="填充：单元格与内容之间的距离" align="水平对齐方式">
+        <tr>
+            <td align="left | center | right" valign="top | middle | bottom"  rowspan="跨行" colspan="跨列"></td>
+        </tr>
+    </table>
+内联框架：
+    <iframe src="地址" width="宽度" height="高度" frameborder="边框宽度"></ifram>
+表单：
+    <form action="表单提交地址" method="表单提交方式 get | post"></form>
+
+表单元素：
+    普通文本框：<input type="text" value="默认显示的文字" placeholder="提示">
+    type:
+        text
+        password
+        radio
+        checkbox
+        button
+        reset
+        submit
+        image
+        file
+    <select>
+        <option></option>
+    </select>
+    <textarea clos="" rows=""></textarea>
+
+
+
+
+标签分类：
+    内联标签：strong  em  i  b a
+    块级标签：h1   p  ul   li  dt

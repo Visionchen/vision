@@ -1,0 +1,31 @@
+.container {
+    width:900px; margin:0 auto;
+}
+.banner {
+    position: relative;
+    width: 730px;
+    height: 454px;
+}
+.banner-img li {
+    position: absolute;
+    left:0; top:0;
+    display: none;
+}
+.banner-img li.on {
+    display: block;
+}
+.banner-nav {
+    position: absolute;
+    bottom: 20px;
+    left:50%;
+    margin-left: -100px;
+}
+.banner-nav li {
+    background: rgba(0,0,0,.7);
+    width:20px; height:20px; border-radius: 50%;
+    float: left; margin-left: 10px; cursor: pointer;
+    box-shadow: inset 0px 0px 1px rgba(0,0,0,.3);
+}
+.banner-nav li:hover, .banner-nav li.on {
+    background: rgba(255,125,0,.7);
+}

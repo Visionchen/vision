@@ -1,0 +1,32 @@
+.top {
+    width: 199px;
+    height: 33px;
+    background-image: url(images/icon.gif);
+    font: bold 12px 宋体;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: 0px -50px;
+    line-height: 33px;
+    color: rgb(248, 143, 28);
+}
+
+li {
+    list-style-type: none;
+}
+
+.middle {
+    font-size: 12px;
+    border-left: 1px solid #F7B056;
+    border-right: 1px solid #F7B056;
+    width: 197px;
+    text-align: center;
+    line-height: 27px;
+}
+
+.bo {
+    width: 199px;
+    background-image: url(images/icon.gif);
+    background-repeat: no-repeat;
+    background-position: 0px -96px;
+    height: 28px;
+}

@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+div {
+    width: 200px;
+    height: 280px;
+    background-image: url(images/bg.gif);
+    background-repeat: no-repeat;
+
+}
+.shangping {
+    color: #ff7300;
+    font-size: 14px;
+    font-weight: bold;
+}
+.list{
+    font-size: 12px;
+}
+li {
+    list-style-type: none;
+}
+.ko {
+    float: left;
+    width: 50px;
+}

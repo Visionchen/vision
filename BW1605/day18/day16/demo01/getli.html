@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<ul>
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+</ul>
+<ul id="second">
+    <li>x</li>
+    <li>y</li>
+    <li>z</li>
+</ul>
+
+<script>
+
+    // 获取li集合
+    var la = document.getElementsByTagName('li');
+    console.log(la.length);
+
+    var lb = document.getElementById('second').getElementsByTagName('li');
+    for(var i = 0; i < lb.length; i++) {
+        lb[i].onclick = function () {
+           // alert(lb[i].innerHTML);
+            console.log(i); // 3 ???
+            alert(this.innerHTML);
+        };
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+h1 {
+    color:red;
+}
+p {
+    color:rgb(200,0,255);
+    font-size:50px;
+    letter-spacing: 50px;
+}
+
+h3 {
+    color:#D38547;
+}
+.zhazha {
+    color:blue;
+}
+.suibian {
+    font-size:90px;
+}
+#first {
+    color:red;
+}

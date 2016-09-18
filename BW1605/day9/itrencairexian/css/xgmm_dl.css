@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+#a{ border: 0px solid red;
+    width: 1366px;
+    height: 50px;
+    background-color: #313a3f;
+
+    position: relative;
+}
+#b{ border: 0px solid red;
+    width:170px ;
+    height: 48px;
+    margin-left: 240px;
+    float: left;
+}
+#c{border: 0px solid red;
+    width:340px ;
+    height: 48px;
+    margin-left: 30px;
+    float: left;
+}
+.ll{
+    list-style-type: none;
+    float: left;
+    padding-top:15px;
+    margin-left: 30px;
+    color: #ACB1B7;
+    font-size: 15px;
+    font-family: 微软雅黑;
+
+}
+#d{
+    border: 0px solid #dadada;
+    width:180px ;
+    height: 48px;
+    margin-left: 180px;
+    float: left;
+}
+.e{ margin-top: 5px;
+    background-color: #435259 ;
+    height: 40px;
+}
+
+#ff{border: 0px solid red;
+    width: 1050px;
+    height: 550px;
+    margin: 0px auto;
+    position: relative;
+
+}
+#f{
+    border: 1px solid #dadada;
+    width:172px ;
+    height:550px;
+
+    float:left;
+
+}
+
+#g{border: 1px solid #dadada;
+    width: 155px;
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+.h{
+    padding:5px 10px;
+    position: absolute;
+    font-family: 微软雅黑;
+    font-weight: bold;
+}
+#i{ border: 1px solid #dadada;
+    width: 130px;
+    height: 40px;
+    padding-top: 17px;
+    padding-left: 40px;
+    font-family: 微软雅黑;
+    font-weight: bold;
+}
+#j{border: 0px solid red;
+    width: 170px;
+    height: 500px;
+
+}
+.lll{
+    list-style-type: none;
+    line-height: 40px;
+    font-family: 微软雅黑;
+    font-weight: bold;
+    padding-left: 30px;
+}
+.llll{
+    background-color: #f9b64c;
+    list-style-type: none;
+    line-height: 40px;
+    font-family: 微软雅黑;
+    font-weight: bold;
+    padding-left: 30px;
+}
+#m{border: 1px solid #dadada;
+    width: 830px;
+    height: 550px;
+
+    float: left;
+    margin: 0 20px;
+}
+#n{border: 0px solid red;
+    width: 85px;
+    height: 42px;
+    margin-left: 20px;
+    font-family: 微软雅黑;
+    font-weight: bold;
+    font-size: 16px;
+    border-bottom: 2px solid #f9b64c;
+    float: left;
+}
+.nn{
+    padding-left: 10px;
+    padding-top: 13px;
+    position: absolute;
+
+}
+#o{border: 0px solid #dadada;
+    width: 700px;
+    height: 42px;
+    float: left;
+    border-bottom: 1px solid #dadada;
+}
+#p{border: 0px solid red;
+    width: 350px;
+    height: 240px;
+    float: left;
+    margin-left: -50px;
+    margin-top: 37px;
+
+}
+#q{border: 0px solid red;
+    width: 348px;
+    height: 35px;
+    float: left;
+    text-align: right;
+    line-height: 35px;
+
+}
+#qq{border: 0px solid red;
+    width: 348px;
+    height: 35px;
+    float: left;
+    text-align: right;
+    line-height: 35px;
+    margin-top: 15px;
+}
+#qqq{border: 0px solid red;
+    width: 348px;
+    height: 35px;
+    float: left;
+    text-align: right;
+    line-height: 35px;
+    margin-top: 15px;
+}
+#qqqq{border: 0px solid red;
+    width: 348px;
+    height: 35px;
+    float: left;
+    text-align: right;
+    line-height: 35px;
+    margin-top: 15px;
+
+}
+#p input{
+    width:250px;
+    height: 30px;
+}
+#qqqqq{border: 0px solid red;
+    width: 348px;
+    height: 35px;
+    float: left;
+    margin-top: 15px;
+    margin-left: 93px;
+}
+#qqqqq button{
+    width:80px;
+    height: 30px;
+    background-color: #4cbdf9;
+
+
+}
+#aaa{
+    border: 0px solid red;
+    width: 1366px;
+    height: 100px;
+    background-color: #313a3f;
+    float: left;
+
+
+}

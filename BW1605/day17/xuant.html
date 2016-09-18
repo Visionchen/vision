@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        * {margin:0; padding: 0}
+        ul,li {
+            list-style-type: none;
+        }
+
+        .cf:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+        .cf {
+            *zoom:1;
+        }
+
+
+        .tab {
+            width:500px;
+            margin:100px auto 0;
+            background: #efefef;
+        }
+        .tab-head {
+
+        }
+        .tab-head li {
+            float:left;
+            border:1px solid #ccc;
+            width:100px;
+            height:30px;
+            text-align: center;
+            line-height: 30px;
+            font-size:12px;
+            cursor: pointer;
+            position: relative;
+            background: #efefef;
+            top:1px;
+        }
+        .tab-head li.focus {
+            border-bottom:1px solid #efefef;
+            color:#f60;
+        }
+        .wrap1, .wrap2  {
+            border:1px solid #ccc;
+            height:300px;
+            text-align: center;
+            line-height: 300px;
+            font-size:12px
+        }
+        .wrap2 {
+            display: none;
+        }
+    </style>
+
+</head>
+<body><div class="tab">
+    <ul class="tab-head cf">
+        <li id="first" class="focus">高信价比</li>
+        <li id="second">口碑推荐</li>
+    </ul>
+    <div class="wrap1" id="firstWrap">第一个选项内容:高信价比</div>
+    <div class="wrap2" id="secondWrap">第二个选项内容:口碑推荐</div>
+
+</div>
+<script>
+    window.onload = function() {
+
+
+        var first = document.getElementById('first');
+        var second = document.querySelector('#second');
+
+        var firstWrap = document.getElementById('firstWrap');
+        var secondWrap = document.getElementById('secondWrap');
+
+
+
+
+        first.onclick = function () {
+            firstWrap.style.display = 'block';
+            secondWrap.style.display = 'none';
+
+             first.style.color = '#f60';
+             second.style.color = '#000';
+
+             first.style.borderBottomColor = '#efefef';
+             second.style.borderBottomColor = '#ccc';
+//            first.className = 'focus';
+//            second.className = '';
+
+        };
+
+        second.onclick = function () {
+            firstWrap.style.display = 'none';
+            secondWrap.style.display = 'block';
+
+//            first.className = '';
+//            second.className = 'focus';
+
+             first.style.color = '#000';
+             second.style.color = '#f60';
+
+             first.style.borderBottomColor = '#ccc';
+             second.style.borderBottomColor = '#efefef';
+        };
+
+
+
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    用户名:<input type="text" id="t">
+    密 码：<input type="password" id="p">
+    <input type="button"  value="点一下" onclick="neWe()">
+    <script>
+        function neWe() {
+            var result =document.getElementById('t').value
+            var reset =document.getElementById('p').value
+            switch (result , reset){
+                case 'admin' ,'password':
+                    confirm('成功');
+                    break;
+                default:
+                    confirm('失败');
+
+            }
+
+        }
+
+
+
+    </script>
+</body>
+</html>

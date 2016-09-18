@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input {width:180px; padding: 5px; border:1px solid gray; border-radius: 4px; outline:none;}
+    </style>
+</head>
+<body>
+<!--
+    得到焦点： 边框：红色  背景：黄色
+    失去焦点： 边框：灰色  背景：白色
+-->
+<input type="text" id="name" onfocus="change1()" onblur="change2()">
+
+<script>
+    function change1() {
+        var name = document.getElementById('name');
+        name.style.border = '1px solid red';   //  加了内联样式
+        name.style.backgroundColor = 'yellow';
+    }
+    function change2() {
+        var name = document.getElementById('name');
+        name.style.borderColor = 'gray';
+        name.style.backgroundColor = 'white';
+    }
+</script>
+
+</body>
+</html>

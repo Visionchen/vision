@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<html>
+<head>
+    <style type="text/css">
+        p{ background-color: #ada; height:40px; width:300px;line-height:40px;border-radius:10px;padding:0 20px;}
+        #myDiv{margin:auto;width:400px;background-color:#fefefe;}
+        body{padding-top:20px;}
+    </style>
+</head>
+<body>
+<div id="myDiv">
+    <p>test_0</p>
+    <p>test_1</p>
+    <p>test_2</p>
+    <p>test_3</p>
+    <p>test_4</p>
+    <p>test_5</p>
+</div>
+
+<script type="text/javascript">
+
+    /********************Method 1********************************/
+
+    //常规的写法（正确的写法）
+    function method_1(){
+        var item=document.getElementsByTagName('p');
+        for(var i=0;i<item.length;i++){
+            item[i].onclick=(function(i){
+                return function(){
+                    alert(i);
+                }
+            })(i);
+        }
+    }
+
+
+
+    /********************Method 2********************************/
+
+    //所有的 p 都 alert() 最后一个 i 的值(错误的写法)
+    function method_2(){
+        var item=document.getElementsByTagName('p');
+        for(var i=0;i<item.length;i++){
+            item[i].onclick=function(){
+                alert(i);
+            };
+        }
+    }
+    /*
+     说明：
+     item[i].onclick=(function(){})(); 匿名函数与立即执行 ，然后把结果给item[i].onclick
+     */
+
+
+    /********************Method 3********************************/
+    //最能表达含义的写法（正确的写法）
+    function method_3(){
+        function createFunction(index){
+            return function(){
+                alert(index);
+            }
+        }
+
+        var elems = document.getElementsByTagName('p');
+        for(var i=0,len=elems.length; i<len; i++){
+            elems[i].onclick = createFunction(i);
+        }
+    }
+
+
+
+    /*说明：
+     *      return function(){ alert(letter); }
+     *      =
+     *      return var fn = new Function(){ alert(letter);}
+     *
+     *      调用 function ，生成（定义）function.
+     *      renturn 的 时候其实是 new 了一个function 出来。
+     */
+
+    //===================================================================================
+    //run function.
+
+    //window.onload = method_3;
+    //or
+    window.onload = function(){
+        method_1();
+    }
+
+</script>
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var ary=[3,6,9,12];
+
+    function reverse(ary) {
+        var ku=new Array(ary.length);
+        for(var i=0;i< ary.length;i++){
+            ku[ary.length-1-i]=ary[i];
+        }
+        for(var i=0;i< ary.length;i++){
+            ary[i]=ku[i];
+        }
+        return ary;
+    }
+    ary=reverse(ary);
+    alert( ary);
+
+
+
+
+
+</script>
+</body>
+</html>

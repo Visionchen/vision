@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select id="select">
+    <option value="0">请选择</option>
+    <option value="1">周一</option>
+    <option value="2">周二</option>
+    <option value="3">周三</option>
+    <option value="4">周四</option>
+    <option value="5">周五</option>
+    <option value="6">周六</option>
+    <option value="7">周日</option>
+</select>
+<input type="button" value="点菜啦！" onclick="ruiName()">
+<div id="div"></div>
+<script>
+    function ruiName() {
+        var no=document.getElementById('select').value;
+        var va;
+        switch (no){
+            case '0':
+                va='喝水吧你';
+                break;
+            case '1':
+                va='吃毛别';
+                break;
+            case '2':
+                va='你个毛憋';
+                break;
+            case '3':
+                va='曹毛别';
+                break;
+            case '4':
+                va='煮毛别';
+                break;
+            case '5':
+                va='打毛憋';
+                break;
+            case '6':
+                va='毛憋';
+                break;
+            case '7':
+                va='马鳖';
+                break;
+
+        }
+        document.getElementById('div').innerHTML=va;
+    }
+
+
+
+
+</script>
+</body>
+</html>

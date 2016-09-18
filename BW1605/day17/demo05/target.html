@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #wrap {height:200px; background: lightblue}
+    </style>
+</head>
+<body>
+
+<div id="wrap"></div>
+
+<script>
+
+
+    window.onload = function () {
+
+
+        var div = document.getElementById('wrap');
+
+        div.onclick = function (event) {
+
+
+            if(event) {
+                alert(event.target);
+            } else {
+                alert(window.event.srcElement);
+            }
+
+
+//            var event = event || window.event;
+//
+//            alert(event.target); // 获取谁触发的本事件
+
+        };
+
+
+    };
+
+
+
+</script>
+
+
+</body>
+</html>

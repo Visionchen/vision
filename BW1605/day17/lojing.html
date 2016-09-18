@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin:0;
+            padding: 0;
+        }
+        body {
+            font-size:12px;
+        }
+
+        .top-bar {
+            height:30px;
+            background: #f1f1f1;
+            border-bottom: 1px solid #ccc;
+        }
+        .top {
+            width:800px;
+            margin:0 auto;
+        }
+        .jd {
+            line-height: 30px;
+            position: relative;
+            border-left:1px solid transparent;
+            border-right:1px solid transparent;
+            width:60px;
+            text-align: center;
+
+        }
+        .info {
+            position: absolute;
+            width:300px;
+            height:200px;background: #fff;
+            border: 1px solid #ccc;
+            border-top:0 none;
+            left:-1px;
+            top:31px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+<div class="top-bar">
+    <div class="top">
+        <div class="jd" id="jd">
+            我的京东
+            <div class="info" id="info">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    window.onload = function() {
+
+        var jd = document.getElementById('jd');
+        var info = document.getElementById('info');
+
+
+        jd.onmouseover = function () {
+            info.style.display = 'block';
+            jd.style.backgroundColor = '#fff';
+            jd.style.borderColor = '#ccc';
+            jd.style.borderBottom = '1px solid #fff';
+        };
+
+        jd.onmouseout = function () {
+            info.style.display = 'none';
+            jd.style.backgroundColor = '#f1f1f1';
+            jd.style.borderColor = 'transparent';
+            jd.style.borderBottom = '0 none';
+        };
+    };
+</script>
+</body>
+</html>

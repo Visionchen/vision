@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div">10</div>
+<input type="button" value="开始" id="start">
+<input type="button" value="暂停" id="stop">
+<script>
+
+    var t;
+    var num=10;
+    var nu = document.getElementById('div') ;
+    var start = document.getElementById('start');
+    start.onclick = function () {
+        clearInterval(t);
+   t = setInterval(function () {
+                num--;
+       console.log(num);
+           if( num>=0){
+              nu.innerHTML=num;
+            }
+            if(num<=0) {
+            clearInterval(t);
+             }
+
+    },1000);
+    };
+    
+    
+    var stop = document.getElementById('stop');
+    stop.onclick =function () {
+
+    }
+
+
+</script>
+</body>
+</html>

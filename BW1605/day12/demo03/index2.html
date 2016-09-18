@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <select id="day">
+        <option value="0">-=请选择=-</option>
+        <option value="1">周一</option>
+        <option value="2">周二</option>
+        <option value="3">周三</option>
+        <option value="4">周四</option>
+        <option value="5">周五</option>
+        <option value="6">周六</option>
+        <option value="7">周日</option>
+    </select>
+    <input type="button" value="吃啥？" onclick="eat()">
+</div>
+
+<div id="info"></div>
+
+
+<script>
+
+    function eat() {
+        // 获取下拉框的值
+        var val = document.getElementById('day').value; // 这里获取的是字符串类型，不是number类型
+
+        var egg;
+
+
+        switch (val) {
+            case '0':   // 这里必须加引号成字符串，因为switch使用的是===判断
+                egg = '请选择';
+                break;
+            case '1':
+                egg = '皮蛋';
+                break;
+            case '2':
+                egg = '蒸蛋';
+                break;
+            case '3':
+                egg = '水蛋';
+                break;
+            case '4':
+                egg = '煮蛋';
+                break;
+            case '5':
+                egg = '卤蛋';
+                break;
+            case '6':
+                egg = '煎蛋';
+                break;
+            case '7':
+                egg = '鸡蛋';
+                break;
+        }
+
+
+        document.getElementById('info').innerHTML = egg;
+    }
+
+</script>
+
+</body>
+</html>

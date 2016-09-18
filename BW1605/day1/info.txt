@@ -1,0 +1,67 @@
+HTML+CSS
+
+
+javaEE
+
+美工
+
+
+网页设计师（psd）
+
+
+web前端（html）
+	页面制作
+	js方向
+
+
+后台服务器（java、php、asp.net）
+
+
+行业歧视
+
+C   java  php  前端   设计
+
+-------------------------------
+网景  molliza
+IE6
+
+五大浏览器：IE、Chrome、Firefox、Safari、Opera
+
+
+
+<!DOCTYPE html>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+HTML:超文本标记（标签）语言
+
+超文本：文字、图片、视频、音频、媒体
+标记：
+语言：
+
+
+
+W3C：万维网联盟
+
+<meta charset="GBK">   告诉浏览器以GBK编码去解析本网页
+	charset：
+		UTF-8
+		GBK
+		GB2312
+
+
+字符实体：以&开头，以;结束
+	空格：&nbsp;
+	<  :   &lt;
+	>  : &gt;
+	版权： &copy;
+
+注释：
+<!--  -->
+
+
+
+
+
+

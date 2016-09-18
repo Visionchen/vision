@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="aa" id="aa">
+    <div class="ba">
+        <div class="ca"></div>
+        <div class="cb"></div>
+    </div>
+    <div class="bb"></div>
+</div>
+<div class="ab"></div>
+
+
+<script>
+
+    var aa = document.getElementById('aa');
+    var first = aa.lastChild;
+   alert(first.nodeName);
+
+    // 删除cb div
+    var cb = document.querySelector('.cb');
+    cb.parentNode.removeChild(cb);
+
+
+
+</script>
+</body>
+</html>

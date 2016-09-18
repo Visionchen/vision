@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="吃啥呢？" onclick="fun()">
+
+<select id="day">
+    <option value="0">请选择</option>
+    <option value="1">周一</option>
+    <option value="2">周二</option>
+    <option value="3">周三</option>
+    <option value="4">周四</option>
+    <option value="5">周五</option>
+    <option value="6">周六</option>
+    <option value="7">周日</option>
+</select>
+
+<div id="eat" ></div>
+<script>
+    function  fun() {
+        var no =document.getElementById('day').value;
+        var gu;
+        switch ( no){
+            case '0':
+            alert('不准吃' );
+                break;
+         case '1':
+           gu='青菜';
+             break;
+         }
+        document.getElementById('eat').innerHTML=gu;
+    }
+</script>
+</body>
+</html>

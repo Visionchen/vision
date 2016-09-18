@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="删除div" class="btn">
+<div style="background: #ccc; width:100px; height:100px"></div>
+
+
+<script>
+    window.onload = function () {
+
+        var btn = document.getElementsByTagName('input')[0];
+        btn.onclick = function () {
+
+
+
+            // 要删除的元素
+            var delDiv = document.getElementsByTagName('div')[0];
+
+            // 删除元素，由父级元素完成删除
+            document.body.removeChild(delDiv);
+
+            // 如何克隆节点？？
+
+
+
+
+//            document.body.innerHTML = '<input type="button" value="删除div" class="btn">';
+
+
+        };
+
+
+
+    };
+</script>
+
+</body>
+</html>

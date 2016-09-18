@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.contain {
+    width: 1002px;
+    margin: 0px auto;
+    border: 1px solid black;
+    background-color: #ccc;
+}
+.cf:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.header {
+    width: 1000px;
+    margin: 0 auto;
+    height: 50px;
+    border: 1px solid red;
+    background-color: #546A2E;
+}
+.contente {
+    width: 1002px;
+
+    margin: 10px auto;
+}
+.contente_1 {
+    width: 390px;
+    border:  1px solid red;
+    margin-right: 8px;
+    float: left;
+    height: 200px;
+    background-color: #006400;
+}
+.contente_2 {
+    width: 600px;
+    border:  1px solid red;
+    float: right;
+    height: 200px;
+    background-color: #F18181;
+}
+.con {
+    width: 1000px;
+    margin: 0 auto;
+    height: 150px;
+    border: 1px solid red;
+    background-color: #008B8B;
+}
+.cy {
+    width: 1002px;
+    margin: 10px auto;
+}
+.cy_1{
+    width: 190px;
+    border:  1px solid red;
+    margin-right: 8px;
+    float: left;
+    height: 200px;
+    background-color: #546A2E;
+}
+.cy_2 {
+    width: 800px;
+
+    float: right;
+    height: 200px;
+
+}
+.cy_2_1 {
+    width: 800px;
+    border:  1px solid red;
+    margin-right: 8px;
+    float: left;
+    height: 95px;
+    margin-bottom: 8px;
+    background-color: #8B2AE3;
+}
+.cy_2_2 {
+    width: 800px;
+    border:  1px solid red;
+    float: right;
+    height: 95px;
+    background-color: #FF8D00;
+}
+
+.ce {
+    width: 1002px;
+    margin: 10px auto;
+
+}
+.ce_1 {
+    width: 371px;
+    border:  1px solid red;
+    margin-right: 8px;
+    float: left;
+    height: 250px;
+    background-color:#8B4412;
+}
+.ce_2 {
+    width: 303px;
+    border:  1px solid red;
+    margin-right: 8px;
+    float: left;
+    height: 250px;
+    background-color: #008100;
+}
+.ce_3 {
+    width: 305px;
+    border:  1px solid red;
+    float: left;
+    height: 250px;
+    background-color: #FF68B5;
+}
+.footer {
+    width: 1000px;
+    margin: 10px auto;
+    height: 80px;
+    border: 1px solid red;
+    background-color: #B32222;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #userName {color:#ccc; outline:none}
+    </style>
+</head>
+<body>
+
+
+用户名：<input type="text" id="userName" value="请输入用户名" onfocus="sa()" onblur="sb()">
+
+<script>
+    
+    function sa() {
+        document.getElementById('userName').style.color = '#333';
+        // 获取文本框内容
+        var userName = document.getElementById('userName').value;
+        if(userName == '请输入用户名') {
+            document.getElementById('userName').value = '';  // 清空文本框内容
+        }
+
+    }
+    
+    
+    function sb() {
+        var userName = document.getElementById('userName').value;
+        if(userName == '') {
+            document.getElementById('userName').value = '请输入用户名';
+            document.getElementById('userName').style.color = '#ccc';
+        }
+    }
+    
+</script>
+
+</body>
+</html>

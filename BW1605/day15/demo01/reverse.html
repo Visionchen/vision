@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" placeholder="请输入一个五位数" id="num">
+<input type="button" value="反转数字" onclick="reverse()">
+
+<div id="info" style="padding: 20px 0"></div>
+
+<script>
+
+    function reverse() {
+        // 获取用户输入的五位数 56789
+        var num = document.getElementById('num').value;
+
+        // 分别获取该数字的个位、十位、百位、千位、万位
+        var g = num % 10; // 个位
+        var s = parseInt(num % 100 / 10); // 十位
+        var b = parseInt(num % 1000 / 100); // 百位
+        var q = parseInt(num % 10000 / 1000); // 千位
+        var w = parseInt(num / 10000); // 万位
+
+        // 方式一
+        var result1 = '' + g + s + b + q + w;  // 获取的是字符串
+
+        // 方式二
+        var result2 = g * 10000 + s * 1000 + b * 100 + q * 10 + w; // 获取的是数字
+
+        document.getElementById('info').innerHTML = '字符串：' + result1 + '<br>数字：' + result2;
+
+    }
+
+</script>
+
+
+
+
+</body>
+</html>

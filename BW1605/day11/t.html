@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="t.css">
+</head>
+<body>
+
+
+用户名：<input type="text" id="ruiName">
+
+<input type="button" value="查看输入框中的内容"   onclick="newFunction()" >
+<div style="border: 1px solid red ;width: 400px ;height: 200px" id="er" >
+
+</div>
+<script>
+
+    function newFunction() {
+        var text = document.getElementById('ruiName').value;
+        var div = document.getElementById('er');
+        div.innerHTML = text;
+    }
+
+</script>
+
+</div>
+</body>
+</html>

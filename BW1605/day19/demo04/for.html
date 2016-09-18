@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var ary = ['aaa', 'bbb', 'ccc'];
+    for(var i = 0; i < ary.length; i++) {
+        console.log(ary[i]);
+    }
+
+    console.log('--------------------------------');
+
+    for(var i in ary) {
+        console.log(ary[i]);
+    }
+
+    console.log('--------------------------------');
+
+    var person = {
+        name: "拉登",
+        age:12,
+        gender: "男",
+        eat: function () {
+            console.log('在吃饭');
+        }
+    };
+
+    for(var p in person) {
+        console.log(p + ' - ' + person[p]);
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+</head>
+<body>
+<input type="text" id="text">
+<button onclick="miUi()">点击一下</button>
+<p id="p"></p>
+<script>
+//    function miUi() {
+//            var m=document.getElementById('text').value;
+//        for ( var n=10000;n<99999;n++){
+//          var  a=parseInt(n/10000);
+//          var  b=parseInt(n/1000%10);
+//           var  c=parseInt(n/100%10);
+//          var  d=parseInt(n%100/10);
+//           var e=n%10;
+//
+//            if(m==n){
+//                        var k=e+''+d+''+c+''+b+''+a;
+////                    var k=e*10000+d*1000+c*100+b*10+a+'';
+//                document.getElementById('p').innerHTML=(k);
+//            }
+//        }
+//
+//    }
+    function miUi() {
+        var n = document.getElementById('text').value;
+        var a = parseInt(n / 10000);
+        var b = parseInt(n / 1000 % 10);
+        var c = parseInt(n / 100 % 10);
+        var d = parseInt(n % 100 / 10);
+        var e = n % 10;
+        var k =  '' +e + d  + c  + b  + a;
+//                    var k=e*10000+d*1000+c*100+b*10+a+'';
+        document.getElementById('p').innerHTML = (k);
+    }
+</script>
+</body>
+</html>

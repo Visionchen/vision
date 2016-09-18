@@ -1,0 +1,54 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    width: 960px;
+
+}
+
+body {
+    background-color: white;
+}
+
+.clear {
+    clear: both;
+}
+
+/*head*/
+#head {
+    background-color: blue;
+    height: 150px;
+}
+
+/*container*/
+#container {
+    background-color: red;
+    width: 960px;
+    height: 800px;
+    margin: 20px auto;
+}
+
+
+
+/*content*/
+#content {
+    background-color: yellow;
+    float: left;
+    width: 685px;
+    height: 100%;
+}
+
+/*side*/
+#side {
+    background-color: green;
+    float: right;
+    width: 255px;
+    height: 100%;
+}
+
+/*foot*/
+#foot {
+    background-color: white;
+    height: 150px;
+    width: 960px;
+    margin: 20px auto;
+}

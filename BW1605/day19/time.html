@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div"></div>
+<script>
+    setInterval(show, 1000);
+    function show() {
+        var time = new Date();
+        var year = time.getFullYear();
+        var month = format(time.getMonth() + 1);
+        var day = format(time.getDate());
+        var hour = format(time.getHours());
+        var min = format(time.getMinutes());
+        var seconds = format(time.getSeconds());
+        var info = '&nbsp;' + year + '-' + month + '-' + day + '&nbsp;' +
+                hour + ':' + min + ':' + seconds + '&nbsp;';
+        document.getElementById('div').innerHTML = info;
+    }
+    var date = ['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+    var time = new Date();
+    for (var i = 0; i < date.length; i++) {
+        if (time.getDay() == i) {
+            document.write(date[i]);
+        }
+    }
+    show();
+    function format(number) {
+        if (number < 10) {
+            return '0' + number;
+        } else {
+            return '' + number;
+        }
+    }
+</script>
+</body>
+</html>

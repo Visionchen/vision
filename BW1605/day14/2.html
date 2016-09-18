@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="text">
+<button onclick="miUi()">点击一下</button>
+<p id="p"></p>
+
+<script>
+    function miUi() {
+            var m =1;
+        var l= document.getElementById('text').value;
+        for (var a=1;a<=l;a++){
+                 m=m*a;
+            document.getElementById('text').value=(a+'!='+m);
+        }
+    }
+</script>
+</body>
+</html>

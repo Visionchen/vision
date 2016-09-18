@@ -1,0 +1,31 @@
+HTML在线考试试题
+
+HTML中，换行使用的标签是（）。
+<br />
+<p>
+<hr />
+<img />
+
+<img />标签的（）属性用于指定图像的地址。
+alt
+href
+src
+addr
+
+创建一个超级链接使用的是（）标签。
+<a>
+<ol>
+<img />
+<hr />
+
+<img />标签的（）属性用来设置图片与旁边内容的水平距离。
+hspace
+vspace
+border
+alt
+
+下面HTML结构中，不属于列表结构的是（）。
+ul-li
+ol-li
+dl-dt-dd
+p-br

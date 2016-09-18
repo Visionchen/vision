@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul {list-style-type: none}
+        li {width:300px; height:25px; background: #ccc; margin: 4px 5px}
+
+    </style>
+</head>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<script>
+
+    window.onload = function () {
+
+
+        // 获取的li元素
+        var allLi = document.getElementsByTagName('li');
+        // 遍历allLi集合，给每一个li标签赋予mouseover事件
+        for(var i = 0; i < allLi.length; i++) {
+            allLi[i].onmouseover = function () {
+
+                this.style.backgroundColor = '#f00';
+
+            };
+        }
+
+
+
+    };
+
+</script>
+</body>
+</html>

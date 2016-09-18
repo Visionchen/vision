@@ -1,0 +1,33 @@
+h3 {
+    font-size: 16px;
+    text-indent: 1em;
+    line-height: 30px;
+    background-color: #518700;
+    color: #ffffff;
+}
+li {
+    font-size: 12px;
+    line-height: 28px;
+
+    color: #1a66b3;
+}
+img {
+    vertical-align: middle;
+
+}
+div{
+    background-color: #f3f4df;
+}
+.q{
+    list-style-type: none;
+}
+.w {
+    text-indent: 4em;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline; color:#F60;
+}
+
