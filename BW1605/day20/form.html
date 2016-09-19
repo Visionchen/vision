@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin: 0;padding: 0;font-family: "Microsoft YaHei";font-size: 14px;}
+        .contain{width: 800px; height: 400px;margin: 40px auto;}
+        li{list-style-type: none;margin-top:20px;}
+        .login{margin-left: 70px;}
+        input{width: 300px;height: 20px;}
+        .login input{width: 40px; height: 25px;}
+        .i,.o{display: none;color: red;}
+
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <form action="#" method="post" onsubmit="">
+            <ul class="ul" >
+                <li>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：
+                    <input type="text" placeholder="名字长度不低于6，不高于20" id="one">
+                    <span class="i" id="i">名字长度必须不低于6，不高于20</span></li>
+                <li >密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：
+                    <input type="password" placeholder="请输入密码" id="two">
+                    <span class="o" id="o">密码不能为空</span></li>
+                <li >确认密码：
+                    <input type="password" placeholder="密码必须一致" id="three">
+                    <span class="l" id="l">密码必须一致</span></li>
+                <li class="login" ><input type="submit" id="login"></li>
+            </ul>
+        </form>
+    </div>
+    <script>
+        window.onload=function () {
+            var name=document.getElementById('one');
+            var i=document.getElementById('i');
+            var o=document.getElementById('o');
+            var pas=document.getElementById('two');
+            var pass=document.getElementById('three');
+            var login=document.getElementById('login');
+            login.onclick=function yu() {
+                name.onblur=function () {
+                    var n=name.value;
+                    if (n.length < 6 || n.length > 20 ) {
+                        i.style.display='inline-block';
+                        alert('错误');
+                        return false;
+                    }
+                };
+                pas.onfocus = function () {
+                    var p = pas.value;
+                    if (p == '') {
+                        o.style.display = 'inline-block';
+                        alert('错误');
+                        return false;
+                    }
+                };
+                pass.onfocus = function () {
+                    var pa = pass.value;
+                    if (p != pa) {
+                        pas.style.display = 'inline-block';
+                        alert('错误');
+                        return false;
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+</html>
