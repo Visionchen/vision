@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    /**
+     *
+     * URL：统一资源定位符
+     *
+     *
+     * http://www.host.com:80/file-path/file?name=tom&pwd=1234#home
+     *
+     * 协议://主机地址:端口/文件?参数名=参数值#引用
+     *
+     *
+     *  http  协议
+     *  www.host.com  主机地址、域名
+     *  80  端口号
+     *  file-path  文件的路径
+     *  file  文件
+     *  ?key=val&k=v  参数（键值对，多个参数以&分割）
+     *  #home  引用、锚
+     *
+     *
+     */
+
+
+    console.log('引用：' + location.hash);
+
+
+    /**
+     * 获取URL中参数值
+     * @param key
+     */
+    function getValue(key) {
+        var params = location.search;
+    }
+
+
+    console.log(getValue('name')); // tom
+    console.log(getValue('pwd')); // 123
+
+</script>
+
+
+</body>
+</html>

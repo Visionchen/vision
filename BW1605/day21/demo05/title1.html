@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //alert(document.title)
+    var flag = true;
+    setInterval(function () {
+        // 三元运算符  条件运算符   三目运算符
+        document.title = flag ? '我是一个好人' : ".";
+
+        flag = !flag;
+    },500);
+
+</script>
+</body>
+</html>

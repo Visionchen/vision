@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    // 保存红球
+    var red = new Array();
+
+
+    while(true) {
+        // 产生一个1~33的随机数
+        var num = Math.floor(Math.random() * 33 + 1);
+        // 判断是否存在该红球
+        if(red.indexOf(num) == -1) {
+            red.push(num);
+        }
+        // 档red的球够6个的时候 结束产生随机数
+        if(red.length == 6) {
+            break;
+        }
+    }
+
+    // 对红球进行排序
+    red.sort(function(a, b) {
+        return a - b;
+    });
+
+    console.log(red);
+
+</script>
+</body>
+</html>

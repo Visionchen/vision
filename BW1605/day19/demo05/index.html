@@ -9,7 +9,7 @@
 <div id="info">10</div>
 
 <input type="button" value="开始" id="start">
-<input type="button" value="暂停">
+<input type="button" value="暂停" id="stop">
 
 
 <script>
@@ -17,11 +17,10 @@
     var id;
     var start = document.getElementById('start');
     var info = document.getElementById('info');
+    var stop = document.getElementById('stop');
 
     start.onclick = function () {
-
         clearInterval(id);
-
         // 创建定时器
         id = setInterval(function () {
             s--;
@@ -29,11 +28,15 @@
             if(s >= 0) {
                 info.innerHTML = s;
             }
-            if(s <= 0) {
-                // 清除定时器
-                clearInterval(id);
+            if(s < 0) {
+                // 循环定时器
+                info.innerHTML = 10;
+                s=info.innerHTML;
             }
         }, 1000);
+        stop.onclick=function () {
+                clearInterval(id);
+            }
 
     };
 

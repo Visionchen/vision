@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+
+    var sb = 34;
+
+//    alert(sb);
+
+   // alert(window.sb);
+
+
+    function show() {
+        sa = 23;  // 是全局变量
+        var sc = 34;
+    }
+
+    show();
+
+    alert(window.sa);  // 23
+    alert(window.sc);  // undefined
+
+
+</script>
+
+
+</body>
+</html>

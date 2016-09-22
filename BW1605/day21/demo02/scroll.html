@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #returnTop {
+            background: #ccc;
+            width:50px; height:50px; line-height: 50px; text-align: center; font-family: Arial;
+            cursor: pointer;
+            position: fixed; right:20px; bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div style="height:1000px; background: lightblue"></div>
+<div style="height:1000px; background: #f60"></div>
+<div style="height:1000px; background: lightgreen"></div>
+
+<div id="returnTop">Top</div>
+
+
+<script>
+
+    document.getElementById('returnTop').onclick = function () {
+
+        // 调到页面最顶端
+//        window.scrollBy(0, -100);
+        window.scrollTo(0, 0);
+    };
+
+</script>
+
+</body>
+</html>

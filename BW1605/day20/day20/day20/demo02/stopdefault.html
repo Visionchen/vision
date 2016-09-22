@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<a href="http://www.baidu.com" id="myLink">百度</a>
+
+
+<script>
+
+    document.getElementById('myLink').onclick = function () {
+
+        alert('123');
+        // 不让跳转（默认行为）
+        return false;
+
+    };
+
+
+</script>
+
+
+</body>
+</html>

@@ -39,7 +39,7 @@ img {
 .su {
     position: absolute;
     bottom: 20px;
-    left: 50%;
+    left: 42%;
     margin-left: -70px;
     line-height: 20px;
     text-align: center;
@@ -53,7 +53,6 @@ img {
     margin: 0px 8px;
     cursor: pointer;
 }
-
 .su li:hover {
     background-color:#f60;color: #fff;
 }
@@ -64,6 +63,6 @@ li.lo {
 .zy {
     font-size: 20px;position: absolute;left: 10px;top:43%;
 }
-.zy li{padding: 15px 15px;background: rgba(255,255,255,.25);cursor: pointer;}
-.left{margin-left: 0px;margin-right: 620px}
+.zy li{padding: 18px 10px;background: rgba(255,255,255,.25);cursor: pointer;}
+.left{margin-left: 0;margin-right: 640px}
 .zy li:hover{background-color:#f60;color: #fff;}

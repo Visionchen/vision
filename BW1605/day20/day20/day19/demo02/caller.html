@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function a() {
+        alert(a.caller);  // b()
+        alert(arguments.callee); // a()
+    }
+
+    function b() {
+        a();
+    }
+
+    b();
+
+</script>
+</body>
+</html>

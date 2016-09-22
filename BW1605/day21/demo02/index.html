@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="button" value="moveBy(100,100)" id="move1">
+<input type="button" value="moveTo(100,100)" id="move2">
+<input type="button" value="resizeBy(100,100)" id="resize1">
+<input type="button" value="resizeTo(100,100)" id="resize2">
+
+
+<script>
+
+    document.getElementById('move1').onclick = function () {
+
+        window.moveBy(100, 100);  // 相当于当前的位置去移动
+
+    };
+
+    document.getElementById('move2').onclick = function () {
+
+        window.moveTo(100, 100);  // 直接移动到（100,100）位置
+
+    };
+    document.getElementById('resize1').onclick = function () {
+
+        window.resizeBy(50, 50);  // 相对
+
+    };
+
+    document.getElementById('resize2').onclick = function () {
+
+        window.resizeTo(450, 450); // 绝对
+
+    };
+
+
+
+
+
+</script>
+
+</body>
+</html>

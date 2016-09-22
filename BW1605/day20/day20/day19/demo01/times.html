@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    var str = 'a,a,b,c,c,d';
+
+    var a =0, b = 0, c = 0, d= 0;
+
+    var ary = str.split(',');
+
+    for(var i in ary) {
+        if(ary[i] == 'a') {
+            a++;
+        } else if(ary[i] == 'b') {
+            b++;
+        } else if(ary[i] == 'c') {
+            c++;
+        } else if(ary[i] == 'd') {
+            d++;
+        }
+    }
+
+    console.log('a-' + a +' b-'+b + ' c-' + c + ' d-'+d);
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="referrer.html">hehe</a>
+
+<script>
+
+    //alert(document.title)
+    var flag = true;
+    setInterval(function () {
+        if(flag == true) {
+            document.title = '我是一个好人';
+            flag = false;
+        } else {
+            document.title = '.';
+            flag = true;
+        }
+
+    },500);
+
+</script>
+</body>
+</html>

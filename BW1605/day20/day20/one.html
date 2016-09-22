@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--//    function sum(num) {-->
+<!--//        if(num==1){-->
+<!--//            return 1;-->
+<!--//        }-->
+<!--//        return num+sum(num-1);-->
+<!--//    }-->
+<!--//    alert(sum(100));-->
+<script language="javascript">
+var han=function (disc,src,aux,dst){
+    if(disc>0){
+        han(disc-1,src,dst,aux);
+        document.writeln("move disc "+disc+" from "+src+" to "+dst+"<br/>");
+        han(disc-1,aux,src,dst);
+    }
+};
+han(10,"src","aux","dst");
+</script>
+</body>
+</html>

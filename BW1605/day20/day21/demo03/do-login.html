@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+用户名： <span id="user"></span>
+密码： <span id="pwd"></span>
+
+<script>
+
+    var userName = getValue('userName');
+    var userPwd = getValue('userPwd');
+
+    document.getElementById('user').innerHTML = userName;
+    document.getElementById('pwd').innerHTML = userPwd;
+
+    // http://localhost:8899/day21/demo03/do-login.html?userName=admin&userPwd=xxx
+
+    /**
+     * 根据参数键获取参数值
+     * @param key 参数键
+     * @returns {*} 参数值
+     */
+    function getValue(key) {
+        // 获取参数字符串
+        var search = location.search;  // ?userName=admin&userPwd=xxx
+        // 去除参数字符串前面的?
+        search = search.substring(1);  // userName=admin&userPwd=xxx
+        // 得到所有的参数键值对
+        var params = search.split('&');  //  userName=admin   userPwd=xxx
+        // 遍历参数键值对数组
+        for(var i in params) {
+            // 获取每一个参数键值对
+            var kv = params[i];
+            // 得到参数键和参数值
+            var p = kv.split('=');  //   userName  admin   /   userPwd  xxx
+            // 判断参数键是不是用户要获取的参数键，如果是的话就返回和该参数键相对应的参数值
+            if(p[0] === key) {
+                return p[1];
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

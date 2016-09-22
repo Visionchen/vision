@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<a href="https://www.baidu.com">超链接</a>
+<input type="button" value="按钮跳转1" id="btn1">
+<input type="button" value="按钮跳转2" id="btn2">
+<input type="button" value="按钮跳转3" id="btn3">
+<input type="button" value="刷新" id="btn4">
+
+<script>
+
+    document.getElementById('btn1').onclick = function () {
+        location.href = 'https://www.baidu.com';
+    };
+    document.getElementById('btn2').onclick = function () {
+        location.assign('https://www.baidu.com');
+    };
+    document.getElementById('btn3').onclick = function () {
+        location.replace('https://www.baidu.com');
+    };
+    document.getElementById('btn4').onclick = function () {
+        location.reload();
+    };
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" id="qq">
+<input type="button" id="btn" value="验证是否是QQ">
+
+
+<script>
+
+    var btn = document.getElementById('btn');
+    var qq = document.getElementById('qq');
+
+    btn.onclick = function () {
+
+        var q = qq.value;
+
+        // 写一个验证QQ的正则
+        var reg = /^[1-9]\d{4,10}$/;
+        if(reg.test(q)) {
+            alert('是一个QQ');
+        } else {
+            alert('不是一个QQ');
+        }
+
+
+
+    };
+
+
+</script>
+
+</body>
+</html>

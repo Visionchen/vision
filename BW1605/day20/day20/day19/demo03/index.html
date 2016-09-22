@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+
+    function fun(num) {
+        if(num == 1) {
+            return 1;
+        } else {
+            return num * fun(num -1);
+        }
+    }
+
+    // 求3的阶乘
+    var result = fun(3);
+
+    alert(result);
+
+</script>
+</body>
+</html>
