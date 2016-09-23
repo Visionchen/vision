@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p>输入5到10的数字</p>
+<input type="text" id="demo">
+<input type="button" value="测试输入的值" id="bex">
+<div id="mess"></div>
+
+<script>
+
+    //try//测试
+    window.onload=function () {
+        bex.onclick=function () {
+            try {
+                var demo = document.getElementById('demo').value;
+                if (demo == "") throw '为空值';
+                if (isNaN(demo)) throw  '不是数字';
+                if (demo > 10) throw '数字太大';
+                if (demo < 5) throw '数字太小';
+            }
+
+            catch(err){
+                    var mess=document.getElementById('mess');
+                        mess.innerHTML="错误"+err+'。';
+
+            }
+
+
+
+        }
+    }
+
+
+</script>
+
+</body>
+</html>

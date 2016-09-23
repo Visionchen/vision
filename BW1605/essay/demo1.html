@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<div id='container'>10</div>
+    <button id='start'>开始</button>
+
+    <script>
+		var tim=document.getElementById('container');
+		var time=tim.innerHTML;
+		var start = document.getElementById('start');
+		var speed = 1000;
+		var id;
+
+		//给按钮添加点击事件
+		start.onclick=function (){
+
+			//用setTimeout函数来实现计时器倒计时
+
+			id=setTimeout("count()",speed);
+		}
+		function count() {
+
+			if(time>0){
+				time--;
+				tim.innerHTML = time;      //改变数字
+		//在函数的方法里面调用函数自身，实现每隔speed毫秒就改变数字一次，
+				// 直到不符合条件计时器被清除停止
+
+				setTimeout("count()",speed);
+
+			}
+			if(time<0){
+				clearTimeout(id);     //清除计数器
+
+			}
+
+		}
+    </script>
+</body>
+</html>

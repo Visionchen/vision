@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    var name = 'li lei';
+
+    var person = {
+        name: 'tom',
+        eat: fun
+    }
+
+    function fun() {
+        alert(this.name);
+    }
+
+
+
+
+
+    fun(); // li lei
+
+
+    person.eat();  // tom
+
+
+    fun.apply(person);  // tom
+
+
+
+
+
+    
+
+
+
+</script>
+</body>
+</html>

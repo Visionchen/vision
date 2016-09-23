@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Uchiha (){
+        this.name = "佐助";
+        this.skill = "火遁";
+        this.showSkill = function () {
+            alert(this.name+"的技能是："+this.skill);
+        }
+    }
+    function Hatake (){
+        this.name = "卡卡西";
+        this.skill = "奥义·千年杀";
+    }
+
+    var Sasuke = new Uchiha();
+    var Kakashi = new Hatake();
+
+//    Kakashi.showSkill();
+    Sasuke.showSkill.call(Kakashi);
+
+</script>
+</body>
+</html>

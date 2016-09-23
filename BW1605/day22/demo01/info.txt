@@ -1,0 +1,25 @@
+进制：
+    二进制：以0b开头  比如  0b10 => 2
+    八进制：以0开头   比如  010  => 8
+    十进制：正常数字
+    十六进制：以0x开头  比如 0x10 => 16
+
+
+document.documentElement  获取根节点（html）
+document.body
+document.images   [节点集合]
+document.title
+document.anchors  获取所有的超链接  =>   document.getElementsByTagName('a')
+
+
+
+.innerHTML
+.innerText
+
+
+
+arguments.callee    获取函数自身的引用
+funName.caller     获取调用此函数的函数的引用
+
+
+

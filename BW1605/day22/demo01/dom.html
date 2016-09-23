@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="add a li" id="btn" >
+
+<ul id="ul">
+
+</ul>
+
+<script>
+
+    document.getElementById('btn').onclick = function () {
+
+        var newLi = document.createElement('li');
+
+        var txt = document.createTextNode('duang');
+
+
+        newLi.appendChild(txt);
+
+        document.getElementById('ul').appendChild(newLi);
+
+    };
+
+</script>
+
+
+</body>
+</html>

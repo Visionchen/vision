@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        #outSide{
+            width: 100px;
+            height: 100px;
+            padding: 50px;
+            background: red;
+        }
+        #inSide{
+            width: 100px;
+            height: 100px;
+            background: black;
+        }
+    </style>
+</head>
+<body>
+<p>红盒打开百度</p>
+<p>黑盒打开京东</p>
+<div id="outSide" onclick="openWin('http://www.baidu.com')">
+    <div id="inSide" onclick="openWin('http://www.JD.com')"></div>
+</div>
+
+<script>
+
+    function openWin(url) {
+        window.open(url);
+    }
+    //阻止事件冒泡。先获取事件源元素，添加侦听事件，侦听事件的三个参数：第一个是引起冒泡事件的事件源
+    //第二个函数代表的是当事件发生的时候要执行的事情（阻止冒泡），最后一个布尔值，可选填，默认值是false
+    document.getElementById('inSide').addEventListener('click',function (e) {
+        e.stopPropagation()
+    },false);
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Uchiha (){
+        this.name = "佐助";
+        this.skill = "火遁";
+        this.showSkill = function () {
+            alert(this.name+"的技能是："+this.skill);
+        };
+        this.showSkills = function (ski1,ski2,ski3,ski4) {
+            alert(this.name+"的技能是："+ski1+ski2+ski3+ski4);
+        }
+    }
+    function Hatake (){
+        this.name = "卡卡西";
+        this.skill = "奥义·千年杀";
+//        Sasuke.showSkills.call(this," 凤仙火之术 "," 大瀑布之术 "," 雷切 "," 千鸟 "," 龟波气功 ");
+    }
+
+    var Sasuke = new Uchiha();
+    var Kakashi = new Hatake();
+
+//    Kakashi.showSkill();
+    Sasuke.showSkills.call(Kakashi," 凤仙火之术 "," 大瀑布之术 "," 雷切 "," 千鸟 "," 龟波气功 ");
+//    Kakashi.showSkills(" 凤仙火之术 "," 大瀑布之术 "," 雷切 "," 千鸟 "," 龟波气功 ");
+
+</script>
+</body>
+</html>
