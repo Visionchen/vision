@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .contain {
+            width: 900px;
+            height: 350px;
+            margin: 100px auto;
+        }
+
+        .one {
+            width: 200px;
+            height: 300px;
+            background-color: #efefef;
+            float: left;
+            margin: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tip {
+            width: 200px;
+            height: 100px;
+            background-color: lightgreen;
+            position: absolute;
+            left: 0;
+            bottom: -100px;
+        }
+        .cf:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+<div class="contain cf">
+    <div class="one">
+        <div class="tip"></div></div>
+    <div class="one">
+        <div class="tip"></div></div>
+    <div class="one">
+        <div class="tip"></div></div>
+    <div class="one">
+        <div class="tip"></div></div>
+</div>
+<script src="../js/common.js"></script>
+<script>
+    var allDiv = document.querySelectorAll('.one');
+    for (var i = 0; i < allDiv.length; i++) {
+        allDiv[i].onmouseover = function () {
+            animate(this.Child[1], {bottom: 0})
+        };
+        allDiv[i].onmouseout = function () {
+            animate(this.firstChild, {bottom: -100})
+        };
+    }
+</script>
+</body>
+</html>

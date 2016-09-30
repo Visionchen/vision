@@ -1,0 +1,12 @@
+* {margin:0; padding:0}
+ul {list-style-type: none}
+img {border: 0 none; vertical-align: top}
+
+/* clearfix */
+.cf:after {content: ''; display: table; clear: both;}
+.cf {*zoom:1}
+
+
+.banner {width:730px; height: 454px; margin: 100px auto 0; overflow: hidden; position: relative}
+.img-container {width: 8000px; position: absolute; left: 0; top:0;}
+.img-container li {float: left;}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    \<style>
+    *{margin:0;padding: 0;}
+    .cf:after{content: '';display: table;clear: both;}
+    .contain{ width: 730px;height: 465px;margin: 100px auto;
+        position: relative;overflow: hidden}
+    .ul { list-style-type: none;width: 5300px;
+        position: absolute;left: 0;  top:0;}
+    .ul li{float: left;width: 730px;height: 465px;}
+    .one {background-color: lightpink}
+    .two {background-color: lightgreen}
+    .three {background-color: lightblue}
+    .ull {position: absolute;left: 40%;bottom: 20px;list-style-type: none}
+    .ull li{width: 25px;height: 25px;float: left;border-radius: 50%;
+        margin: 5px;line-height: 25px;text-align: center;background-color: #CCCCCC;
+    }
+    .li {background-color: #f60;color: white;}
+    .ull li:hover{background-color: #f60;color: white;cursor: pointer}
+
+    .ol {
+        position: absolute;
+        left: 0;
+        top: 43%;
+    }
+
+    .ol li {
+        padding: 12px 8px;
+        background-color: #CCCCCC;
+        color: #000;
+        text-align: center;
+        list-style-type: none;
+    }
+
+    .ol li:hover {
+        background-color: #f60;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    #left {
+        float: left;
+        margin-right: 681px;
+    }
+
+    #right {
+        float: right;
+    }
+
+</style>
+</head>
+<body>
+<div class="contain">
+    <ul class="ul cf" id="ul">
+        <li class="one"></li>
+        <li class="two"></li>
+        <li class="three"></li>
+        <li class="one"></li>
+    </ul>
+    <ul class="ull cf" id="ull">
+        <li class="li">1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <ul class="ol">
+        <li id="left"><strong><</strong></li>
+        <li id="right"><strong>></strong></li>
+    </ul>
+</div>
+<script src="../js/js.js"></script>
+<script>
+    window.onload = function () {
+        var timer;
+        var ul = $('ul');
+        var index =0;
+        var ull =$('ull');
+        var left = document.getElementById('left');
+        var right = document.getElementById('right');
+        var len = ul.getElementsByTagName('li').length;
+        var lenli = ull.getElementsByTagName('li');
+        timer = setInterval(jump,2000);
+        function jump() {
+                index++;
+                animate(ul,{left:-730*index},function () {
+                    if (index == len - 1) {
+                        ul.style.left = 0;
+                        index = 0;
+                    }
+                })
+            }
+//        left.onclick = function () {
+//            index--;
+//            if (index = 0) {
+//                index = len - 1;
+//            }
+//            animate(ul,{left:-730*index},function () {
+//                if (index == len - 1) {
+//                    ul.style.left = 0;
+//                    index = 0;
+//                }
+//            })
+//
+//        };
+//        right.onclick = function () {
+//            index++;
+//            if (index == len) {
+//                index = 0;
+//            }
+//            animate(ul,{left:-730*index},function () {
+//                if (index == len - 1) {
+//                    ul.style.left = 0;
+//                    index = 0;
+//                }
+//            })
+//
+//        };
+
+//            for (var i = 0; i < len; i++) {
+//                lenli[i].index = i;
+//                lenli[i].onmouseover = function () {
+//                    animate(ul,{left:-730*index}
+//                    index = this.index;
+//                    int();
+//                };
+//            }
+//                function int() {
+//                    for (var j = 0; j < len; j++) {
+//                        if (j == index) {
+//                            animate(ul,{left:-730*index}
+//                            lenli[j].className = 'li';
+//                        }
+//                    }
+//        };
+
+    }
+</script>
+</body>
+</html>
