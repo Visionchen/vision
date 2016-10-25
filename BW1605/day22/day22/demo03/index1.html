@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1,width=device-width,user-scalable=no,maximum-scale=1.0">
+    <style>
+        #box {
+            width:100px; height:100px; background: #f60;
+        }
+    </style>
+</head>
+<body>
+
+<div id="box"></div>
+
+<script>
+
+    var box = document.getElementById('box');
+
+
+    box.onmouseover = function () {
+
+        // 获取IE的样式
+        var w = box.currentStyle.width;
+        alert(w);
+        // 获取样式值（标准浏览器）
+//        var w = getComputedStyle(box, null).width;
+//        alert(w);
+
+    };
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原生js百分比进度条效果</title>
+    <style>
+        *{margin:0;padding:0;list-style:none;}
+        body{background-color: #9f9f9f;}
+        .box{
+            width: 450px;
+            border: 1px solid #2BB7E4;
+            height: 25px;
+            margin:100px auto;
+        }
+        #bar{
+            display: block;
+            background: #2BB7E4;
+            /*background: -webkit-linear-gradient(left, #2BB7E4 , rgba(0, 255, 140, 0.83)); !* Safari 5.1 - 6.0 *!*/
+            /*background: -o-linear-gradient(right, #2BB7E4, #00ff8d); !* Opera 11.1 - 12.0 *!*/
+            /*background: -moz-linear-gradient(right, #2BB7E4, #00ff8d); !* Firefox 3.6 - 15 *!*/
+            /*background: linear-gradient(to right, #2BB7E4 , #00ff8d); !* 标准的语法 *!*/
+            float: left;
+            height: 100%;
+            text-align:center;
+            line-height: 25px;
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div id="bar" style="width:1%;"></div>
+</div>
+<script>
+    var timer = null;
+    window.onload = function(){
+        timer = setInterval(function(){
+            progress();
+        },500)
+    };
+    function progress(){
+        var oDiv = document.getElementById("bar");
+        oDiv.style.width =parseInt(oDiv.style.width) + 1 + "%";//parseInt将百分比转为整数，每隔50毫秒加1%
+        oDiv.innerHTML = oDiv.style.width;
+        console.log(parseInt(oDiv.style.width))
+        if(oDiv.style.width == "100%"){
+            clearInterval(timer);
+        }
+    }
+
+</script>
+</body>
+</html>

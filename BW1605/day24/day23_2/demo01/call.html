@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>call()函数</title>
+    <meta name="viewport" content="initial-scale=1,width=device-width,user-scalable=no,maximum-scale=1.0">
+</head>
+<body>
+<script>
+    function add(a,b) {
+        alert(a+b);
+    }
+    function sub(a,b) {
+        alert(a-b)
+    }
+    //sub(3,1)
+    add.call(sub,3,1)
+    //add.call(sub,3,1) == add(3,1)
+    //call 调用一个对象的方法，以另一个对象来代替当前对象
+</script>
+</body>
+</html>

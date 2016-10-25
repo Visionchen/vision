@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1,width=device-width,user-scalable=no,maximum-scale=1.0">
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+
+<div class="wrap">
+    <div class="choose">
+        <dl class="cf" id="size">
+            <dt>型号</dt>
+            <dd class="cur">4.7英寸</dd>
+            <dd>5.5英寸</dd>
+        </dl>
+        <dl  class="cf">
+            <dt>颜色</dt>
+            <dd class="cur">银色</dd>
+            <dd>金色</dd>
+            <dd>深空灰色</dd>
+        </dl>
+        <dl  class="cf" id="memory">
+            <dt>内存</dt>
+            <dd class="cur">16GB</dd>
+            <dd>64GB</dd>
+            <dd>128GB</dd>
+        </dl>
+        <dl  class="cf">
+            <dt>版本</dt>
+            <dd class="cur">公开版</dd>
+            <dd>移动赠费版</dd>
+            <dd>联通合约版</dd>
+        </dl>
+    </div>
+    <div class="price-wrap">
+        <p class="info">价格 <span class="price">￥5288.00</span></p>
+        <p><input type="button" value="立即购买" class="btn-buy"></p>
+    </div>
+</div>
+
+
+<script src="../lib/jquery.min.js"></script>
+<script>
+
+    $('dd').click(function () {
+        $(this).addClass('cur').siblings('dd').removeClass('cur');
+    });
+
+    var v1 = 5288;
+    var v2 = 0;
+
+    $('#size dd').click(function () {
+        if($(this).index('dd') == 0) {
+            v1 = 5288;
+        } else if($(this).index('dd') == 1) {
+            v1 = 6088;
+        }
+        $('.price').html('￥' + (v1 + v2) + '.00');
+    });
+    $('#memory dd').click(function () {
+        if($(this).index('#memory dd') == 0) {
+            v2 = 0;
+        } else if($(this).index('#memory dd') == 1) {
+            v2 = 800;
+        } else if($(this).index('#memory dd') == 2) {
+            v2 = 1600;
+        }
+        $('.price').html('￥' + (v1 + v2) + '.00');
+    });
+
+</script>
+</body>
+</html>

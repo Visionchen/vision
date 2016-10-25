@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        * {margin:0; padding: 0}
+        ul,li {
+            list-style-type: none;
+        }
+        .cf:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+        .cf {
+
+        }
+        .tab {
+            width:500px;
+            margin:100px auto 0;
+
+        }
+        .tab-head {
+
+        }
+        .tab-head li {
+            float:left;
+            background-color: lightcyan;
+            width:100px;
+            height:30px;
+            margin-right: 1px;
+            text-align: center;
+            line-height: 30px;
+            font-size:12px;
+            cursor: pointer;
+            position: relative;
+
+        }
+        .tab-head li.focus {
+            background-color: lightblue;
+            color:#f60;
+        }
+        .cd  {
+            background-color: lightblue;
+            height:300px;
+            text-align: center;
+            line-height: 300px;
+            font-size:12px
+        }
+        .cd li{display: none;background-color: lightblue; }
+        .w {
+            display: block;color: black;
+        }
+    </style>
+</head>
+<body><div class="tab">
+    <ul class="tab-head cf" id="t">
+        <li id="first" class="focus">信价比袁松骚猪</li>
+        <li >口碑袁松骚猪</li>
+        <li >最佳袁松骚猪</li>
+    </ul>
+    <ul class="cf cd" id="ni">
+        <li class="w">怎么了</li>
+        <li >你累了</li>
+        <li >说好的</li>
+    </ul>
+</div>
+<script src="../js/jquery.js"></script>
+<script>
+        $(function () {
+            $('.cd li:first').css({display:'block'});
+
+            $('#t li').hover(function(i) {
+
+                $(this).css({color:'#f60',backgroundColor: 'lightblue'})
+                        .siblings().css({color:'#000', backgroundColor: 'lightcyan'});
+                 i = $("#t li").index(this);
+
+                $(".cd li").eq(i).addClass("w").siblings().removeClass("w");
+
+                $(".cd li").hide().eq(i).show();
+
+                })
+        })
+</script>
+</body>
+</html>

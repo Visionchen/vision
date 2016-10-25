@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1,width=device-width,user-scalable=no,maximum-scale=1.0">
+    <style>
+        .box {
+            width:200px;
+            height:200px;
+            background: #f00;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box" id="box"></div>
+
+
+<script>
+    var box = document.getElementById('box');
+    box.onmouseover = function () {
+
+        //this  == box
+        this.style.width = '500px';
+    };
+    box.onmouseout = function () {
+
+        //this  == box
+        this.style.width = '200px';
+    };
+</script>
+
+</body>
+</html>

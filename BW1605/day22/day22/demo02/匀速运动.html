@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1,width=device-width,user-scalable=no,maximum-scale=1.0">
+    <style>
+        * {margin:0; padding: 0}
+        .box {
+            width: 200px;
+            height: 200px;
+            background: #f00;
+        }
+        .line {width:1px; height: 300px; position: absolute; left:500px; top:0; background: black}
+    </style>
+</head>
+<body>
+
+<div class="box" id="box" style="width:200px"></div>
+<div class="line"></div>
+
+
+<script>
+    var box = document.getElementById('box');
+    var timer;
+    var s = 200;
+    box.onmouseover = function () {
+//        alert(this.style.width); // 只能获取内联样式
+
+        clearInterval(timer);
+        // 每30ms增加10px
+        timer = setInterval(function () {
+            if(s >= 500) {
+                clearInterval(timer);
+            } else {
+                s += 10;
+
+                box.style.width = s + 'px';
+            }
+
+        }, 30);
+
+    };
+
+</script>
+
+</body>
+</html>

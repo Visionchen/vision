@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全选/反选</title>
+    <style>
+        *{margin:0;padding:0;}
+        body{font-size:16px; font-family: Segoe UI Light, Calibri;}
+        ul li{list-style-type:none;margin: 20px 0}
+        div {width: 400px;margin: 100px auto;}
+    </style>
+</head>
+<body>
+<div class="div">
+<ul id="ul">
+    <li><input type="checkbox" name='checkbox'> 1.时间都去哪儿了</li>
+    <li><input type="checkbox" name='checkbox'> 2.海阔天空</li>
+    <li><input type="checkbox" name='checkbox'> 3.不再犹豫</li>
+    <li><input type="checkbox" name='checkbox'> 4.真的爱你</li>
+    <li><input type="checkbox" name='checkbox'> 5.光辉岁月</li>
+    <li><input type="checkbox" name='checkbox'> 6.喜欢你</li>
+</ul>
+<input type="checkbox" name="e" id="q">全选          &nbsp;&nbsp;
+<input type="checkbox" name="w" id="f">反选
+</div>
+<script src="../js/jquery.js"></script>
+<script>
+    $(function () {
+        var a = true;
+        $('#q').click(function(){
+
+                $("#ul :checkbox").prop("checked", a);
+            a =! a;
+        });
+        $("#f").click(function () {
+                $("input[name='checkbox']").each(function(){
+
+                  $(this).prop('checked',!$(this).prop('checked'));
+
+                })
+            });
+
+        $('input[name="checkbox"]').click(function () {
+            var b = true;
+
+            $('input[name="checkbox"]').each(function () {
+
+                if(!$(this).prop('checked')){
+                        b = false;
+                }
+            });
+            if(b){
+                $("#q").prop("checked",true)
+            }else{
+                $("#q").prop("checked",false)
+            }
+        })
+
+        })
+</script>
+</body>
+</html>

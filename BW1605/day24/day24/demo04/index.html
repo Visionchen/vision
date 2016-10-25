@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1,width=device-width,user-scalable=no,maximum-scale=1.0">
+    <style>
+        * {margin: 0; padding: 0}
+        ul {list-style-type: none}
+        .container {margin: 100px auto 0; width: 200px}
+        .select {font-size: 12px; position: relative}
+        .select-head {width:100px; height: 30px; background: #f60; line-height: 30px; text-align: center; cursor: pointer; color:#fff}
+        .select-option {display: none; position: absolute}
+        .select-option li {background: #ccc; width: 100px; height: 28px; line-height: 28px; text-align: center; margin-top: 1px; position: relative; opacity: 0;}
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="select">
+        <div class="select-head" id="select">-=请选择=-</div>
+        <ul class="select-option" id="options">
+            <li>孙悟空</li>
+            <li>猪八戒</li>
+            <li>沙僧</li>
+            <li>小白龙</li>
+            <li>唐三藏</li>
+        </ul>
+    </div>
+    <p>渣渣</p>
+</div>
+
+<script src="../lib/common.js"></script>
+<script>
+
+    window.onload = function () {
+
+        // 获取所有的li
+        var allLi = $('options').getElementsByTagName('li');
+        // 把li一左一右不的分开
+        for(var i =0; i < allLi.length; i++) {
+            if(i % 2 == 0) {
+                allLi[i].style.left = '-150px';
+            } else {
+                allLi[i].style.left = '150px';
+
+            }
+        }
+
+        var flag = true;
+        $('select').onclick = function () {
+            if(flag) {
+                $('options').style.display ='block';
+                for(var i =0; i < allLi.length; i++) {
+                    animate(allLi[i], {left: 0, opacity: 100});
+                }
+            } else {
+                for(var i =0; i < allLi.length; i++) {
+                    if(i % 2 == 0) {
+                        animate(allLi[i], {left: -150, opacity: 0});
+                    } else {
+                        animate(allLi[i], {left: 150, opacity: 0});
+                    }
+                }
+              var time =  setTimeout(function () {
+                    $('options').style.display ='none';
+                },500);
+            }
+            flag = !flag;
+
+        };
+    };
+
+</script>
+</body>
+</html>

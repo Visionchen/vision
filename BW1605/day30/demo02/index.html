@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>显示电影列表</title>
+    <style>
+        #container {}
+        #container ul {float:left; list-style-type: none}
+    </style>
+</head>
+<body>
+
+<input type="button" id="btn" value="暴击这里,查看电影">
+<div id="container"></div>
+<div id="vi"><video id="video" controls autoplay width="500" height="300"></video></div>
+<script>
+var btn = document.getElementById('btn'),
+    box = document.getElementById('container'),
+    vi =  document.getElementById('video');
+
+btn.onclick = function() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'movie.json', true);
+    xhr.send();
+    xhr.onreadystatechange = function() {
+        if(xhr.readyState == 4 && xhr.status == 200) {
+            // 获取服务器端响应的json数据
+            var json = JSON.parse(xhr.responseText);
+            // 获取所有电影
+            var ary = json.maxNotifyList;
+            // 拼接字符串
+            var html = '';
+            for(var i in ary) {
+                var movie = ary[i]; // 获取具体电影
+                html += '<ul><li><img src="'+movie.logo+'" /></li><li><a href="'+movie.mobilePreview+'">'+movie.name+'</a></li></ul>'
+            }
+            box.innerHTML = html;
+            // 给a添加点击事件
+            var all = box.getElementsByTagName('a');
+            for(var i = 0; i < all.length; i++) {
+                all[i].onclick = function(event) {
+                    vi.src = this.href;
+                    //return false;
+                    event.preventDefault();
+                };
+            }
+        }
+    };
+};
+
+</script>
+
+
+</body>
+</html>

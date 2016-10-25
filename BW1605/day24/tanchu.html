@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹出层</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        #box{width: 100px;height: 100px;position: fixed;left: 50%;top:50%;background-color: red;margin-left: -50px;
+            margin-top: -50px;display: none}
+        #shadow{width: 100%;height: 100%;background-color: black;opacity: .6;position:fixed;filter: alpha(opacity=60);display: none}
+    </style>
+</head>
+<body>
+<div id="shadow"></div>
+<input type="button" value="弹出层" id="bt">
+<div id="box"></div>
+<script>
+    var box =document.getElementById('box');
+    var bt = document.getElementById('bt');
+    var shadow = document.getElementById('shadow');
+    bt.onclick = function () {
+        box.style.display = 'block';
+        shadow.style.display = 'block';
+    };
+    shadow.onclick = function () {
+        box.style.display = 'none';
+        shadow.style.display = 'none';
+    }
+
+</script>
+</body>
+</html>

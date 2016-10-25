@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航条</title>
+    <link rel="stylesheet" href="../common.css">
+    <style>
+        .content{width: 1210px;margin: 50px auto;position: relative;height: 40px;}
+        .top{position: relative;width: 1210px;height: 40px;background-color: #CD292B;}
+        .entire-top{width: 210px;height: 40px;line-height: 40px;text-indent: 20px;color: white;font-size: 15px;position: relative}
+        .top_left{width: 210px;float: left;height: 40px;background: #CD292B }
+        .entire-top:after{content:''; display:block; width: 20px;height: 20px;background:url(imges/arrow.png)no-repeat 0 0;position: absolute;top:10px;right: 10px;}
+        .entire-top:hover:after{background-position: 0 -20px;}
+        .top_right{width: 1000px;height: 40px;background-color: #E4393C;font-size: 15px;float: right}
+        .top_right ul li a{color: white;padding: 10px 30px;display: block;float: left;transition: all 0.2s linear;}
+        .top_right ul li a:hover{background-color: rgb(164,0,0)}
+        .entire-bot{width: 206px;height: 402px;position: absolute;left: 0;top:40px; border: 2px solid #CD292B;background-color: #fafafa;border-top:0 none;   display: none}
+        .entire-bot:hover{border-right:1px solid #ccc;width: 207px;}
+
+        .first_nav{ height: 30px;line-height: 30px;display: block;width: 206px;}
+        .first_nav h3{  padding-left: 10px; font-size: 15px;color: rgb(51,51,51);width: 197px;height: 30px}
+        .first_nav h3:hover{border-top:1px solid #ccc;border-bottom:1px solid #ccc;border-right: 1px solid white;
+            line-height: 28px}
+        .ae{border-top:1px solid #ccc;border-bottom:1px solid #ccc;border-right: 1px solid white;
+            line-height: 28px}
+        .first_nav h3 a{color: #333; }
+        .first_nav  h3 a:hover{color: rgb(228,57,145);}
+
+        .second_nav{ width: 680px;  height: 382px;  padding: 10px ;  background: #fff;  border: 1px solid #ddd;  position: absolute;  left: 208px;  top: 0;font-size: 15px;border-left: none;display: none}
+        .back{background-color: #1a66b3;width: 1210px;height: 500px;margin: 10px auto}
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="top cf">
+        <div class="top_left">
+            <div class="entire-top">全部商品 <span></span></div>
+            <div class="entire-bot">
+                <div class="first_nav">
+                        <h3><a href="#">图书</a>、<a href="#">音像</a>、<a href="#">数字商品</a></h3>
+                <div class="second_nav">图书二级导航内容</div>
+            </div>
+                <div class="first_nav">
+
+                        <h3><a href="#">家用电器</a></h3>
+
+                    <div class="second_nav">家用电器二级导航内容</div>
+                </div>
+                <div class="first_nav">
+
+                        <h3><a href="#">手机</a>、<a href="#">数码</a>、<a href="#">京东通信</a></h3>
+
+                    <div class="second_nav">手机二级导航内容</div>
+                </div>
+                <div class="first_nav">
+
+                        <h3><a href="#">电脑</a>、<a href="#">办公</a></h3>
+
+                    <div class="second_nav">电脑二级导航内容</div>
+                </div>
+                <div class="first_nav">
+
+                        <h3><a href="#">家居</a>、<a href="#">家具</a>、<a href="#">家装</a></h3>
+
+                    <div class="second_nav">家居二级导航内容</div>
+                </div>
+                <div class="first_nav">
+
+                        <h3><a href="#">男装</a>、<a href="#">珠宝</a>、<a href="#">女装</a>、<a href="#">内衣</a></h3>
+
+                    <div class="second_nav">男装二级导航内容</div>
+                </div>
+                <div class="first_nav">
+
+                        <h3><a href="#">鞋袜</a>、<a href="#">奢侈品</a>、<a href="#">箱包</a>、<a href="#">钟表</a></h3>
+
+                    <div class="second_nav">鞋袜二级导航内容</div>
+                </div>
+                <div class="first_nav">
+
+                        <h3><a href="#">个护化妆</a></h3>
+
+                    <div class="second_nav">个护化妆二级导航内容</div>
+                </div>
+                <div class="first_nav">
+
+                        <h3><a href="#">运动户外</a></h3>
+
+                    <div class="second_nav">运动户外二级导航内容</div>
+                </div>
+                <div class="first_nav">
+
+                        <h3><a href="#">女婴</a>、<a href="#">玩具乐器</a></h3>
+
+                    <div class="second_nav">女婴二级导航内容</div>
+                </div>
+                <div class="first_nav">
+
+                        <h3><a href="#">汽车</a>、<a href="#">汽车用品</a></h3>
+
+                    <div class="second_nav">汽车、汽车用品二级导航内容</div>
+                </div>
+                <div class="first_nav">
+
+                        <h3><a href="#">食品饮料</a>、<a href="#">酒类</a>、<a href="#">生鲜</a></h3>
+
+                    <div class="second_nav">食品饮料二级导航内容</div>
+                </div>
+                <div class="first_nav">
+
+                        <h3><a href="#">营养保健</a></h3>
+
+                    <div class="second_nav">营养保健二级导航内容</div>
+                </div>
+            </div>
+        </div>
+        <div class="top_right">
+            <ul class="cf">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">服装城</a></li>
+                <li><a href="#">美食</a></li>
+                <li><a href="#">团购</a></li>
+                <li><a href="#">夺宝岛</a></li>
+                <li><a href="#">闪购</a></li>
+                <li><a href="#">金融</a></li>
+                <li><a href="#">智能</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="back"></div>
+<script src="../js/jquery.min.js"></script>
+<script>
+    $(function() {
+
+        $('.top_left').hover(function() {
+            $('.entire-bot').show()
+//            .hover(function () {
+//                $(this).find('.second_nav').show();
+//            });
+        }, function() {
+            $('.entire-bot').hide();
+        });
+
+        $('.first_nav h3').hover(function() {
+            $(this).next('.second_nav').show();
+        }, function() {
+            $(this).next('.second_nav').hide();
+        });
+
+    });
+
+</script>
+</body>
+</html>

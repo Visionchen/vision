@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1,width=device-width,user-scalable=no,maximum-scale=1.0">
+    <style>
+        #box {width:200px; height: 200px; background: #f60; opacity: 0}
+    </style>
+</head>
+<body>
+
+
+<div id="box">
+
+</div>
+
+
+<script src="../lib/common.js"></script>
+<script>
+
+    $('box').onmouseover = function () {
+
+        animate(this, {width:500, height:500, opacity: 100});
+
+    };
+    $('box').onmouseout = function () {
+
+        animate(this, {width:200, height:200, opacity:0}, function () {
+            $('box').style.display = 'none';
+        });
+
+    };
+
+</script>
+
+
+</body>
+</html>

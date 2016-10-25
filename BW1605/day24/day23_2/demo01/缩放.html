@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1,width=device-width,user-scalable=no,maximum-scale=1.0">
+    <style>
+        .box{width: 300px;margin: 0 auto}
+        .box ul li{
+            float: left;
+            width: 50px;
+            height: 50px;
+            list-style-type: none;
+            margin: 0 5px 5px 0;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value=" 点击一下" id="btn">
+<div class="box" id="box">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<script>
+    var btn = document.getElementById('btn')
+    var allli =document.getElementById('box').querySelectorAll('li')
+    btn.onclick =function () {
+        for(var i=0 ;i<allli.length;i++){
+            allli[i].style.transition = '1s';
+            allli[i].style.transform = 'scale(0)';//取值0~1
+        }
+    }
+
+</script>
+</body>
+</html>

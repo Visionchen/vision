@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1,width=device-width,user-scalable=no,maximum-scale=1.0">
+    <style>
+        #box {
+            width:100px; height:100px; background: #f60;
+        }
+    </style>
+</head>
+<body>
+
+<div id="box"></div>
+
+<script>
+
+    var box = document.getElementById('box');
+
+
+    box.onmouseover = function () {
+
+
+        var w = getStyle(box, 'width');
+        var h = getStyle(box, 'height');
+
+        alert(w + ' - ' + h);
+        alert(getStyle(box, 'backgroundColor'))
+
+    };
+
+    /**
+     * 获取元素的样式  调用如：getStyle(box, 'width');
+     * @param obj 要获取谁的样式
+     * @param attr 要获取的样式属性名称
+     * @return {String} 样式的属性值
+     */
+    function getStyle(obj, attr) {
+        var result;
+        if(obj.currentStyle) {
+            result = obj.currentStyle[attr];
+        } else {
+            result = getComputedStyle(obj, null)[attr];
+        }
+        return result;
+    }
+
+</script>
+
+</body>
+</html>

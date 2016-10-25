@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul {float:left; list-style-type: none}
+        #userList:after{clear:both; display: table; content:''}
+        video {display:none}
+    </style>
+</head>
+<body>
+
+
+<input type="button" value="获取推荐电影" id="btn">
+
+<div id="userList"></div>
+
+<div class="video">
+    <video id="vi" controls autoplay width="600" height="300"></video>
+</div>
+
+<script>
+    document.getElementById('btn').onclick = function () {
+
+
+        var ul = document.getElementById('userList');
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'movie.json');
+        xhr.send();
+        xhr.onreadystatechange = function () {
+            if(xhr.readyState == 4 && xhr.status == 200) {
+                var li = '';
+                var txt = xhr.responseText;
+                var ary = eval('('+txt+')'); // 解析json数据时，需要在外面加一个小括号（固定格式）
+
+                console.log(ary);
+
+                for(var i = 0; i < ary.maxNotifyList.length; i++) {
+                    li += '<ul><li><img src="'+ary.maxNotifyList[i].logo+'"></li>';
+                    li += '<li><a href="'+ary.maxNotifyList[i].mobilePreview +'"  >'+ary.maxNotifyList[i].name+'</a></li></ul>';
+                }
+
+
+
+                ul.innerHTML = li;
+
+                var vi = document.getElementById('vi');
+
+                var all = document.getElementsByTagName('a');
+                for(var i = 0; i < all.length; i++) {
+
+                    all[i].onclick = function (e) {
+                        vi.style.display = 'block';
+                        console.log(this.href);
+                        vi.src = this.href;
+                        e.preventDefault();
+                    }
+                }
+
+            }
+        }
+
+
+    };
+
+
+
+</script>
+
+
+
+</body>
+</html>

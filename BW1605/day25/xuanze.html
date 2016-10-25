@@ -1,0 +1,61 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<p style="width: 100px ;height: 100px;background-color: red;margin: 200px auto">1</p>-->
+<!--<script src="../js/jquery.js"></script>-->
+<!--<script>-->
+    <!--$("p").hover(function() {-->
+        <!--$("p").stop().animate({width: '50%', height: '500px'}, 1000)-->
+    <!--},function(){-->
+        <!--$("p").stop().animate({width:'100px', height:'100px'},1000)-->
+    <!--})-->
+
+
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1,width=device-width,user-scalable=no,maximum-scale=1.0">
+    <style>
+        * {margin:0; padding:0}
+        .pro-list {width:900px; margin: 100px auto 0; overflow: hidden}
+        .pro {width:200px; height: 300px; background: #efefef; float: left; margin: 10px; position: relative;
+            overflow: hidden;}
+        .tip {position: absolute;  left:0; bottom:-100px; background: lightgreen; width: 200px;
+            height: 100px;opacity: 0;filter: alpha(opacity: 0)}
+    </style>
+</head>
+<body>
+
+
+<div class="pro-list">
+    <div class="pro">
+        <div class="tip">1</div>
+    </div>
+    <div class="pro"><div class="tip">2</div></div>
+    <div class="pro"><div class="tip">3</div></div>
+    <div class="pro"><div class="tip">4</div></div>
+</div>
+
+<script src="../js/jquery.js"></script>
+<script>
+    $(function () {
+            $(".pro").hover(function() {
+                $(this).find('.tip').stop(true,true).animate({bottom:0,opacity: '1'})
+            },function() {
+                $(this).find('.tip').stop(true,true).animate({bottom:'-100px',opacity: 0})
+            })
+    })
+
+
+</script>
+</body>
+</html>

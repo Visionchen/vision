@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1,width=device-width,user-scalable=no,maximum-scale=1.0">
+    <style>
+        #box {width:100px;
+            height:100px; background: #f00;}
+    </style>
+</head>
+<body>
+<div id="box"></div>
+
+
+
+<script src="../lib/common.js"></script>
+<script>
+
+    var box = $('box');
+    box.onmouseover= function () {
+        alert(getStyle(box, 'width'));
+    }
+
+
+</script>
+
+</body>
+</html>

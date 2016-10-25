@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1,width=device-width,user-scalable=no,maximum-scale=1.0">
+    <style>
+        #box1 {
+            width:100px; height:100px; background: #f00;;
+        }
+        #box2 {
+            width:100px; height:100px; background: #f00; margin: 20px 0;
+        }
+        #box3 {
+            width:100px; height:100px; background: #f00; position: relative;
+        }
+    </style>
+</head>
+<body>
+
+<div id="box1">hello</div>
+<div id="box2"></div>
+<div id="box3"></div>
+
+<script src="../lib/common.js"></script>
+<script>
+
+    $('box1').onmouseover = function () {
+        animate(this, {width:200, height:200, fontSize:50}, function () {
+            alert('我杀完了');
+        })
+    };
+    $('box3').onmouseover = function () {
+        animate(this, {width:200, height:200, left:50})
+    };
+
+</script>
+
+</body>
+</html>

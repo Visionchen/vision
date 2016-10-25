@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>BDan.html</title>
+</head>
+<body>
+<h1>登录</h1>
+<form action="demo1.html" onsubmit="return checkForm();">
+    账&nbsp;&nbsp;号：<input onblur = checkName() type="text"  id="name" />
+    <span id="name_msg"></span>
+    <br/><br/>
+    密&nbsp;&nbsp;码：<input onblur="checkPwd()" type="password" id="pwd"/>
+    <span id="pwd_msg"></span>
+    <br/><br/>
+    确认密码：<input  type="password" onblur="checkPdd()" id="pwdCon"/>
+    <span id="pwdCon_msg"></span>
+    <br/><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="登录"/>
+</form>
+<script type="text/javascript">
+
+            function checkName(){
+        var nam=document.getElementById("name").value;
+
+
+        var span=document.getElementById("name_msg");
+
+        var exp=/^\w{8,15}$/;
+        if(exp.test(nam)){
+
+            span.style.color="green";
+            span.innerHTML="";
+            return true;
+        }else{
+
+            span.style.color="red";
+            span.innerHTML="格式错误(单词字符[8,15])";
+            return false;
+        }
+    }
+
+    var pwd=document.getElementById("pwd").value;
+    function checkPwd(){
+
+        var pwd=document.getElementById("pwd").value;
+
+        var span=document.getElementById("pwd_msg");
+        var exp=/^\d{6}$/;
+        if(exp.test(pwd)){
+
+            span.style.color="green";
+            span.innerHTML="";
+            return true;
+        }else{
+
+            span.style.color="red";
+            span.innerHTML="格式错误(6位数字)";
+            return false;
+        }
+    }
+    var pwdCon=document.getElementById("pwdCon").value;
+    function checkPdd() {
+        var pwdCon=document.getElementById("pwdCon").value;
+
+        var spa = document.getElementById("pwdCon_msg");
+        var pwd=document.getElementById("pwd").value;
+        var exp=/^\d{6}$/;
+
+        if(exp.test(pwdCon) && pwdCon == pwd  ){
+            spa.style.display = "none";
+             return true;
+        }
+        else{
+            spa.style.color = "red";
+            spa.innerHTML = "密码不一致";
+            return false;
+        }
+//         if(pwdCon != pwd || pwdCon == '')
+//        {
+//            //不合格
+//            spa.style.color = "red";
+//            spa.innerHTML = "密码不一致";
+//            return false;
+//        }
+//        else if(pwdCon == pwd && exp.test(pwdCon)){
+//            //合格
+//            spa.innerHTML = "";
+//             spa.style.display = "none";
+//             return true;
+//        }
+
+    }
+    function checkForm(){
+        return checkName() && checkPwd() && checkPdd();
+    }
+</script>
+</body>
+</html>

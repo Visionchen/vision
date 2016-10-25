@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>淘宝建议</title>
+</head>
+<body>
+
+<input type="text" id="search">
+<ul id="info"></ul>
+
+<script>
+    var txt = document.getElementById('search'),
+        box = document.getElementById('info');
+    var script;
+    function fn(json) {
+        console.log(json);
+        var ary = json.result;
+        var html = '';
+        for(var i in ary) {
+            html += '<li>'+ ary[i][0] +'</li>'
+        }
+        box.innerHTML = html;
+    }
+    txt.onkeyup = function() {
+        // 获取用户输入的关键字
+        var val = txt.value;
+        // 保证只有一个script标签
+        if(script) {
+            script.parentNode.removeChild(script);
+        }
+        script = document.createElement('script');
+        script.src = 'https://suggest.taobao.com/sug?code=utf-8&q='+val+'&callback=fn';
+        document.body.appendChild(script);
+    };
+</script>
+
+</body>
+</html>

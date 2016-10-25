@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        .red {width: 100px;height:100px;
+            background-color: #f60;position: absolute;left: 0;top:200px;}
+        #line1 {
+            height: 400px;position: absolute;left: 200px;top:0;border: 1px solid red;
+        }
+        #line2 {
+           height: 400px;position: absolute;left: 500px;top:0;border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="开始" id="btn">
+<input type="button" value="开始" id="btn1">
+<div class="red" id="red"></div>
+<div id="line1"></div>
+<div id="line2"></div>
+<script src="../js/js.js"></script>
+    <script>
+    var btn = $('btn');
+    var btn1 = $('btn1');
+    var red = $('red');
+    var timer;
+
+    btn.onclick = function () {
+        clearInterval(timer);
+        var target = 500;
+        timer = setInterval(function () {
+            var s = parseInt(getStyle(red,'left'));
+            var speed = (target - s) / 6;
+            speed = target > s ? Math.ceil(speed) : Math.floor(speed);
+            if(s == target){
+                clearInterval(timer);
+            }else {
+                red.style.left = s + speed + 'px';
+            }
+        },30)
+    };
+    btn1.onclick = function () {
+        clearInterval(timer);
+
+        var target = 200;
+        timer = setInterval(function () {
+            var s = parseInt(getStyle(red,'left'));
+            var speed = (target - s) / 6;
+            speed = target > s ? Math.ceil(speed) : Math.floor(speed);
+            if(s == target){
+                clearInterval(timer);
+            }else {
+                red.style.left = s + speed + 'px';
+            }
+        },30)
+    }
+</script>
+</body>
+</html>

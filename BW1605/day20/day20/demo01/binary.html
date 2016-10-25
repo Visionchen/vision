@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="num">
+<input type="button" id="btn"  value="获取二进制">
+<div id="result" style="margin:20px; border: 1px solid #ccc; padding: 20px;"></div>
+
+<script>
+
+    // 给btn添加一个点击事件监听
+    document.getElementById('btn').addEventListener('click', function () {
+
+        // 获取用户输入的文本框的内容
+        var txt = document.getElementById('num').value;
+        // 把用户输入的内容转换成整数
+        var num = parseInt(txt);
+        // 获取该整数的二进制
+        var bin = binary(num);  // 获取二进制
+        // 把二进制结果显示在#result的div中
+        document.getElementById('result').innerHTML = bin;
+
+    }, false);
+
+    /**
+     * 获取num的二进制
+     * @param num
+     * @returns {*}
+     */
+    function binary(num) {
+        if(num == 0) {
+            return '';
+        }
+        return binary(parseInt(num / 2, 10)) + num % 2;
+    }
+
+
+
+
+</script>
+
+</body>
+</html>

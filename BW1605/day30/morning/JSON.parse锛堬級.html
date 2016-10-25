@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1,width=device-width,user-scalable=no,maximum-scale=1.0">
+</head>
+<body>
+<script>
+    var book = {
+        "title":"javascript",
+        "authors":["Peter","Lucy"],
+        "edition":3,
+        "year":2011
+    };
+    var txt = JSON.stringify(book);
+    console.info(eval("("+txt+")"));
+    console.info(JSON.parse(txt));
+    var t = JSON.parse(txt,function (key,value) {
+        switch (key) {
+            case "authors":
+                return value.join(',');
+            case "year":
+                return 5000;
+            case "edition":
+                return undefined;
+            default:
+                return value;
+        }
+    });
+    console.info(t);
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="div">
+    <a href="1">第一页</a>
+    <a href="2">第二页</a>
+    <a href="3">第三页</a>
+    <a href="4">第四页</a>
+    <a href="5">第五页</a>
+</div>
+<div class="box"></div>
+<script src='../../js/jquery.min.js'></script>
+<script>
+    $(function(){
+        $('#div a').click(function(){
+            $.getJSON("http://cache.video.iqiyi.com/jp/avlist/202861101/"+$(this).attr('href')+"/?callback=?",function(con){
+                console.log(con.data.vlist);
+                var ary = con.data.vlist;
+                var html = '';
+                for(var i in ary){
+                    html += `<p>${ary[i].shortTitle} - <img src="${ary[i].vpic}"/>  - ${ary[i].vt}</p>`;
+                }
+                $('.box').html(html);
+            });
+            return false;
+
+        })
+    });
+
+</script>
+</body>
+</html>

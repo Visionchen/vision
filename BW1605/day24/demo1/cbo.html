@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>JS效果-下拉列表</title>
+<link rel="stylesheet" href="style.css" />
+<style type="text/css">
+.wrap {width:600px}
+dl {width:200px;position:relative; margin:0 auto}
+dt {background:#FFF url(images/arrow.gif) no-repeat 180px center; text-indent:20px; font-size:14px; color:#333; height:30px; line-height:30px; cursor:pointer}
+dd {background:#FFF; text-indent:20px; font-size:12px; color:#444; height:30px; line-height:30px; cursor:pointer; width:200px; opacity:0; filter:alpha(opacity=0); border-top:1px solid #2ea6ff}
+dd:hover {background:#2ea6ff; color:#FFF}
+</style>
+</head>
+<body>
+<div class="wrap">
+	<dl id="cbo">
+		<dt>请选择</dt>
+		<dd>这里是第一个</dd>
+		<dd>这里是第二个</dd>
+		<dd>这里是第三个</dd>
+		<dd>这里是第四个</dd>
+		<dd>这里是第五个</dd>
+		<dd>这里是第六个</dd>
+		<dd>这里是第七个</dd>
+		<dd>这里是第八个</dd>
+	</dl>
+</div>
+
+
+<script src="helper.js" type="text/javascript"></script>
+<script type="text/javascript">
+window.onload = function() {
+	var cbo = JSHELPER.$("#cbo"),
+		ddList = JSHELPER.$("dd"),
+		len = ddList.length, isShow = false;
+	for(var i = 0; i < len; i++) {
+		ddList[i].style.left = (i % 2 === 0) ? (-ddList[i].offsetWidth + "px") : (ddList[i].offsetWidth + "px");
+		ddList[i].style.top = ddList[i].offsetTop + "px";
+	}
+	for(var i = 0; i < len; i++) {
+		ddList[i].style.position = "absolute";
+		ddList[i].style.display = "none";
+	}
+	cbo.children[0].onclick = function() {
+		if(!isShow) {
+			var i = 0;
+			var timer = setInterval(function() {
+				ddList[i].style.display = "block";
+				JSHELPER.animate(ddList[i], {left: 0, opacity: 100});
+				i++;
+				if(i === len) {
+					clearInterval(timer);
+				}
+			}, 30);
+			isShow = true;
+		} else {
+			var m = len - 1;
+			var timerb = setInterval(function() {
+				JSHELPER.animate(ddList[m], {left: ((m % 2 === 0) ? -ddList[m].offsetWidth : ddList[m].offsetWidth), opacity: 0});
+				m--;
+				if(m < 0) {
+					setTimeout(function() {
+						for(var n = 0; n < len; n++) {
+							ddList[n].style.display = "none";
+						}
+					}, 200);
+					clearInterval(timerb);
+				}
+			}, 30);
+			isShow = false;
+		}
+	};
+	for(var i = 0; i < len; i++) {
+		(function(y) {
+			ddList[y].onclick = function() {
+				cbo.children[0].innerHTML = ddList[y].innerHTML;
+				var m = len - 1;
+				var timerb = setInterval(function() {
+					JSHELPER.animate(ddList[m], {left: ((m % 2 === 0) ? -ddList[m].offsetWidth : ddList[m].offsetWidth), opacity: 0});
+					m--;
+					if(m < 0) {
+						setTimeout(function() {
+							for(var n = 0; n < len; n++) {
+								ddList[n].style.display = "none";
+							}
+						}, 200);
+						clearInterval(timerb);
+					}
+				}, 30);
+				isShow = false;
+			};
+		})(i);
+	}
+};
+</script>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=19682494" charset="UTF-8"></script>
+</body>
+</html>

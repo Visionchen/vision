@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<input type="text" id="txtName">
+<input type="button" id="btn" value="submit">
+
+
+<script>
+
+    var txt = document.getElementById('txtName'),
+        btn = document.getElementById('btn');
+
+    btn.addEventListener('click', function() {
+        var n = txt.value;
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'do.php', true);
+        xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xhr.send('name='+n + '&age=45');
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState == 4 && xhr.status == 200) {
+                var text = xhr.responseText;
+                var div = document.createElement('div');
+                div.innerHTML = text;
+                // 把div添加到body中
+                document.body.appendChild(div);
+            }
+        };
+    });
+
+</script>
+
+
+</body>
+</html>

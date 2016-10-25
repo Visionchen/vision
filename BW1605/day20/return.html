@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function a(b,c){
+        return b+c;
+    }
+    var abc=a(5,8);
+    console.log(abc);//13
+    function a(b,c){
+        document.write(b+c);
+    }
+    var abc=a(5,8);//此时页面上会输出13,但其实abc是没有值的
+    console.log(abc);//undefined
+</script>
+</body>
+</html>

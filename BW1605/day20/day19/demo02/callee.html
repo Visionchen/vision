@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    function fun() {
+
+        console.log('duang');
+
+        arguments.callee();  //  fun()
+        fun();
+    }
+    fun();
+</script>
+
+</body>
+</html>

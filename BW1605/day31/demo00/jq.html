@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="box">
+        <form action="dologin.php" id="myform">
+        <input type="text" id="txtName" placeholder="username" name="name">
+        <input type="password" id="txtPwd" placeholder="password" name="pwd">
+        <input type="button" id="btn" value="login now"></form>
+    </div>
+
+<script src="jquery-1.11.3.min.js"></script>
+    <script>
+
+    $(function() {
+
+        $('#btn').click(function() {
+            console.log($('#myform').serialize())
+            $.post('dologin.php',$('#myform').serialize(), function (data) {
+                alert(data);
+            })
+        });
+
+    });
+
+    </script>
+
+
+</body>
+
+</html>

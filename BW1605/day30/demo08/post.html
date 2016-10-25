@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="box">
+        <input type="text" id="txtName" placeholder="username">
+        <input type="password" id="txtPwd" placeholder="password">
+        <input type="button" id="btn" value="login now">
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script>
+        $('#btn').click(function() {
+            $.ajax({
+                type: "POST",
+                url: '../demo04/dologin.php',
+                data: 'name=' + $('#txtName').val() + '&pwd=' + $('#txtPwd').val(),
+                success: function(msg) {
+                    alert(msg);
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

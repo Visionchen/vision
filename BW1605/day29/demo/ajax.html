@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+用户名<input type="text" id="userName"><span id="span"></span><br>
+<script>
+    window.onload = function () {
+        var userName = document.getElementById('userName');
+        userName.onblur = function () {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET','check.php?name='+userName.value ,true);
+            xhr.send();
+            xhr.onreadystatechange = function () {
+                if(xhr.readyState == 4 && xhr.status == 200){
+                    var text = xhr.responseText;
+                    var info = document.getElementById('span');
+                    if(text == 'fail'){
+                            info.innerHTML = '该用户不存在';
+                    }else{
+                        info.innerHTML = '';
+                    }
+                }
+            }
+                    };
+    };
+
+</script>
+</body>
+</html>

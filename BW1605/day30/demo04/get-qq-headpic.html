@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<input type="text" placeholder="qq" id="txt">
+<input type="button" id="btn" value="获取头像">
+<img src="http://qlogo4.store.qq.com/qzone/373555563/373555563/100" id="img" >
+
+<script>
+    btn.onclick = function() {
+        img.src = 'http://qlogo4.store.qq.com/qzone/'+txt.value+'/'+txt.value+'/100';
+    };
+</script>
+
+</body>
+</html>

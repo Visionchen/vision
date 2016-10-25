@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航</title>
+    <style>
+        *{margin:0;padding: 0; font-family: Segoe UI Light, Calibri;font-weight: bold;}
+        .cf{*zoom : 1;}
+        .cf:after{comtent:'';display: table;clear: both}
+        .content{height:55px; margin: 50px auto;width: 500px;}
+        .com{position: relative}
+        li {list-style-type: none;float: left;position:relative;top:-55px;left: 0;}
+        ul{width:500px;height:55px;line-height: 55px;text-align: center;color: white;cursor: pointer;
+            position: relative;overflow: hidden;}
+        .second_ul li .top{width: 100px ;height: 50px;background-color: #f60;border-bottom:5px solid #f69;
+            position: relative;top:0;left:0;z-index: 99}
+        .second_ul li .show{width: 100px ;height: 50px;background-color: #0f7cbf;border-bottom:5px solid #1a66b3;
+            position: relative;top:0;left:0;}
+        .second_ul:after{content: '';border-bottom: 5px solid #1a66b3;position: absolute;left:0;bottom:0;
+            width: 500px; }
+         .top a{color: white;text-decoration: none;}
+         .show a{color: white;text-decoration: none;}
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="com">
+        <ul class="second_ul cf">
+        <li>
+            <div class="top"><a href="#">首页</a></div>
+            <div class="show"><a href="#">首页</a></div>
+        </li>
+        <li>
+            <div class="top"><a href="#">时间日期</a></div>
+            <div class="show"><a href="#">时间日期</a></div>
+        </li>
+        <li>
+            <div class="top"><a href="#">说走就走</a></div>
+            <div class="show"><a href="#">说走就走</a></div>
+        </li>
+        <li>
+            <div class="top"><a href="#">半岛铁盒</a></div>
+            <div class="show"><a href="#">半岛铁盒</a></div>
+        </li>
+        <li>
+            <div class="top"><a href="#">梦想启动</a></div>
+            <div class="show"><a href="#">梦想启动</a></div>
+        </li>
+    </ul>
+    </div>
+
+</div>
+<script src="../js/jquery.min.js"></script>
+<script>
+        $(function () {
+                $('.second_ul li').hover(function () {
+                        $(this).stop().animate({top:'0'});
+                },function () {
+                        $(this).stop().animate({top:'-55'});
+                    })
+        })
+</script>
+</body>
+</html>

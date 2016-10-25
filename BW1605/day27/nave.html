@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../common.css">
+    <style>
+        ul{display: none;}
+       li a{color: #606060;}
+       .content{width: 300px;margin: 50px auto;border-right:1px solid #909090;
+           border-left:1px solid #909090;font-weight: bold}
+        .top{height: 40px;line-height:40px;text-indent:40px;cursor: pointer; width: 300px;
+            background:  #ccc url(imges/pro_left.png) no-repeat right center;border-bottom:1px solid #909090;font-size: 16px}
+         ul li a{height: 40px;line-height:40px;display: block;text-indent:40px;
+            width: 300px;border-bottom:1px solid #909090;font-size: 14px;}
+        .title{background:#ccc url(imges/pro_down.png) no-repeat right center;}
+    </style>
+</head>
+<body>
+<div class="content">
+    <div>
+    <h3 class="top title">哲学</h3>
+        <ul style="display: block">
+            <li><a href="#">科学技术哲学</a></li>
+            <li><a href="#">宗教学</a></li>
+            <li><a href="#">美学</a></li>
+            <li><a href="#">伦理学</a></li>
+            <li><a href="#">逻辑学</a></li>
+            <li><a href="#">外国哲学</a></li>
+            <li><a href="#">中国哲学</a></li>
+            <li><a href="#">马克思主义哲学</a></li>
+        </ul>
+    </div>
+    <div>
+    <h3 class="top">经济学</h3>
+        <ul >
+            <li><a href="#">应用经济学</a></li>
+            <li><a href="#">理论经济学</a></li>
+            <li><a href="#">国民经济学</a></li>
+            <li><a href="#">区域经济学</a></li>
+            <li><a href="#">产业经济学</a></li>
+            <li><a href="#">国际贸易学</a></li>
+            <li><a href="#">劳动经济学</a></li>
+            <li><a href="#">政治经济学</a></li>
+        </ul>
+    </div>
+    <div>
+    <h3 class="top">法学</h3>
+        <ul >
+            <li><a href="#">马克思主义基本原理</a></li>
+            <li><a href="#">马克思主义发展史</a></li>
+            <li><a href="#">马克思主义中国化研究</a></li>
+            <li><a href="#">国外马克思主义研究</a></li>
+            <li><a href="#">思想政治教育</a></li>
+        </ul>
+    </div>
+    <div>
+    <h3 class="top">教育学</h3>
+        <ul>
+            <li><a href="#">体育人文社会学</a></li>
+            <li><a href="#">体育教育训练学</a></li>
+            <li><a href="#">民族传统体育学</a></li>
+            <li><a href="#">发展与教育心理学</a></li>
+            <li><a href="#">应用心理学</a></li>
+            <li><a href="#">教育学原理</a></li>
+            <li><a href="#">课程与教学论</a></li>
+            <li><a href="#">比较教育学</a></li>
+        </ul>
+    </div>
+
+    <div>
+    <h3 class="top">工学</h3>
+        <ul>
+            <li><a href="#">一般力学与力学基础</a></li>
+            <li><a href="#">固体力学</a></li>
+            <li><a href="#">流体力学</a></li>
+            <li><a href="#">工程力学</a></li>
+            <li><a href="#">机械制造及其自动化</a></li>
+            <li><a href="#">机械电子工程</a></li>
+        </ul>
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script>
+        $(function () {
+            $('h3.top').click(function () {
+                $(this).toggleClass('title').next('ul').stop().slideToggle().parent()
+                        .siblings('div').find('h3').removeClass('title').next('ul').slideUp();
+            })
+        })
+
+</script>
+</body>
+</html>

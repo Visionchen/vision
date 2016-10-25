@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    // num:下标
+    /**
+     * 根据下标获取该下标位置的数值
+     * @param num
+     * @returns {*}
+     */
+    function fb(num) {
+
+        if(num == 1 || num == 2) {
+            return 1;
+        }
+        return fb(num - 1) + fb(num - 2);
+
+
+    }
+
+    alert(fb(30));
+
+
+</script>
+
+</body>
+</html>

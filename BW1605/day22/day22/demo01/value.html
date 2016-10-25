@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var e = {a:3}
+    var w = e;
+    w.a = 4;
+    console.log(e.a);
+
+    //////////////////////////////
+
+    var o = {a:3}
+    var s = o;
+    s = {a:4};
+    console.log(o.a);
+
+
+    ///
+    var ary = [3,1,6,23,78,2,8];
+    ary.sort(function(a,b) {
+        return b-a;
+    });
+    console.log(ary);
+
+</script>
+</body>
+</html>

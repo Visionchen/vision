@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<input type="button" id="btn" value="暴击这里">
+
+<script>
+
+btn.onclick = function() {
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'data.json?t=' + new Date().getTime(), true);
+    xhr.send();
+    xhr.onreadystatechange = function() {
+        if(xhr.readyState == 4 && xhr.status == 200) {
+            var text = xhr.responseText;
+            // var json = eval("("+text+")");
+            var json = JSON.parse(text); // 解析JSON字符串，参数只能是`JSON`字符串
+            console.log(json);
+        }
+    };
+
+};
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>top</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        #ul{width: 200px;height:240px;font-size: 16px;color: black;border: 1px solid #ccc;
+            margin:100px auto;overflow: hidden}
+        #ul ul li{width: 200px;height: 40px;text-indent: 20px;line-height: 40px;background-color: lightcyan;}
+        #ul ul li a{color: black}
+        #ul ul li a:hover{color: #f60}
+    </style>
+</head>
+<body>
+<div id="ul">
+    <ul>
+        <li><a href="#"> 1.cabGration</a></li>
+        <li><a href="#"> 2.cabGration</a></li>
+        <li><a href="#"> 3.cabGration</a></li>
+        <li><a href="#"> 4.cabGration</a></li>
+        <li><a href="#"> 5.cabGration</a></li>
+        <li><a href="#"> 6.cabGration</a></li>
+    </ul>
+</div>
+<script src="../js/common.js"></script>
+<script>
+    window.onload =function () {
+    var div = $('ul');
+    var Ul = div.getElementsByTagName('ul')[0];
+        div.appendChild(Ul.cloneNode(true));
+    var timer = setInterval(top,30);
+        div.onmouseover =function () {
+          clearInterval(timer);
+        };
+        div.onmouseout =function () {
+            timer = setInterval(top,30);
+        };
+    function top() {
+        div.scrollTop++;
+        if(div.scrollTop == Ul.offsetHeight){
+            div.scrollTop = 0;
+        }
+    }
+        };
+
+</script>
+
+</body>
+</html>

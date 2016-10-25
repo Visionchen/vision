@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="box">
+        <input type="button" id="btn" value="login now">
+    </div>
+    <div id="images"></div>
+
+    <script src="jquery.min.js"></script>
+    <script>
+        $('#btn').click(function() {
+            $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags=cat&tagmode=any&format=json&jsoncallback=?", function(data){
+                $.each(data.items, function(i, item) {
+                    $("<img/>").attr("src", item.media.m).appendTo("#images");
+                    if (i == 3) return false;
+                });
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

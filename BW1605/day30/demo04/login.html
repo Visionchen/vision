@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="box">
+        <input type="text" id="txtName" placeholder="username">
+        <input type="password" id="txtPwd" placeholder="password">
+        <input type="button" id="btn" value="login now">
+    </div>
+
+
+    <script>
+        var txtName = document.getElementById('txtName'),
+            txtPwd = document.getElementById('txtPwd'),
+            btn = document.getElementById('btn'),
+            box = document.getElementById('box');
+
+        btn.addEventListener('click', function() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'dologin.php', true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.send('name=' + txtName.value + '&pwd=' + txtPwd.value);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var text = xhr.responseText;
+                    if(text == 'success4') {
+                        box.innerHTML = '欢迎您：' + txtName.value;
+                    } else {
+                        var div = document.createElement('p');
+                        div.innerHTML = '用户名或密码错误！';
+                        // 把div添加到box中
+                        box.appendChild(div);
+                    }
+
+                }
+            };
+        });
+    </script>
+
+
+</body>
+
+</html>

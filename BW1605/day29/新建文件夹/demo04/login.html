@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<form action="#" >
+
+<p><input type="text" name="userName" id="userName"> <span id="info"></span></p>
+<p><input type="password" name="userPwd"></p>
+<p><input type="submit" value="login"></p>
+
+</form>
+
+<script>
+    var userName = document.getElementById('userName');
+    userName.onblur = function() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'check-name.php?name=' + userName.value, true);
+        xhr.send(null);
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState == 4 && xhr.status == 200) {
+                var text = xhr.responseText;
+                if(text == 'fail') {
+                    document.getElementById('info').innerHTML = '用户名不存在';
+                } else {
+                    document.getElementById('info').innerHTML = '';
+                }
+            }
+        };
+
+    };
+</script>
+
+
+</body>
+</html>

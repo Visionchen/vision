@@ -1,0 +1,20 @@
+* {margin:0; padding:0}
+body {font:12px/20px "Consolas", "Microsoft YaHei"; color:#333;background:#EFEFEF; overflow:hidden}
+ul, li {list-style:none}
+.cf {zoom:1}
+.cf:after {clear:both; content:"."; display:block; visibility:hidden; height:0}
+.wrap {width:980px; margin:0 auto; padding:100px 0 0}
+
+#banner {width:800px; margin:0 auto; position:relative; background:#FFF; height:400px; overflow:hidden}
+#banner ul {}
+#banner li {float:left; width:190px; height:190px; cursor:pointer;padding:5px}
+#banner li img {width:190px; height:190px; position:absolute; z-index:4; left:5px; top:5px}
+#banner li span {display:block; width:170px; height:170px; border:10px solid #000; position:absolute; background:#CCC; opacity:0.5; filter:alpha(opacity=50);left:5px; top:5px; z-index:5}
+#banner li span:hover {opacity:0.3; filter:alpha(opacity=30); border:10px solid #000; background:#fff;}
+
+
+.btn_wrap {position:absolute; left:820px; top:150px; height:100px; width:37px}
+#goUp {background:url(images/nav.png) no-repeat 4px 4px; width:37px; height:22px; display:block; text-indent:-9999px;position:absolute; left:0; top:0;}
+#goUp:hover {background-position:-34px 4px}
+#goDown {background:url(images/nav.png) no-repeat 4px -52px; width:37px; height:22px; display:block; text-indent:-9999px;position:absolute; left:0; bottom:0;}
+#goDown:hover {background-position:-34px -52px}

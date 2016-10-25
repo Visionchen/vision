@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../common.css">
+    <style>
+        .out{width: 54px;height: 275px;position: fixed;right: 0;top:50%;}
+        li{}
+        ul li a.li{display:block;width: 110px;height: 54px;background-color: #000;color: white;line-height: 54px;position: relative;right: 0;top:0;}
+        ul li a.local{ display:block;width: 54px;height: 54px;background-color: #000;color: white;line-height: 54px;position: relative;right:0;top:0;}
+        ul li a:hover{background-color :#ae1c1c}
+    </style>
+</head>
+<body>
+<div class="out">
+<ul>
+    <li><a href="#" class="li"><img src="imges/side_icon01.png">客服中心</a></li>
+    <li><a href="#" class="li"><img src="imges/side_icon02.png">客户案例</a></li>
+    <li><a href="#" class="li"><img src="imges/side_icon03.png">QQ客服</a></li>
+    <li><a href="#" class="li"><img src="imges/side_icon04.png">新浪微博</a></li>
+    <li><a href="javascript:" class="local"><img src="imges/side_icon05.png"></a></li>
+</ul>
+
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<script>
+        $(function () {
+            $('.li').hover(function () {
+                $(this).stop().animate({left:'-55'},400)
+            },function () {
+                $(this).stop().animate({left:'0'},400)
+            });
+            $(".local").click(function () {
+                $('body,html').animate({ scrollTop: 0 }, 1000);
+                return false;
+            });
+        })
+</script>
+</body>
+</html>

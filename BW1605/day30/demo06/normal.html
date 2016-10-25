@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" id="btn" value="get json">
+
+    <script>
+        btn.onclick = function() {
+            var xhr = new XMLHttpRequest(); // 不支持IE6
+            xhr.open('GET', 'http://192.168.1.134/demo06/do.php', true);
+            xhr.send();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var text = xhr.responseText;
+                    console.log(JSON.parse(text));
+                }
+            };
+        };
+    </script>
+</body>
+
+</html>

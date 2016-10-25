@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1,user-scalable=no">
+</head>
+<body>
+
+
+<script>
+
+
+    var name = '张三丰';
+
+    var person = {
+        name: '小不懂'
+    }
+
+
+    function show() {
+        var name = '刘罗锅';
+        alert(this.name);  // 这里的this指window对象
+    }
+
+    show();  // 张三丰
+
+    show.apply(person, null); //
+
+</script>
+
+
+</body>
+</html>

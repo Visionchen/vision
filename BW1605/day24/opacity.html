@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        #div {width: 100px; height: 100px;margin: 100px auto;background-color: #f65;position: relative;left: 0;top:0;}
+    </style>
+</head>
+<body>
+<div id="div">
+</div>
+<script src="../js/common.js"></script>
+<script>
+    var div = $('div');
+    div.onmouseover = function () {animate(this, {width: 300, height: 300, top:-100,opacity: 100});
+    };
+    div.onmouseout = function () {
+        animate(this,{width:100,height:100,left:0,top:0,opacity:100},function(){
+//            div.style.display = 'none';
+        })
+    };
+
+</script>
+</body>
+</html>

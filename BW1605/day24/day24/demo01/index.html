@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1,width=device-width,user-scalable=no,maximum-scale=1.0">
+    <style>
+        * {margin:0; padding:0}
+        ul {list-style-type: none;}
+        .news {width:200px; margin: 50px auto; border:1px solid #ccc; text-align: center; height: 210px; overflow: hidden}
+        .news li a{font-size: 12px; line-height: 30px; text-decoration: none; color:#333;}
+        .news li a:hover {color:#f60}
+    </style>
+</head>
+<body>
+<div class="news" id="news">
+    <ul>
+        <li><a href="#">1. 热烈祝贺中国获得第28枚金牌</a></li>
+        <li><a href="#">2. 热烈祝贺中国获得第27枚金牌</a></li>
+        <li><a href="#">3. 热烈祝贺中国获得第26枚金牌</a></li>
+        <li><a href="#">4. 热烈祝贺中国获得第25枚金牌</a></li>
+        <li><a href="#">5. 热烈祝贺中国获得第24枚金牌</a></li>
+        <li><a href="#">6. 热烈祝贺中国获得第23枚金牌</a></li>
+        <li><a href="#">7. 热烈祝贺中国获得第22枚金牌</a></li>
+        <li><a href="#">8. 热烈祝贺中国获得第21枚金牌</a></li>
+        <li><a href="#">9. 热烈祝贺中国获得第20枚金牌</a></li>
+    </ul>
+</div>
+<script>
+    window.onload = function () {
+
+        // 获取news
+        var news = document.getElementById('news');
+        // 获取news中的第一个ul
+        var firstUL = news.getElementsByTagName('ul')[0];
+        // 把第一个ul复制一个放入到news中
+        news.appendChild(firstUL.cloneNode(true));
+        // 不断滚动
+        var timer = setInterval(marquee, 30);
+
+        // 鼠标移入news 清除定时器
+        news.onmouseover = function () {
+            clearInterval(timer);
+        };
+        // 鼠标移出news 重新开启定时器
+        news.onmouseout = function () {
+            timer = setInterval(marquee, 500);
+        };
+
+        function marquee() {
+            // 不断改变news的scrollTop
+            news.scrollTop++;
+            // 滚动到第一个ul结束的时候，立马回到第一个ul
+            if(news.scrollTop == firstUL.offsetHeight) {
+                news.scrollTop = 0;
+            }
+        }
+
+    };
+</script>
+</body>
+</html>

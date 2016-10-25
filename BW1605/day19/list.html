@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft YaHei";
+        }
+
+        li {
+            list-style-type: none;
+            float: left;
+        }
+
+        .contain {
+            width: 800px;
+            height: 500px;
+            margin: 50px auto;
+        }
+
+        .top {
+            width: 730px;
+            height: 460px;
+            position: relative;
+        }
+        img {vertical-align: top;
+            border: 0 none;
+        }
+        .img li {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .img li.on_li {
+            display: block;
+        }
+
+        .nav {
+            position: absolute;
+            left: 42%;
+            bottom: 20px;
+        }
+
+        .nav li {
+            padding: 5px 5px;
+            margin-left: 5px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            line-height: 20px;
+            background-color: #ccc;
+            color: #000;
+            border-radius: 50%;
+            text-align: center;
+        }
+
+        .nav li:hover {
+            background-color: #f60;
+            color: #fff;
+        }
+
+        .nav li.to_li {
+            background-color: #f60;
+            color: #fff;
+        }
+
+        .ul {
+            position: absolute;
+            left: 0;
+            top: 43%;
+        }
+
+        .ul li {
+            padding: 12px 8px;
+            background-color: #CCCCCC;
+            color: #000;
+            text-align: center;
+        }
+
+        .ul li:hover {
+            background-color: #f60;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #left {
+            float: left;
+            margin-right: 673.6px;
+        }
+
+        #right {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<div class="contain">
+    <div class="top" id="to">
+        <ul class="img" id="im">
+            <li class="on_li"><a href="#"><img src="img/ban1.jpg"></a></li>
+            <li><a href="#"><img src="img/ban2.jpg"></a></li>
+            <li><a href="#"><img src="img/ban3.jpg"></a></li>
+            <li><a href="#"><img src="img/ban4.jpg"></a></li>
+        </ul>
+        <ul class="nav" id="na">
+            <li class="to_li">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        <ul class="ul">
+            <li id="left"><strong><</strong></li>
+            <li id="right"><strong>></strong></li>
+        </ul>
+    </div>
+</div>
+<script>
+    window.onload = function () {
+        var img = document.getElementById('im').getElementsByTagName('li');
+        var nav = document.getElementById('na').getElementsByTagName('li');
+        var top = document.getElementById('to');
+        var left = document.getElementById('left');
+        var right = document.getElementById('right');
+        var timer;
+        var cur = 0;
+        var len = nav.length;
+        var speed = 1000;
+        timer = setInterval(jump, speed)
+        function jump() {
+            cur++;
+            if (cur == len) {
+                cur = 0;
+            }
+            for (var j = 0; j < len; j++) {
+                if (j == cur) {
+                    img[j].className = 'on_li';
+                    nav[j].className = 'to_li';
+                } else {
+                    img[j].className = '';
+                    nav[j].className = '';
+                }
+            }
+        }
+        for (var i = 0; i < len; i++) {
+            nav[i].cur = i;
+            nav[i].onmouseover = function () {
+                cur = this.cur;
+                int();
+            }
+        }
+        function int() {
+            for (var j = 0; j < len; j++) {
+                if (j == cur) {
+                    img[j].className = 'on_li';
+                    nav[j].className = 'to_li';
+                } else {
+                    img[j].className = '';
+                    nav[j].className = '';
+                }
+            }
+        }
+
+        top.onmouseover = function () {
+            clearInterval(timer)
+        };
+        top.onmouseout = function () {
+            timer = setInterval(jump, speed)
+        };
+        left.onclick = function () {
+            cur--;
+            if (cur < 0) {
+                cur = len - 1;
+            }
+            int();
+        };
+        right.onclick = function () {
+            cur++;
+            if (cur == len) {
+                cur = 0;
+            }
+            int();
+        };
+    };
+
+</script>
+</body>
+</html>

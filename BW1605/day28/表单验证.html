@@ -1,0 +1,60 @@
+<html>
+<head>
+    <meta charset="GBk">
+    <title></title>
+</head>
+<body>
+
+<form action="welcome.html" method="post" id="form">
+    <p>名字: <input type="text" name="fname"><span id="textSp"></span></p>
+    <p>密码: <input type="password" name="password"><span id="passSp"></span></p>
+
+    <p>年龄: <input type="text" name="age"></p>
+    <p><input type="submit" value="提交" id="submit"></p>
+</form>
+<script>
+    var nam = document.getElementsByName('fname')[0];
+    var pwd = document.getElementsByName('password')[0];
+    var name = nam.value;
+    var pw = pwd.value;
+    var textSp = document.getElementById('textSp');
+    var passSp = document.getElementById('passSp');
+    var sub = document.getElementById('submit');
+    var reg = /^\w{6,20}$/;
+    var reg1 = /^\d{6}$/;
+    nam.onfocus = function () {
+        textSp.innerHTML = '';
+    };
+    nam.onblur = function () {
+        if(!reg.test(name)){
+            textSp.innerHTML = '6-20位数字字母下划线';
+        }else{
+            textSp.innerHTML = '';
+        }
+    };
+    pwd.onfocus = function () {
+        passSp.innerHTML = '';
+    };
+    pwd.onblur = function () {
+        if(!reg1.test(pw)){
+            passSp.innerHTML = '密码必须为六位';
+        }
+            passSp.innerHTML = '';
+
+    };
+    sub.onclick = function () {
+        if(!reg.test(name)){
+            textSp.innerHTML = '6-20位数字字母下划线';
+                return false;
+        }
+        if(!reg1.test(pw)){
+            passSp.innerHTML = '密码必须为六位';
+            return false;
+        }
+    };
+
+
+
+</script>
+</body>
+</html>

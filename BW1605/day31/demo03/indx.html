@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<input type="button" value="get info" id="btn">
+<div id="box">
+
+</div>
+
+
+<script src="../demo00/jquery-1.11.3.min.js"></script>
+<script>
+    $(function() {
+
+        $("#btn").click(function() {
+            $.getJSON("http://cache.video.iqiyi.com/jp/avlist/202861101/1/?callback=?", function(data) {
+                    console.log(data.data.vlist);
+                    var ary = data.data.vlist;
+                    var html = '';
+                    for(var i in ary) {
+                        html += `<p>${ary[i].shortTitle} - ${ary[i].vt} - <img src="${ary[i].vpic}" /></p>`;
+                    }
+                    $('#box').html(html);
+            });
+        });
+
+    });
+</script>
+
+</body>
+</html>

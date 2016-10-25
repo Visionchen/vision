@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1,width=device-width,user-scalable=no,maximum-scale=1.0">
+    <style>
+        * {margin: 0; padding: 0}
+        #box {
+            width:100px; height:100px; background: #f00; position: absolute; left:0; top:120px;
+        }
+        .line {width:1px; height:300px; background: #000; position: absolute; left:500px; top:0}
+    </style>
+</head>
+<body>
+
+<input type="button" value="开始运动" id="btn">
+
+<div id="box"></div>
+
+<div class="line"></div>
+
+<script src="../lib/common.js"></script>
+<script>
+
+    var box = $('box');
+
+    var timer;
+    $('btn').onclick = function () {
+        clearInterval(timer);
+        timer = setInterval(function () {
+
+            // 获取当前的left值
+            var l = parseInt(getStyle(box, 'left'));
+
+            // 获取速度
+            var speed = Math.ceil((500 - l) / 6);
+
+
+            if(l < 500) {
+                box.style.left = l + speed + 'px';
+            } else {
+                clearInterval(timer);
+            }
+
+        }, 30);
+
+
+    };
+
+
+
+</script>
+
+</body>
+</html>

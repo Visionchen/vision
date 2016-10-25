@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<form action="#" id="myform" >
+    <input type="text" name="name">
+    <input type="password" name="pwd">
+    <input type="button" value="login now" id="btn">
+</form>
+
+<script src="../demo00/jquery-1.11.3.min.js"></script>
+<script>
+// window.onload = function() {
+//
+// };
+//
+// $(document).ready(function() {
+//
+// });
+// ready
+$(function() {
+    $('#btn').click(function() {
+        //  序列化  反序列化
+        console.log($('#myform').serialize());
+        $.post("../demo00/dologin.php", $('#myform').serialize(), function(data) {
+            console.log(data);
+        });
+    });
+});
+
+</script>
+
+</body>
+</html>

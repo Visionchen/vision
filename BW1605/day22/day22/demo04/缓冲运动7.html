@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1,width=device-width,user-scalable=no,maximum-scale=1.0">
+    <style>
+        * {margin: 0; padding: 0}
+        .wrap div {
+            width:100px; height:100px; background: #f00; margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class="wrap" id="container">
+    <div ></div>
+    <div></div>
+    <div ></div>
+</div>
+
+
+
+
+<script src="../lib/common.js"></script>
+<script>
+
+
+    var allDiv = $('container').getElementsByTagName('div');
+    for(var i = 0; i < allDiv.length; i++) {
+
+        allDiv[i].onmouseover = function () {
+            animate(this, {width:500, height:500})
+        };
+        allDiv[i].onmouseout = function () {
+            animate(this, {width:100, height:100})
+        };
+
+    }
+
+
+
+    //   {width:100}
+    function animate(obj, json) {
+        // 避免连续点击按钮
+        clearInterval(obj.timer);
+        // 开始运动
+        obj.timer = setInterval(function () {
+            console.log('d')
+            var flag = true; // 假设所有动画都执行完毕
+            for(var attr in json) {
+                // 获取当前属性值
+                var val = parseInt(getStyle(obj, attr));
+                // 获取当前属性的目标值
+                var target = json[attr];
+                // 获取速度
+                var speed = (target - val) / 6;
+                speed = target > val ? Math.ceil(speed) : Math.floor(speed);
+                if(val != target) {
+                    obj.style[attr] = val + speed + 'px';
+                    flag = false;
+                }
+            }
+            // 当所有动画都执行完毕后才关闭定时器
+            if(flag == true) {
+                clearInterval(obj.timer)
+            }
+
+        }, 30);
+    }
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../common.css">
+    <style>
+        .content{width: 1100px;margin: 50px auto;color: white;font-weight: 500}
+        .teacher{width:180px ;height: 360px;float: left;margin-right: 3px;position: relative;overflow: hidden}
+        .shadow{background-color: rgb(18,21,44);width: 180px;height: 360px;border-top: 2px solid #cb5412;position: absolute;top:260px;left: 0;opacity: .7;alpha(opacity=70px;)}
+        .info{width: 180px;height: 360px;position: absolute;top:260px;left: 0;}
+        .name{font-size: 20px;color: #f60;padding: 10px 20px;}
+        .exp{font-size: 13px;padding: 0 20px 30px;}
+        .describe{margin: 0 20px;border-top:1px solid #cb5412;padding: 20px 0;font-size: 13px;}
+    </style>
+</head>
+<body>
+<div class="content cf">
+    <div class="teacher">
+        <p><img src="imges/t1.jpg"></p>
+        <div class="shadow"></div>
+        <div class="info">
+            <p class="name">马老师</p>
+            <p class="exp">中国注会师、注册税务师
+                注会、职称高级讲师</p>
+            <p class="describe">  拥有丰富的教学和实操经验，多年的教书生涯历练了对会计学的精深把握，课程讲授，深入浅出，语言干脆利落，旁征博引，解题思路，逻辑严密</p>
+        </div>
+    </div>
+    <div class="teacher">
+        <p><img src="imges/t2.jpg"></p>
+        <div class="shadow"></div>
+        <div class="info">
+            <p class="name">马老师</p>
+            <p class="exp">中国注会师、注册税务师
+                注会、职称高级讲师</p>
+            <p class="describe">  拥有丰富的教学和实操经验，多年的教书生涯历练了对会计学的精深把握，
+                课程讲授，深入浅出，语言干脆利落，旁征博引，解题思路，逻辑严密</p>
+        </div>
+    </div>
+    <div class="teacher">
+        <p><img src="imges/t3.jpg"></p>
+        <div class="shadow"></div>
+        <div class="info">
+            <p class="name">马老师</p>
+            <p class="exp">中国注会师、注册税务师
+                注会、职称高级讲师</p>
+            <p class="describe">  拥有丰富的教学和实操经验，多年的教书生涯历练了对会计学的精深把握，
+                课程讲授，深入浅出，语言干脆利落，旁征博引，解题思路，逻辑严密</p>
+        </div>
+    </div>
+    <div class="teacher">
+        <p><img src="imges/t4.jpg"></p>
+        <div class="shadow"></div>
+        <div class="info">
+            <p class="name">马老师</p>
+            <p class="exp">中国注会师、注册税务师
+                注会、职称高级讲师</p>
+            <p class="describe">  拥有丰富的教学和实操经验，多年的教书生涯历练了对会计学的精深把握，
+                课程讲授，深入浅出，语言干脆利落，旁征博引，解题思路，逻辑严密</p>
+        </div>
+    </div>
+    <div class="teacher">
+        <p><img src="imges/t5.jpg"></p>
+        <div class="shadow"></div>
+        <div class="info">
+            <p class="name">马老师</p>
+            <p class="exp">中国注会师、注册税务师
+                注会、职称高级讲师</p>
+            <p class="describe">  拥有丰富的教学和实操经验，多年的教书生涯历练了对会计学的精深把握，
+                课程讲授，深入浅出，语言干脆利落，旁征博引，解题思路，逻辑严密</p>
+        </div>
+    </div>
+    <div class="teacher">
+        <p><img src="imges/t6.jpg"></p>
+        <div class="shadow"></div>
+        <div class="info">
+            <p class="name">马老师</p>
+            <p class="exp">中国注会师、注册税务师
+                注会、职称高级讲师</p>
+            <p class="describe">  拥有丰富的教学和实操经验，多年的教书生涯历练了对会计学的精深把握，
+                课程讲授，深入浅出，语言干脆利落，旁征博引，解题思路，逻辑严密</p>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script>
+    $(function () {
+        $('.teacher').hover(function () {
+            $(this).find('.shadow').stop().animate({top:"-2"},300);
+            $(this).find('.info').stop().animate({top:'20'},100,function () {
+                $(this).stop().animate({top:'120'},300)
+            })
+        },function () {
+            $(this).find('.shadow').stop().animate({top:"260"},300);
+            $(this).find('.info').stop().animate({top:'400'},200,function () {
+                $(this).stop().animate({top:'260'},200)
+            })
+        })
+    })
+</script>
+</body>
+</html>

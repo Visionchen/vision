@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1,width=device-width,user-scalable=no,maximum-scale=1.0">
+    <style>
+        #box {
+            width:100px; height: 100px; background: #ccc; position: fixed;
+            left:50%; top:50%; margin-left: -50px; margin-top: -50px; display: none;
+        }
+    </style>
+</head>
+<body>
+
+<input type="button" value="弹出层" id="btn">
+
+<div id="box"></div>
+
+
+<script>
+
+    var box = document.getElementById('box');
+
+    document.getElementById('btn').onclick = function () {
+
+        box.style.display = 'block';
+
+
+    };
+
+</script>
+
+
+</body>
+</html>

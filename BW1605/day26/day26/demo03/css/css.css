@@ -1,0 +1,17 @@
+* {margin:0; padding: 0;}
+body {font-size:14px; font-family: 'Microsoft YaHei'}
+
+.cf {*zoom:1}
+.cf:after {content: ''; display: table; clear: both}
+
+.wrap {width:600px; margin: 50px auto 0;}
+.wrap dl {margin-top: 15px}
+.wrap dl dt {float: left; padding: 8px;}
+.wrap dl dd {float: left; padding: 8px; border: 1px solid #ccc; margin-left: 5px; color:#666; cursor: pointer}
+.wrap dl dd.cur {border:2px solid #f60; padding: 7px; background: url("../on.png") no-repeat right bottom;}
+
+.choose {border-bottom: 1px solid #ccc; padding-bottom: 30px}
+.price-wrap {padding-top: 30px}
+.info {font-size:16px; padding-bottom: 20px}
+.price {font-size:20px; color:#f60;}
+.btn-buy {width:335px; height: 54px; border: 0 none; background: #f60; color: #fff; font-size: 18px; font-family: 'Microsoft YaHei'}

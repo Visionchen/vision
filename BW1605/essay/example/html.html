@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function sort(arr,l,r){
+        var index = partation(arr,l,r);
+        if(l < index-1){
+            sort(arr,l,index-1);
+        }
+        if(index < r){
+            sort(arr,index,r);
+        }
+
+    }
+    function partation(arr,l,r){
+        var pivot = arr[parseInt((l+r)/2)];
+        while(l <= r){
+            while(arr[l] < pivot)l++;
+            while(arr[r] > pivot)r--;
+            if(l <= r){
+                var tmp = arr[l];
+                arr[l] = arr[r];
+                arr[r] = tmp;
+                l++;
+                r--;
+            }
+        }
+        return l;
+    }
+    var arr = [3,5,7,2,1,5,8,9,67,4,3,90];
+    sort(arr,0,arr.length-1);
+</script>
+</body>
+</html>

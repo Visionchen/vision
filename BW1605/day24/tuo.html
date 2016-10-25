@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖动</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        #box{width: 100px;height: 100px;background-color: #f60;position:absolute;top:  250px;left:  100px;}
+        #shadow{width: 100%;height:  600px;background-color: #efefef;position: relative}
+    </style>
+</head>
+<body>
+<div id="shadow"><div id="box"></div></div>
+
+
+<script>
+    window.onload = function () {
+        var box = document.getElementById('box');
+        box.onmousedown = function (e) {
+            var event = e || window.event;
+            box.style.cursor = 'move';
+            var x = event.clientX;
+            var y = event.clientY;
+            var w = x - box.offsetLeft;
+            var h = y - box.offsetTop;
+            document.onmousemove = function (e) {
+                event = e || window.event;
+                var _x = event.clientX;
+                var _y = event.clientY;
+                box.style.left = _x - w + 'px';
+                box.style.top = _y - h + 'px';
+
+            };
+
+            document.onmouseup = function () {
+                box.style.cursor = 'default';
+                document.onmousemove = null;
+            };
+            return false;
+        };
+
+    };
+
+
+</script>
+</body>
+</html>

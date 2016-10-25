@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1,width=device-width,user-scalable=no,maximum-scale=1.0">
+</head>
+<body>
+
+<input type="button" value="click me" id="btn">
+
+
+<script>
+
+    document.getElementById('btn').onclick = function () {
+
+        // 创建ajax对象
+        var xhr = new XMLHttpRequest();
+        // 指定服务器地址
+        xhr.open('GET','data.txt',true);
+        // 发送
+        xhr.send();
+        // 指定事件
+        xhr.onreadystatechange = function () {
+
+            if(xhr.readyState == 4) {
+
+                if(xhr.status == 200) {
+
+
+                    // 获取服务器响应的信息
+                    var txt = xhr.responseText;
+                    alert(txt);
+
+
+                }
+
+
+            }
+
+        };
+
+
+    };
+
+</script>
+</body>
+</html>

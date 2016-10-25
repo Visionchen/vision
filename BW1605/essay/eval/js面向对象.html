@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Father(name){
+        this.name = name;
+        this.colors = ["red","blue","green"];
+    }
+
+    Father.prototype.sayName = function(){
+        alert(this.name);
+    };
+
+    function Child(name,age){
+        Father.call(this,name);//第二次调用Father父类构造函数，在新的子类实例对象上添加name,和colors属性，覆盖第一次(子原型中的属性)
+        this.age = age;
+    }
+    Child.prototype = new Father();//第一次调用Father父类构造函数，继承父的实例属性，name,colors。原型链指向父类
+    Child.prototype.constructor = Child;//原型构造函数指向Child
+    Child.prototype.sayAge = function(){
+        alert(this.age);
+    }
+</script>
+</body>
+</html>

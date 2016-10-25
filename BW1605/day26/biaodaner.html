@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品购买</title>
+    <style>
+        *{margin:0;padding:0;}
+        body{font-size:16px; font-family: Segoe UI Light, Calibri;font-weight: bold;}
+        ul,li,ol{list-style-type:none;}
+        img{border:0 none;}
+        a{text-decoration:none;}
+        .content{width: 1000px;height: 400px;margin: 100px auto;}
+        .ul{width: 600px;height: 250px;margin:0 auto;border-bottom: 1px solid #ccc}
+        .ul li{margin: 40px 0;}
+         li span {padding: 8px 12px;border: 1px solid #ccc;color: #606060;cursor:pointer;}
+        .style1{margin-left: 20px;}
+        .span{width: 600px;height: 50px;margin:30px auto;}
+        .border{background: url('on.png')right bottom no-repeat;border:2px solid #f60;padding: 7px 11px; }
+        .jia{font-size: 20px}
+        .doll{color: #f60;font-size: 22px;padding-left: 15px}
+        .shop{ padding:10px 80px;font-size: 24px;color: white;background-color: #f60;
+            cursor:pointer; text-align: center;width: 250px;}
+    </style>
+</head>
+<body>
+<div class="content">
+    <ul class="ul">
+        <li id="top">
+            型号 <span class="style1 border">4.7英寸</span>
+            <span class="style">5.5英寸</span>
+        </li>
+        <li>
+            颜色 <span class="style1 border">银色</span>
+            <span class="style">金色</span>
+            <span class="style">深空灰色</span>
+        </li>
+        <li id="third">
+            内存 <span class="style1 border">16GB</span>
+            <span class="style">64GB</span>
+            <span class="style">128GB</span>
+        </li>
+        <li>
+            版本 <span class="style1 border">公开版</span>
+            <span class="style">移动赠费版</span>
+            <span class="style">联通合约版</span>
+        </li>
+    </ul>
+        <div class="span"><span class="jia ">价格 :</span><span class="doll"> ¥ 5288.00</span></div>
+    <div class="span">
+    <div class="shop">立即购买</div>
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script>
+    $(function () {
+        $("li span").click(function () {
+            $(this).addClass('border').siblings().removeClass('border');
+        });
+        var i1 = 5288;
+        var i2 = 0;
+        $('#top span').click(function () {
+            if($(this).index() == 0){
+                i1 = 5288;
+            }else if($(this).index() == 1){
+                i1 = i1 + 800;
+            }
+            $('.doll').html(' ¥ '+(i1+i2)+'.00')
+        });
+        $('#third span').click(function () {
+            if($(this).index('#third span') == 0){
+                i2 = 0;
+            }else if($(this).index('#third span') == 1){
+                i2=  800;
+            }else if($(this).index('#third span') == 2){
+                i2= 1600;
+            }
+            $('.doll').html(' ¥ '+(i1+i2)+'.00')
+        });
+    });
+
+</script>
+</body>
+</html>

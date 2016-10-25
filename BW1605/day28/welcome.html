@@ -1,0 +1,25 @@
+<html>
+<head>
+    <meta charset="GBk">
+    <title></title>
+</head>
+<body>
+<p>欢迎 <?php echo $_POST["fname"]; ?>!</p>
+<p>你的密码是 <?php echo $_POST["password"]; ?></p>
+
+
+
+<p>你的年龄是 <?php echo $_POST["age"]; ?>  岁。</p>
+
+<?php
+$name = $_POST["fname"];
+$pwd = $_POST["password"];
+if($name == $pwd && strlen($name) >=5 ){
+echo "<script>alert('登录成功');location.href='text.html'</script>";
+}else{
+echo "<script>alert('登录失败');history.go(-1);</script>";
+}
+?>
+
+</body>
+</html>

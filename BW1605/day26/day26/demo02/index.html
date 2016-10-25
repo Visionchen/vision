@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1,width=device-width,user-scalable=no,maximum-scale=1.0">
+</head>
+<body>
+
+<div class="header">
+    <input type="checkbox" id="choose" > 全选
+</div>
+<hr>
+<div class="main">
+    <input type="checkbox" name="song"> 全世界谁倾听你  <br>
+    <input type="checkbox" name="song"> 忐忑  <br>
+    <input type="checkbox" name="song"> 你在终点等我   <br>
+    <input type="checkbox" name="song"> 演员  <br>
+    <input type="checkbox" name="song"> 你在终点等我  <br>
+    <input type="checkbox" name="song"> 丑八怪 <br>
+    <input type="checkbox" name="song"> 电台情歌
+</div>
+
+<script src="../lib/jquery.min.js"></script>
+<script>
+
+    $(function () {
+
+        $('#choose').click(function () {
+
+            if($(this).prop('checked')) {
+                $('input[name="song"]').prop('checked', true);
+            } else {
+                $('input[name="song"]').prop('checked', false);
+            }
+
+        });
+        $('input[name="song"]').click(function () {
+
+            var flag = true; // 假如全部都被选中了
+
+            $('input[name="song"]').each(function () {
+
+                if(!$(this).prop('checked')) {
+                    flag = false;
+                }
+            });
+
+            // 判断choose是否应该被选中
+            if(flag) {
+                $('#choose').prop('checked', true);
+            } else {
+                $('#choose').prop('checked', false);
+            }
+
+        });
+
+
+    });
+
+</script>
+</body>
+</html>

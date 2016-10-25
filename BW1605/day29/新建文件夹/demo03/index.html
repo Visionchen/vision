@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="button" value="show all name" id="btn">
+
+    <div id="info"></div>
+
+<script>
+var info = document.getElementById('info');
+document.getElementById('btn').onclick = function() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "data.txt?t=" + new Date().getTime(), true);
+    xhr.send();
+    xhr.onreadystatechange = function() {
+        if(xhr.readyState == 4 && xhr.status == 200) {
+            var text = xhr.responseText;
+            var ary = eval('('+text+')');  // 固定格式
+            var html = '';
+            for(var i in ary) {
+                html += '<p>' + ary[i].name + ' - ' + ary[i].age + '</p>';
+            }
+
+            info.innerHTML = html;
+        }
+    };
+
+};
+
+
+</script>
+
+
+</body>
+</html>

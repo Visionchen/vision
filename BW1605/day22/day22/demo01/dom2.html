@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="add a li" id="btn" >
+
+<ul id="ul">
+
+</ul>
+
+<script>
+    var ul = document.getElementById('ul');
+
+    document.getElementById('btn').onclick = function () {
+
+
+
+        var newLi = '<li>info'+ Math.floor(Math.random()*10) +' <a href="#">x</a></li>';
+
+        ul.innerHTML = ul.innerHTML + newLi;
+
+        var allA = ul.getElementsByTagName('a');
+        for(var i = 0; i < allA.length; i++) {
+            allA[i].onclick = function () {
+                ul.removeChild(this.parentNode);
+            };
+        }
+
+    };
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

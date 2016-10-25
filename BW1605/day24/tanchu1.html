@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹出层</title>
+    <style>
+        *{margin: 0;padding: 0;font-family: "Microsoft YaHei";font-weight: bold}
+        #box {width: 400px;position: fixed;left: 50%;top:50%;margin-left: -200px;background-color: #f5f5f5;
+            box-shadow:1px 1px 50px  rgba(0,0,0,.5);}
+        #top{height: 30px;width: 380px;background-color: cornflowerblue;padding: 20px 10px;
+            color: white;font-size: 22px;}
+        p {color: black;font-size: 20px;margin: 20px 20px 100px 20px;}
+        #input {padding: 10px 16px ;position: absolute;right: 20px;bottom: 20px;margin-top:200px;
+            font-size: 14px;border-radius: 5px;
+            background-color: cornflowerblue;color:white;border: none;opacity: .9; filter: alpha(opacity=90);}
+        #input:hover{opacity: 1; filter: alpha(opacity=100);}
+        #shadow{width: 100%;height: 100%;background-color: black;position:fixed;
+            top:0;left:0;opacity: .6; filter: alpha(opacity=60);}
+    </style>
+</head>
+<body>
+<input type="button" value="弹出层" onclick="myAlert()">
+<script>
+    myAlert('cangration');
+    function myAlert(msg,flag) {
+        var shadow = document.createElement('div');
+        shadow.setAttribute('id','shadow');
+        var box = document.createElement('div');
+        box.setAttribute('id','box');
+        box.innerHTML = ' <div id="top">提示信息</div> <P id="message">'+msg+'</P> <input type="button" value="确定" id="input">'
+
+        document.body.appendChild(shadow);
+        document.body.appendChild(box);
+        var tp = document.getElementById('top');
+        var inp = document.getElementById('input');
+        if(flag){
+            inp.onclick = function () {
+                shadow.parentNode.removeChild(shadow);
+                box.parentNode.removeChild(box);
+            };
+            box.style.marginTop = -(box.offsetHeight / 2) + 'px';
+            tp.onmousedown = function (e) {
+                var event = e || window.event;
+                tp.style.cursor = 'move';
+                var x = event.clientX;
+                var y = event.clientY;
+                var w = x - box.offsetLeft;
+                var h = y - box.offsetTop;
+                document.onmousemove = function (e) {
+                    var event = e || window.event;
+                    var _x = event.clientX;
+                    var _y = event.clientY;
+                    box.style.left = _x - w +(box.offsetWidth / 2) + 'px';
+                    box.style.top = _y - h +(box.offsetHeight / 2) + 'px';
+                };
+                document.onmouseup = function () {
+                    tp.style.cursor = 'default';
+                    document.onmousemove = null;
+                    document.onmouseup = null;
+                };
+                return false;
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>

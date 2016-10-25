@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+</head>
+<body>
+<input type="button" value="点击" id="btn">
+<ul id="info"></ul>
+<script>
+    window.onload = function(){
+        var info = document.getElementById('info');
+    document.getElementById('btn').onclick = function () {
+
+        var xhr = new XMLHttpRequest();//创建XMl对象
+        xhr.open('GET','date.txt?t='+new Date().getTime(),true);//请求方式,请求地址,
+        xhr.send();//发送
+        xhr.onreadystatechange = function () {
+//            if(xhr.readyState == 4){ //返回请求的当前状态
+//                if(xhr.status == 200){//返回状态码为200 OK ;
+//                    alert(xhr.responseText);//
+//                }
+//            }
+            if(xhr.readyState == 4 && xhr.status == 200){
+                var text =xhr.responseText;
+                var ary = eval(text);
+                var html = '';
+                for (var i = 0;i < ary.length;i++){
+                    html += '<li>' + ary[i] + '</li>';
+                }
+                info.innerHTML = html;
+            };
+        }
+    };
+    };
+</script>
+</body>
+</html>
