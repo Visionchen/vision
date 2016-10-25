@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    \<style>
+    <style>
     *{margin:0;padding: 0;}
     .cf:after{content: '';display: table;clear: both;}
     .contain{ width: 730px;height: 465px;margin: 100px auto;
@@ -53,12 +53,12 @@
 </style>
 </head>
 <body>
-<div class="contain">
+<div class="contain " id="con">
     <ul class="ul cf" id="ul">
-        <li class="one"></li>
-        <li class="two"></li>
-        <li class="three"></li>
-        <li class="one"></li>
+        <li class="three">1</li>
+        <li class="one">2</li>
+        <li class="two">3</li>
+        <li class="three">1</li>
     </ul>
     <ul class="ull cf" id="ull">
         <li class="li">1</li>
@@ -75,66 +75,44 @@
     window.onload = function () {
         var timer;
         var ul = $('ul');
-        var index =0;
-        var ull =$('ull');
+        var con = $('con');
+        var index = 0;
+        var ull = $('ull');
         var left = document.getElementById('left');
         var right = document.getElementById('right');
         var len = ul.getElementsByTagName('li').length;
         var lenli = ull.getElementsByTagName('li');
-        timer = setInterval(jump,2000);
+        timer = setInterval(jump, 2000);
         function jump() {
-                index++;
-                animate(ul,{left:-730*index},function () {
-                    if (index == len - 1) {
-                        ul.style.left = 0;
-                        index = 0;
-                    }
-                })
+            index++;
+            animate(ul, {left: -730 * index}, function () {
+                if (index == len - 1) {
+                    ul.style.left = '0';
+                    index = 0;
+                }
+            })
+        }
+
+        con.onmouseover = function () {
+            clearInterval(timer)
+        };
+        con.onmouseout = function () {
+            timer = setInterval(jump, 1000)
+        };
+        left.onclick = function () {
+            index--;
+            if (index < 0) {
+                index = len - 2;
             }
-//        left.onclick = function () {
-//            index--;
-//            if (index = 0) {
-//                index = len - 1;
-//            }
-//            animate(ul,{left:-730*index},function () {
-//                if (index == len - 1) {
-//                    ul.style.left = 0;
-//                    index = 0;
-//                }
-//            })
-//
-//        };
-//        right.onclick = function () {
-//            index++;
-//            if (index == len) {
-//                index = 0;
-//            }
-//            animate(ul,{left:-730*index},function () {
-//                if (index == len - 1) {
-//                    ul.style.left = 0;
-//                    index = 0;
-//                }
-//            })
-//
-//        };
-
-//            for (var i = 0; i < len; i++) {
-//                lenli[i].index = i;
-//                lenli[i].onmouseover = function () {
-//                    animate(ul,{left:-730*index}
-//                    index = this.index;
-//                    int();
-//                };
-//            }
-//                function int() {
-//                    for (var j = 0; j < len; j++) {
-//                        if (j == index) {
-//                            animate(ul,{left:-730*index}
-//                            lenli[j].className = 'li';
-//                        }
-//                    }
-//        };
-
+            animate(ul, {left: -730 * index});
+        };
+        right.onclick = function () {
+                index++;
+                if (index == len - 1) {
+                    index = 0;
+                }
+                animate(ul, {left: -730 * index});
+            }
     }
 </script>
 </body>

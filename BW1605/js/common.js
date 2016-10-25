@@ -39,18 +39,30 @@ function animate(obj, json, fn) {
     clearInterval(obj.timer);
     // 开始运动
     obj.timer = setInterval(function () {
-        console.log('d')
+
         var flag = true; // 假设所有动画都执行完毕
         for(var attr in json) {   // {width:200}    attr:width   json[attr]  => 200
             // 获取当前当前对象的attr属性值
-            var val = parseInt(getStyle(obj, attr));
+            var val;
+            if(attr == 'opacity'){
+                val = getStyle(obj, attr) * 100;
+            }else{
+                 val = parseInt(getStyle(obj, attr));
+            }
+
             // 获取当前对象的attr属性的目标值
             var target = json[attr];
             // 获取速度
             var speed = (target - val) / 6;
             speed = target > val ? Math.ceil(speed) : Math.floor(speed);
             if(val != target) {
-                obj.style[attr] = val + speed + 'px';
+                if(attr == 'opacity'){
+                    obj.style.opacity = (val + speed) / 100 ;
+                    obj.style.filter = 'alpha(opacity =' + (val + speed) +')';
+                }else{
+                    obj.style[attr] = val + speed + 'px';
+                }
+
                 flag = false;
             }
         }

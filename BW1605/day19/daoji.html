@@ -22,17 +22,17 @@
            if( num>=0){
               nu.innerHTML=num;
             }
-            if(num<=0) {
-            clearInterval(t);
+            if(num<0) {
+                num=10;
+                nu.innerHTML=num;
              }
-
-    },1000);
+    },400);
     };
     
     
     var stop = document.getElementById('stop');
     stop.onclick =function () {
-
+        clearInterval(t);
     }
 
 

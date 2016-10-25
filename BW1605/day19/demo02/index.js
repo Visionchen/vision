@@ -2,6 +2,8 @@
  * Created by Tean on 2016/9/17.
  */
 window.onload = function () {
+
+
     var nav = document.getElementById('bannerNav').getElementsByTagName('li');
     var img = document.getElementById('bannerImg').getElementsByTagName('li');
 

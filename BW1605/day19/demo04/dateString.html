@@ -9,13 +9,8 @@
 <div class="show"></div>
 
 <script>
-
-
-
     // 每隔1s改变下时间
     setInterval(show, 1000);
-
-
     function show() {
         var now = new Date();
         var year = now.getFullYear();
@@ -25,7 +20,6 @@
         var minutes = format(now.getMinutes());
         var second = format(now.getSeconds());
         var info = year + '-' + month + '-' + date + ' ' + hour + ':' + minutes + ':' + second;
-
         document.querySelector('.show').innerHTML = info;
     }
     // 页面加载完毕后立马显示出当前日期

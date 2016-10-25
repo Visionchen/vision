@@ -9,7 +9,7 @@
     width: 730px;
     height: 460px;
     margin: 0 auto;
-    position: relative;
+    position: relative
 }
 
 ul li {
@@ -22,7 +22,7 @@ img {
 }
 
 .one {
-    position: relative;
+    position: relative
 }
 
 .one li {
@@ -39,8 +39,7 @@ img {
 .su {
     position: absolute;
     bottom: 20px;
-    left: 42%;
-    margin-left: -70px;
+    left: 45%;
     line-height: 20px;
     text-align: center;
 }
@@ -48,21 +47,23 @@ img {
 .su li {
     width: 20px;
     height: 20px;
-    background-color: rgba(255, 255, 255, .55);
+    background-color: rgba(255, 255, 255, .25);
     border-radius: 50%;
     margin: 0px 8px;
     cursor: pointer;
 }
+
 .su li:hover {
-    background-color:#f60;color: #fff;
+    background-color: rgba(255, 255, 255, .75);
+    color: #fff;
 }
 
 li.lo {
-    background-color:#f60;color: #fff;
+    background-color: rgba(255, 255, 255, .75); color: #fff;
 }
 .zy {
     font-size: 20px;position: absolute;left: 10px;top:43%;
 }
-.zy li{padding: 18px 10px;background: rgba(255,255,255,.25);cursor: pointer;}
-.left{margin-left: 0;margin-right: 640px}
-.zy li:hover{background-color:#f60;color: #fff;}
+.zy li{padding: 15px 15px;background: rgba(255,255,255,.25);cursor: pointer}
+.left{margin-left: 0px;margin-right: 620px}
+.zy li:hover{background: rgba(255,255,255,.8);}

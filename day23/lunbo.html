@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0;padding: 0;}
+        .contain{ width: 730px;height: 465px;margin: 100px auto;
+            position: relative;overflow: hidden}
+        .ul { list-style-type: none;width: 5300px;
+            position: absolute;left: 0;  top:0;}
+        .ul li{float: left;width: 730px;height: 465px;}
+    </style>
+</head>
+<body>
+<div class="contain">
+    <ul class="ul" id="ul">
+        <li><a href="#"><img src="img/ban1.jpg"></a></li>
+        <li><a href="#"><img src="img/ban2.jpg"></a></li>
+        <li><a href="#"><img src="img/ban3.jpg"></a></li>
+        <li><a href="#"><img src="img/ban4.jpg"></a></li>
+        <li><a href="#"><img src="img/ban1.jpg"></a></li>
+    </ul>
+</div>
+<script src="../js/js.js"></script>
+<script>
+    window.onload = function () {
+
+    var ul = $('ul');
+    var index =0;
+    var len = ul.getElementsByTagName('li').length;
+    setInterval(function () {
+        index++;
+        animate(ul,{left:-730*index},function () {
+            if(index == len-1){
+                ul.style.left=0;
+                index=0;
+            }
+        })
+    },1000);
+
+    }
+</script>
+</body>
+</html>

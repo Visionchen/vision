@@ -10,7 +10,7 @@
         .login{margin-left: 70px;}
         input{width: 300px;height: 20px;}
         .login input{width: 40px; height: 25px;}
-        .i,.o{display: none;color: red;}
+        .i,.o,.l{display: none;color: red;}
 
     </style>
 </head>
@@ -35,35 +35,104 @@
         window.onload=function () {
             var name=document.getElementById('one');
             var i=document.getElementById('i');
+            var l=document.getElementById('l');
             var o=document.getElementById('o');
             var pas=document.getElementById('two');
             var pass=document.getElementById('three');
             var login=document.getElementById('login');
-            login.onclick=function yu() {
-                name.onblur=function () {
-                    var n=name.value;
-                    if (n.length < 6 || n.length > 20 ) {
-                        i.style.display='inline-block';
-                        alert('错误');
+
+                name.onblur = function () {
+                    var n = name.value;
+                    if (n.length < 6 || n.length > 20) {
+                        i.style.display = 'inline-block';
+                        alert('用户名输入有误');
                         return false;
                     }
+                    if (n.length >= 6 && n.length <= 20) {
+                        i.style.display = 'none';
+                    }
                 };
-                pas.onfocus = function () {
+
+
+                pas.onblur= function () {
                     var p = pas.value;
                     if (p == '') {
                         o.style.display = 'inline-block';
-                        alert('错误');
+                        alert('密码不能为空');
                         return false;
                     }
-                };
-                pass.onfocus = function () {
+                    if (p != '') {
+                        o.style.display = 'none';
+                    }
+                    ;
                     var pa = pass.value;
                     if (p != pa) {
-                        pas.style.display = 'inline-block';
-                        alert('错误');
+                        l.style.display = 'inline-block';
+                        alert('密码必须一致');
                         return false;
                     }
+                    if (p == pa) {
+                        l.style.display = 'none';
+                    }
                 }
+
+
+                pass.onblur = function () {
+                    var pp = pass.value;
+                    if (p == '' || pp == '' || n == '') {
+                        l.style.display = 'inline-block';
+                        alert('输入不能为空');
+                        return false;
+                    }
+
+                    var pa = pass.value;
+                    if (p != pa) {
+                        l.style.display = 'inline-block';
+                        alert('密码必须一致');
+                        return false;
+                    }
+                    if (p == pa) {
+                        l.style.display = 'none';
+                    }
+                }
+
+
+            login.onclick=function yu() {
+
+                    var n = name.value;
+                    if (n.length < 6 || n.length > 20) {
+                        i.style.display = 'inline-block';
+                        alert('用户名输入有误');
+                        return false;
+                    }
+                    if (n.length > 6 && n.length < 20) {
+                        i.style.display = 'none';
+                    }
+
+
+                    var p = pas.value;
+                    if (p == '') {
+                        o.style.display = 'inline-block';
+                        alert('密码不能为空');
+                        return false;
+                    }
+                var pa = pass.value;
+                if (p != pa) {
+                    l.style.display = 'inline-block';
+                    alert('密码必须一致');
+                    return false;
+                }
+                if (p == pa) {
+                    l.style.display = 'none';
+                }
+                if (p == '' || pp == '' || n == '') {
+                    l.style.display = 'inline-block';
+                    alert('输入不能为空');
+                    return false;
+                }
+
+
+
             }
         };
     </script>

@@ -75,10 +75,10 @@ var top=document.getElementById('top');
 var le=  document.getElementById('le');
 var rig=  document.getElementById('rig');
 var timer;
-var speed = 1000;
+var speed = 2000;
 var cur = 0;
 var len = on.length;
-    tt();
+    timer = setInterval(tt,speed);
 for ( var j=0;j<len;j++) {
     sui[j].cur=j;
     sui[j].onmouseover = function () {
@@ -90,17 +90,16 @@ top.onmouseover = function () {
     clearInterval(timer);
 }
 top.onmouseout = function () {
-    tt();
+    timer = setInterval(tt,speed);
 }
     function tt() {
-        timer = setInterval(function () {
+
             cur++;
             if (cur == len) {
                 cur = 0;
             }
             mao();
-        }, speed);
-    }
+        }
     function mao(){
         for (var i = 0; i < len; i++) {
             if (i == cur) {
@@ -113,20 +112,19 @@ top.onmouseout = function () {
             }
         }
     }
-    le.onclick = function () {
+    le.onclick =function () {
         cur--;
-        if(cur<0){
+        if(cur< 0){
             cur=len - 1;
         }
         mao();
     }
-    rig.onclick = function () {
+    rig.onclick =function () {
         cur++;
         if(cur==len){
             cur=0;
         }
         mao();
     }
-
 
 };
