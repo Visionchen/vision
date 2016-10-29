@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>sort</title>
+</head>
+<body>
+<script>
+    var ary =[13,3,9,34,27,6];
+    function sort(ary) {
+
+        for (var i = 0; i < ary.length - 1; i++) {
+
+            for (var j = 0; j < ary.length - 1 - i; j++) {
+
+                if (ary[j] > ary[j + 1]) {
+                    var t = ary[j];
+                    ary[j] = ary[j + 1];
+                    ary[j + 1] = t;
+                }
+
+            }
+
+        }
+        return ary;
+    }
+    sort(ary);
+    console.log(ary)
+
+</script>
+</body>
+</html>

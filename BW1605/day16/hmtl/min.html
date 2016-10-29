@@ -8,8 +8,9 @@
 <script>
     var ary =[13,3,9,34,2,27,999];
     var index;
+    var min;
     if(ary[0]<ary[1]){
-        var min=ary[0];
+        min=ary[0];
         index=0;
     }
     else {
@@ -18,7 +19,7 @@
     }
     for(var i=1;i<ary.length-1;i++){
         if(min>ary[i+1]){
-            min=ary[i+1]
+            min=ary[i+1];
             index=i+1;
         }
     }

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>js实现双色球效果</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        #btn{width:100px;height:50px;text-align: center;line-height: 30px;font-size: 24px;margin:30px auto;display: block;}
+        ul,li{list-style: none;}
+        ul{margin: 30px auto;width:630px;height:90px;}
+        ul li{width:70px;height:70px;margin:10px;border-radius:50%;float: left;text-align:center;line-height: 70px;font-size:40px;color:#fff;background:#cb0000;}
+        .a{transition: all 0.4s;}
+        .b{transition: all 0.8s;}
+        .c{transition: all 1.2s;}
+        .d{transition: all 1.6s;}
+        .e{transition: all 2.0s;}
+        .f{transition: all 2.4s;}
+        .g{transition: all 2.8s;}
+
+    </style>
+    <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var s=0;
+            $("#btn").click(function(){
+                redballs();
+                blueball();
+                rolling();
+            });
+            //生成一个长度为6的数组，存放1到33
+            function redballs(){
+                var arr=new Array(6);
+                for(var i=0;i<6;i++){
+                    arr[i]=Math.ceil(Math.random()*33)
+                }
+                //alert(arr)
+                sort(arr);
+            }
+            //对数组进行由小到大排序
+            function sort(arr){
+                var empty=0;
+                for(var i=0;i<arr.length;i++){
+                    for(var n=i+1;n<arr.length;n++){
+                        if(arr[i]>arr[n]){
+                            empty=arr[n];
+                            arr[n]=arr[i];
+                            arr[i]=empty;
+                        }
+                    }
+                }
+                //alert(arr)
+                check(arr);
+            }
+            //检查数组中是否有重复的数
+            function check(arr){
+                var flag=0;
+                for(var i=0;i<arr.length;i++){
+                    for(var n=i+1;n<arr.length;n++){
+                        if(arr[i]==arr[n]){
+                            flag++;
+                        }
+                    }
+                }
+                //alert(flag)
+                if(flag>0){
+                    redballs()
+                }else{
+                    addzero(arr);
+                }
+                //addzero(arr);
+            }
+            //如果数组中有小于10的数，那么将其补零
+            function addzero(arr){
+                for(var k=0;k<6;k++){
+                    if(arr[k]<10){
+                        arr[k]="0"+arr[k]
+                    }else{
+                        arr[k]=String(arr[k])
+                    }
+                    $("ul li").eq(k).html(arr[k])
+                }
+            }
+            //生成一个1到16的数字
+            function blueball(){
+                var n=Math.ceil(Math.random()*16)
+                if(n<10){
+                    n="0"+n
+                }else{
+                    n=String(n)
+                }
+                $("ul li").eq(6).html(n)
+            }
+            //让li进行旋转
+            function rolling(){
+                s++;
+                for(var i=0;i<7;i++){
+                    $("ul li").eq(i).css({
+                        "transform": 'rotate('+(i+1)*s*720+'deg)'
+                    });
+                }
+            }
+
+        })
+    </script>
+</head>
+<body>
+<ul>
+    <li class="a">01</li>
+    <li class="b">10</li>
+    <li class="c">12</li>
+    <li class="d">15</li>
+    <li class="e">22</li>
+    <li class="f">31</li>
+    <li class="g" style="background:#3768da;">05</li>
+</ul>
+<button id="btn">来一注</button>
+</body>
+</html>

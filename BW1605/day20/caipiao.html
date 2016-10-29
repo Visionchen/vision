@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        .red {width:20px;height:20px;bbackground-color: red;color: #fff;}
+        .red {display: block;color: #f60;float: left;line-height: 25px;text-align: center;list-style-type: none;height: 25px;width: 140px;
+       }
     </style>
 
 </head>
 <body>
+<div id="box"></div>
+
 <script>
     window.onload=function () {
     var red = new Array();
@@ -26,12 +29,14 @@
         red.sort(function (a,b) {
                return a - b;
         });
+      var  r = red.join(',');
+
+          var re = '<span class="red">'+ r +'</span>';
 
             var nu = Math.floor(Math.random() * (16 - 1 + 1) + 1);
-
-
-        document.write(red + '    ' + nu);
+        document.getElementById('box').innerHTML = re;//(re + '    ' + nu)
     };
+
 </script>
 </body>
 </html>
