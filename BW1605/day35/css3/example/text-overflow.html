@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>text-overflow</title>
+    <style>
+        div.test
+        {
+            white-space:nowrap;
+            width:200px;
+            overflow:hidden;
+            border:1px solid #000000;
+        }
+    </style>
+</head>
+<body>
+
+
+<p>省略号显示</p>
+
+<div class="test" style="text-overflow:ellipsis;">快去把东西收拾一下
+    再耗下去都天亮啦</div><br>
+
+<div class="test" style="text-overflow:clip;">快去把东西收拾一下
+    再耗下去都天亮啦</div><br>
+
+<div class="test" style="text-overflow:'>>';">快去把东西收拾一下
+    再耗下去都天亮啦</div>
+</body>
+</html>>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>对表格操作</title>
+    <style>
+        #tb {width:300px; border:1px solid #ccc; font-size:14px; border-collapse:collapse; margin: 100px auto 0}
+        #tb td,th {border:1px solid #ccc; padding: 10px; text-align: center}
+        td:first-child {width:180px;}
+        .edit {width:300px; padding:20px; margin: 0 auto;}
+        .edit input {width:100px; height:30px; cursor: pointer}
+    </style>
+</head>
+<body>
+
+<table id="tb">
+    <tr>
+        <th>名称</th>
+        <th>操作</th>
+    </tr>
+    <tr>
+        <td>张三</td><td><a href="#" onclick="edit(this)">编辑</a> <a href="#" onclick="del(this)">删除</a></td>
+    </tr>
+</table>
+<p class="edit"><input type="button" value="添加" onclick="add()"></p>
+
+
+<script src="index.js"></script>
+</body>
+</html>

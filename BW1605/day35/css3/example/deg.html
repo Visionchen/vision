@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>deg</title>
+    <style>
+        #grad1 {
+            height: 100px;
+            background: -webkit-linear-gradient(0deg, red, yellow); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(0deg, red, yellow); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(0deg, red, yellow); /* Firefox 3.6 - 15 */
+            background: linear-gradient(0deg, red, yellow); /* 标准的语法（必须放在最后） */
+        }
+
+        #grad2 {
+            height: 100px;
+            background: -webkit-linear-gradient(90deg, red, yellow); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(90deg, red, yellow); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(90deg, red, yellow); /* Firefox 3.6 - 15 */
+            background: linear-gradient(90deg, red, yellow); /* 标准的语法（必须放在最后） */
+        }
+
+        #grad3 {
+            height: 100px;
+            background: -webkit-linear-gradient(180deg, red, yellow); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(180deg, red, yellow); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(180deg, red, yellow); /* Firefox 3.6 - 15 */
+            background: linear-gradient(180deg, red, yellow); /* 标准的语法（必须放在最后） */
+        }
+
+        #grad4 {
+            height: 100px;
+            background: -webkit-linear-gradient(-90deg, red, yellow); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(-90deg, red, yellow); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(-90deg, red, yellow); /* Firefox 3.6 - 15 */
+            background: linear-gradient(-90deg, red, yellow); /* 标准的语法（必须放在最后） */
+        }
+    </style>
+</head>
+<body>
+
+<h3>使用不同的角度渐变,0:从下到上,90:左到右,180:上到下;-90:右到左</h3>
+<div id="grad1" style="color:white;text-align:center;">0deg</div><br>
+<div id="grad2" style="color:white;text-align:center;">90deg</div><br>
+<div id="grad3" style="color:white;text-align:center;">180deg</div><br>
+<div id="grad4" style="color:white;text-align:center;">-90deg</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>border-images</title>
+    <style>
+        div{width:300px;border:15px solid transparent;padding:10px 20px;}
+        #stretch{
+              -web-border-image:url(../images/border.png) 30 30 stretch;
+              -o-border-image:url(../images/border.png) 30 30 stretch;
+              border-image:url(../images/border.png) 30 30 stretch;
+          }
+        #round{
+            -web-border-image:url(../images/border.png) 30 30 round;
+            -o-border-image:url(../images/border.png) 30 30 round;
+            border-image:url(../images/border.png) 30 30 round;
+        }
+    </style>
+</head>
+<body>
+<div id="round"></div>
+<div id="stretch"></div>
+</body>
+</html>

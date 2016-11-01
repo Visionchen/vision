@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>transform: translate</title>
+    <style>
+        .contain {width: 400px; height:200px; background: #efefef;  position: relative;}
+        .box {background: #f69; width:100px; padding: 20px; position: absolute; left:50%; top:50%; transform: translate(-50%, -50%)}
+    </style>
+</head>
+<body>
+
+<div class="contain">
+
+    <div class="box">在事件中，this指向触发这个事件的对象，</div>
+
+</div>
+
+</body>
+</html>

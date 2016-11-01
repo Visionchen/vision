@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>info</title>
+    <style>
+        *{padding: 0;margin: 0;font-size: 18px}
+        .contain{width: 600px;margin: 0 auto;border-collapse:collapse;}
+         a,span{display: inline-block}
+        .content{width: 600px;height: 42px;}
+        .entire{margin: 100px auto }
+        .input{margin-left: 33%}
+        .first{width: 600px;text-align: center;line-height: 40px;font-weight: bold;font-size: 20px}
+        .first-left{width: 400px;height: 40px;}
+        .first-right{width: 200px;height: 40px;}
+        .content-left{width: 400px;height: 40px;}
+        .content-right{width: 200px;height: 40px;text-align: center}
+    </style>
+</head>
+<body>
+<div class="entire">
+<table class="contain" border="1" cellpadding="0" cellspacing="0" align="center">
+    <tr class="first">
+        <td class="first-left">姓名</td><td class="first-right">操作</td>
+    </tr>
+    <tr class="content">
+        <td class="content-left"><span>张三</span> <input type="text" style="display: none"></td><td class="content-right"><a href="javascript:;" class="edit">编辑</a> <a href="javascript:;" class="del">删除</a></td>
+    </tr>
+</table>
+<br>
+<input type="button" value="添加" class="input">
+</div>
+<script src="../day37/entire/jquery.min.js"></script>
+<script>
+    $(function () {
+        $('.input').click(function () {
+            $('.contain').append('<tr class="content"><td class="content-left"><span></span> <input type="text"></td><td class="content-right"><a href="javascript:;" class="edit">编辑</a> <a href="javascript:;" class="del">删除</a></td></tr>');
+//            $('table tbody tr:last').getElementsByTagName('input')[0].focus();
+        });
+        $('table').delegate('.del','click',function () {
+            $(this).parent().parent().remove();
+        });
+            $('table').delegate('.edit','click',function () {
+
+                if( $(this).html() != '保存') {
+                    $(this).html('保存');
+                    var con = $(this).parent().siblings('.content-left').find('span').html();
+                    $(this).parent().siblings('.content-left').find('input').css("display","block").val(con);
+                    $(this).parent().siblings('.content-left').find('span').css("display","none");
+                    $(this).parent().siblings('.content-left').find('input').focus();
+
+
+
+                }else{
+                    $(this).html('编辑');
+                    var val = $(this).parent().siblings('.content-left').find('input').val();
+                    $(this).parent().siblings('.content-left').find('input').css("display","none");
+                    $(this).parent().siblings('.content-left').find('span').css("display","block").html(val);
+
+                }
+            })
+    })
+</script>
+</body>
+</html>

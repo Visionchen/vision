@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>confirm</title>
+    <meta charset="utf-8">
+    <style>
+        .btn{padding: 10px 20px;font-size: 18px;margin: 50px auto;}
+    </style>
+</head>
+<body>
+<input type="button" onclick="Countdown(this)" value="发送" class="btn">
+<script>
+    var i=60;
+    function Countdown(obj){
+        if(i == -1){
+            obj.removeAttribute("disabled");
+            obj.value="重新发送";
+            i=60;
+        }
+        else{
+            obj.setAttribute("disabled",true);
+            obj.value=""+i+" s";
+            i--;
+            setTimeout(function(){
+                Countdown(obj)
+            },100);
+        }
+
+    }
+
+
+
+
+</script>
+</body>
+</html>

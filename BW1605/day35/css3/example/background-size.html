@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>background-size</title>
+    <style>
+        div{width: 600px;height: 400px }
+        .length{background: url(../images/back.jpg) no-repeat;background-size:200px 400px;}
+        .percentage{background: url(../images/back.jpg) no-repeat;background-size: 100% 100%}
+        .cover{background: url(../images/back.jpg) no-repeat;background-size: cover}
+        .contain{background: url(../images/back.jpg) no-repeat;background-size:contain }
+    </style>
+</head>
+<body>
+<div class="contain"></div><!--会保持图像的纵横比并将图像缩放成将适合背景定位区域的最大大小-->
+<div class="length"></div><!--设置数值,设一个,另一个为自动-->
+<div class="percentage"></div><!--设置百分比,设一个,另一个为自动-->
+<div class="cover"></div><!--会保持图像的纵横比并将图像缩放成将完全覆盖背景定位区域的最小大小-->
+
+
+</body>
+</html>

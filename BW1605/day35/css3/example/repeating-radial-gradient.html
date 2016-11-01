@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>repeating-radial-gradient</title>
+    <style>
+        div{ height: 550px;
+            width: 800px;}
+        #grad {
+
+        background: -webkit-repeating-radial-gradient(red, yellow 10%, green 15%); /* Safari 5.1 - 6.0 */
+        background: -o-repeating-radial-gradient(red, yellow 10%, green 15%); /* Opera 11.6 - 12.0 */
+        background: -moz-repeating-radial-gradient(red, yellow 10%, green 15%); /* Firefox 3.6 - 15 */
+        background: repeating-radial-gradient(red, yellow 10%, green 15%); /* 标准的语法（必须放在最后） */
+    }</style>
+</head>
+<body>
+
+<h2>重复的径向渐变</h2>
+<div id="grad"></div>
+<h2>从上到下,不均匀用百分比</h2>
+<div style="background: linear-gradient(red, blue);"></div>
+</body>
+</html>
