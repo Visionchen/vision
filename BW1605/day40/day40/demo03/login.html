@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../login/css/login.css">
+    <link rel="stylesheet" href="icon/iconfont.css">
+</head>
+<body>
+<div class="contain">
+    <ul class="cf">
+        <li class="li-1"><a href="register.html"><i class="icon iconfont">&#xe66e;</i></a></li>
+        <li class="li-2">账号登录</li>
+    </ul>
+</div>
+<ul>
+    <li class="phone"><i class="icon iconfont size">&#xe613;</i><input type="text" class="phone-num" id="phone-num1" placeholder="请输入手机号"></li>
+    <li class="phone"><i class="icon iconfont size">&#xe6e3;</i><input type="password" class="phone-num" id="phone-num2" placeholder="请输入密码，区分大小写"><i class="icon iconfont " id="false">&#xe642;</i><i class="icon iconfont " id="eye">&#xe620;</i></li>
+</ul>
+<a href="javascript:;" id="btn-1">登录</a>
+<div class="reg cf">
+    <a  href="register.html" class="reg-fast">快速注册</a>
+    <a href="find.html" class="reg-find">忘记密码？</a>
+</div>
+<div class="it">
+    <ul class="cf">
+        <li class="hr"><hr></li>
+        <li class="it-hr">其它登录方式</li>
+        <li class="hr"><hr></li>
+    </ul>
+    <ul class="icon cf">
+        <li><a href="javascript:;"><i class="icon iconfont sizing">&#xe63e;</i></a></li>
+        <li><a href="javascript:;"><i class="icon iconfont sized">&#xe606;</i></a></li>
+        <li><a href="javascript:;"><i class="icon iconfont sizing">&#xe600;</i></a></li>
+    </ul>
+</div>
+<script src="jquery.min.js"></script>
+<script>
+    $(function () {
+        var flag = true;
+        $('#eye').click(function () {
+            if (flag == true){
+                $(this).css("color","#1e93ed");
+                $('#phone-num2').attr('type','text');
+                $('#phone-num2').focus();
+            }else{
+                $(this).css("color","#999999");
+                $('#phone-num2').attr('type','password');
+                $('#phone-num2').focus();
+            }
+            flag = !flag;
+        });
+
+////
+        $('#false').click(function () {
+            $('#phone-num2').val('');
+            $(this).hide();
+        });
+        $('#phone-num2').keyup(function () {
+            if($('#phone-num2').val() != ''){
+                $('#false').show();
+            } else{
+                $('#false').hide();
+            }
+        });
+
+    },jQuery);
+    /////////
+
+
+
+    //////////////////////////////////
+    new function () {
+        var _self = this;
+        _self.width = 750; // 设置默认最大宽度
+        _self.fontSize = 100; // 默认字体大小
+        _self.widthProportion = function () {
+            var p = (document.body && document.body.clientWidth || document.getElementsByTagName("html")[0].offsetWidth) / _self.width;
+            return p;
+        };
+        _self.changePage = function () {
+            document.getElementsByTagName("html")[0].setAttribute("style", "font-size:" + _self.widthProportion() * _self.fontSize + "px !important");
+        };
+        _self.changePage();
+        window.addEventListener('resize', function () {
+            _self.changePage();
+        }, false);
+    };
+</script>
+</body>
+</html>

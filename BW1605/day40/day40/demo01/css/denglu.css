@@ -1,0 +1,13 @@
+.main-bottom{width: 100%;box-sizing: border-box;padding: .38rem .3rem}
+.main-bottom a{font-size: .28rem;color: #cdcdcd;font-family: "微软雅黑";text-decoration: none}
+.main-register{float: left;}
+.main-kw{float: right}
+.footer{width: 100%;box-sizing: border-box;padding:4.5rem .3rem 0 .3rem}
+.foot-icon{width: 2.5rem;height: .01rem;background: #dddddd;float: left}
+.foot-icon1{float: left;font-size:.28rem;font-family: "微软雅黑";color: #dddddd;line-height: .1rem;margin-left: .1rem}
+.foot-icon2{width: 2.5rem;height: .01rem;background: #dddddd;float: right}
+.footer-log{width: 100%;float: left;text-align: center;padding: .5rem 0 0 0 }
+.footer-log span{text-align: center}
+.footer-log .icon-weixin{font-size: 1.2rem;color:#999999 }
+.footer-log .icon-qq-copy{font-size: .97rem;margin:0 .9rem 0 .95rem;color:#999999 }
+.footer-log .icon-xinlang1{font-size: .9rem;color:#999999 }

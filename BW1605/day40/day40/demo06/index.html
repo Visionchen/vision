@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>Title</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        input {-webkit-appearance:none;}
+        header {height:10vh; position: absolute; left:0; top:0; background: #f60; width: 100vw}
+        main {margin: 10vh 0; position: absolute; top:10vh; height: 80vh; overflow-y: auto; width: 100vw;-webkit-overflow-scrolling: touch;   }
+
+        footer {height:10vh; position: absolute; left:0; bottom:0; background: #efefef; width: 100vw}
+        input[type=text] {width:80vw; border:1px solid #ccc; height: 8vh}
+        input[type=button] {width:18vw; border:1px solid #ccc; height: 8vh}
+    </style>
+</head>
+<body>
+
+<header></header>
+<main>
+    <div class="content">
+        <script>
+            for(var i = 0;i < 500; i++) {
+                document.write(i + '<br>');
+            }
+        </script>
+    </div>
+</main>
+<footer>
+    <input type="text">
+    <input type="button" value="send">
+</footer>
+</body>
+</html>

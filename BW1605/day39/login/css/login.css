@@ -1,0 +1,33 @@
+*{margin:0;padding:0;}
+body{font-size:12px; box-sizing: border-box;}
+ul,li,ol{list-style-type:none;}
+img{vertical-align:top;border:0 none;}
+a{text-decoration:none;}
+.cf:after{content:'';display:table;clear:both;}
+.cf{*zoom:1}
+.contain ul{ width: 100%;height: 0.79rem;border-bottom: 0.01rem solid #cccccc;background-color: white;}
+.contain ul li{float: left;font-size: 0.36rem}
+.li-1 {text-indent: .3rem;line-height: .8rem;}
+.li-1 a{color: #999999;}
+.li-2{text-align: center;line-height: .8rem;width: 6.05rem}
+.phone{margin:0 0 0 .3rem;border-bottom: 0.01rem solid #dddddd;height: 1.25rem;color: #999999;position: relative;}
+.size{font-size: .58rem;line-height: 1.5rem;}
+.phone-num{margin:0 0 .2rem .38rem;font-size: .28rem;border: 0 none;height: .58rem;outline: 0 none;line-height: 1.2rem;vertical-align: middle}
+.btn{padding: .16rem .20rem;background-color: #1e93ed;outline: 0 none;border:0 none;border-radius: .15rem;font-size: .28rem;color: white;vertical-align: middle;display: inline-block;}
+.span{display: inline-block;vertical-align: middle;margin-bottom: .2rem;margin-left: .5rem}
+#eye{font-size: .55rem;position: absolute;right: .3rem;top:.45rem}
+#false{font-size: .45rem;margin-left: 1.1rem;display: none;}
+#btn-1{margin: .8rem .3rem;width: 6.9rem;height: .9rem;color: white;background-color: #ed0070;display: block;font-size: .32rem;line-height: .9rem;text-align: center;border-radius: .2rem;}
+#btn-1:hover{background-color: #d80066}
+.reg{margin: .4rem .3rem;font-size: .28rem}
+.reg-fast{display: inline-block;float: left;color: #999999}
+.reg-find{display: inline-block;float: right;color:#999999}
+a.reg-fast:hover{color: #999999}
+a.reg-find:hover{color: #999999}
+.it{margin: 4.7rem auto 0;width: 6.9rem;}
+.it ul li{float: left;}
+.hr{width: 2.5rem;height: .5rem;}
+.it-hr{width: 1.9rem;font-size: .28rem;line-height: .04rem;text-align: center;color: #999999;height: .5rem;}
+.sizing{font-size: 1rem; color: #cccccc;}
+.sized{font-size: 1.12rem;color: #cccccc;position: relative;top:-0.15rem;}
+.icon li{padding:.3rem .63rem;}

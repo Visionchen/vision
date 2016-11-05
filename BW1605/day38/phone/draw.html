@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>phone</title>
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+<div class="contain">
+    <ul class="cf">
+        <li><a href="javascript:;"><img src="imgs/return.png" class="li-1"></a></li>
+        <li class="li-2">优惠券</li>
+    </ul>
+</div>
+<div class="content">
+<div class="vouchers">
+    <div class="logo"><img src="imgs/house.png"> <span>美乐乐家居旗舰店</span></div>
+    <div class="gift cf"><img src="imgs/gift.png"><div class="gift-text"><span class="gift-text-1">金秋10月优惠券</span><br><span class="gift-text-2">领取后1天生效，有效期30天</span></div></div>
+    <div class="git">礼品劵</div>
+</div>
+</div>
+
+<div class="code">
+    <div class="code-con"><img src="imgs/code.png" class="img-1"></div>
+    <div class="code-text">mll15613213546<br>将本页展示给店员即可使用</div>
+</div>
+<div class="use">
+    <div class="use-1 cf">
+    <div class="use-text">使用说明</div>
+    <div class="use-go"><a href="javascript:;"><img src="imgs/go.png"></a></div>
+</div>
+    <div class="use-2 cf">
+        <div class="use-text">适用门店</div>
+        <div class="use-go"><a href="javascript:;"><img src="imgs/go.png"></a></div>
+    </div>
+    <div class="use-1 cf">
+        <div class="use-text">客服电话</div>
+        <div class="use-go"><a href="javascript:;"><img src="imgs/go.png"></a></div>
+    </div>
+</div>
+<div>
+    <a href="javascript:;" class="input">领 取</a>
+</div>
+
+    <a href="javascript:;" class="my-bag">查看我的卡包>></a>
+
+<script src="jquery.min.js"></script>
+<script>
+    $(function () {
+        $('.input').click(function () {
+            $('.code').css('display','block');
+            $(this).parent('div').remove();
+        })
+    },jQuery);
+
+
+
+
+    //////////////////////////////////
+    new function () {
+        var _self = this;
+        _self.width = 640; // 设置默认最大宽度
+        _self.fontSize = 100; // 默认字体大小
+        _self.widthProportion = function () {
+            var p = (document.body && document.body.clientWidth || document.getElementsByTagName("html")[0].offsetWidth) / _self.width;
+            return p;
+        };
+        _self.changePage = function () {
+            document.getElementsByTagName("html")[0].setAttribute("style", "font-size:" + _self.widthProportion() * _self.fontSize + "px !important");
+        };
+        _self.changePage();
+        window.addEventListener('resize', function () {
+            _self.changePage();
+        }, false);
+    };
+</script>
+</body>
+</html>

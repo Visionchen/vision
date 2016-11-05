@@ -1,0 +1,20 @@
+header{width: 100%;height: .53rem;background-color: #ff5a28;}
+.head{width: 5.5rem;height: .53rem;margin: 0 auto;}
+.head img{width: .32rem;height: .22rem;float: left;display: block;padding:.15rem 0; }
+.head input{width: 1.77rem;height: .35rem;float: right;border-radius: .08rem;background:#fff url(../imgs/search.png)90% center no-repeat;display: block ;outline: 0 none;margin:.09rem 0;border: 0 none;background-size: .22rem .22rem;}
+.cont{width: 100%;height: 1.2rem;background-color: #efefef;}
+.con{width: 3.75rem;height: 1.2rem;}
+.im{width: 3.75rem;height: 1.2rem;margin: 0 auto;display: block}
+.content{margin: .15rem .26rem .36rem ;}
+.content li{width: 1.4rem;height: 1.27rem;float: left;margin-top: .4rem;}
+.content li a p{margin: 0 .33rem;width: .75rem;height: .75rem;border-radius: 50%;}
+.content li a p img{display: block; width:.34rem ;height:.4rem;padding: .17rem .2rem;}
+.content li a h3{font-size: .2rem;color: #666666;text-align: center;padding-top: .29rem;}
+.content li a p img.img-nav{height: .26rem;padding: .24rem .2rem;}
+.content li a p img.im-nav{padding: .19rem .16rem;}
+.back{width: 100%;height: .25rem;}
+.bottom{margin: .2rem auto 0;border:.02rem solid #e0e0e0;width: 5.6rem;height: 2.6rem;box-sizing: border-box;}
+.bottom li{float: left;width: 1.82rem;border-right: .02rem solid #e0e0e0;height: 2.6rem;}
+.bottom li h2{font-size: .24rem;padding: .1rem .15rem;}
+.bottom li p{font-size: .16rem;text-align: center;padding-top: .06rem;}
+.bo-img{width: 1.8rem;height: 1.22rem;margin-top: .2rem;}

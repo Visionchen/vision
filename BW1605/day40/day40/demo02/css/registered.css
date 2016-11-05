@@ -1,0 +1,19 @@
+* {margin: 0;padding: 0;}
+html,body {box-sizing: border-box;height: 100%}
+nav {height: 1rem;border-bottom: .01rem solid #ccc}
+nav .icon-fanhui {font-size: .4rem;line-height: 1rem;padding-left: .22rem;color: #333}
+.log {font-size: .36rem;display: inline-block;line-height: 1rem;text-align: center;width: 6.1rem}
+content {}
+nav a:hover{text-decoration: none}
+.txt{height: 1.23rem;border-bottom: .01rem solid #ddd;margin-left: .3rem;padding-top: .5rem;box-sizing: border-box}
+.txt .icon-shouji {font-size: .5rem;margin-left: -.08rem}
+.txt .icon-yanzheng {font-size: .5rem;margin-left: -.08rem;}
+.txt .icon-mima {font-size: .36rem;margin-top: .1rem;display: inline-block}
+.txt input {width: 4.23rem;height: .42rem;font-size: .28rem;border: 0 none;outline: medium;margin-left: .15rem}
+#psd {margin-left: .2rem}
+#text {margin-top: -.05rem}
+.txt .icon-x {font-size: .3rem;color: #999;margin-left: 1.2rem;visibility: hidden}
+.txt .icon-yanjing {font-size: .4rem;margin-left: .05rem;position: relative;top: .03rem}
+.bttn {height: .6rem;width: 2rem;background: #1e93ed;display: inline-block;position: relative;top: -.1rem;border-radius: .11rem;line-height: .6rem;text-align: center;font-size: .28rem;color: white}
+.login {width: 6.9rem;height: .9rem;background: #ddd;margin: .8rem auto .4rem;border-radius: .19rem;font-size: .32rem;line-height: .9rem;text-align: center;color: white}
+

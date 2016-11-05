@@ -1,0 +1,31 @@
+* {margin: 0;padding: 0;}
+html,body {box-sizing: border-box;height: 100%}
+nav {height: 1rem;border-bottom: .01rem solid #ccc}
+nav .icon-fanhui {font-size: .4rem;line-height: 1rem;padding-left: .22rem;color: #333}
+.log {font-size: .36rem;display: inline-block;line-height: 1rem;text-align: center;width: 6.1rem}
+content {}
+.txt{height: 1.23rem;border-bottom: .01rem solid #ddd;margin-left: .3rem;padding-top: .5rem;box-sizing: border-box}
+.txt .icon-shouji {font-size: .5rem;margin-left: -.08rem}
+.txt .icon-mima {font-size: .36rem;margin-top: .1rem;display: inline-block}
+.txt input {width: 4.23rem;height: .42rem;font-size: .28rem;border: 0 none;outline: medium;margin-left: .15rem}
+#psd {margin-left: .2rem}
+#text {margin-top: -.05rem}
+.txt .icon-x {font-size: .3rem;color: #999;margin-left: 1.2rem;visibility: hidden}
+.txt .icon-yanjing {font-size: .4rem;margin-left: .05rem;position: relative;top: .03rem}
+.login {width: 6.9rem;height: .9rem;background: #d80066;margin: .8rem auto .4rem;border-radius: .19rem;font-size: .32rem;line-height: .9rem;text-align: center;color: white}
+.two {width: 6.9rem;margin: 0 auto;overflow: hidden}
+.login:hover {background: #ed0070}
+
+.two a{display: block;font-size: .28rem;}
+.two a:hover {text-decoration: none}
+.reg {float: left;color: #999}
+.fot {float: right;color: black}
+.login-other {width: 6.9rem;margin: 0 auto;padding-top: 5rem}
+.wz-1 {height: .13rem;width: 2.5rem;float: left;border-bottom: .01rem solid #ddd}
+.wz-2 {font-size: .28rem;color: #999;text-align: center;line-height: .26rem;float: left;padding: 0 .09rem}
+.logo {width: 5.08rem;margin: 0 auto;padding-top: .71rem}
+.logo span .iconfont{font-size: .6rem;color: #ccc}
+.logo span {height: .96rem;width: .96rem;display: block;float: left;border-radius: 50%;border: .02rem solid #ccc;line-height: .96rem;text-align: center}
+.logo span:first-child {margin-right: 1rem}
+.logo span:last-child {margin-left: 1rem}
+.logo span a:hover {text-decoration: none}

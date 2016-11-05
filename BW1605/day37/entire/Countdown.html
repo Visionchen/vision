@@ -19,8 +19,10 @@
         }
         else{
             obj.setAttribute("disabled",true);
-            obj.value=""+i+" s";
+            obj.value= '已发送'+'('+i+'s)';
+            obj.style.backgroundColor = '#bfbfbf';
             i--;
+
             setTimeout(function(){
                 Countdown(obj)
             },100);

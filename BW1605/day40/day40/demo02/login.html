@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="fonticon/demo.css">
+    <link rel="stylesheet" href="fonticon/iconfont.css">
+</head>
+<body>
+<nav>
+    <span class="icon iconfont icon-fanhui"></span><span class="log">账号登录</span>
+</nav>
+<content>
+    <div class="txt">
+        <span class="icon iconfont icon-shouji"></span>
+        <input type="text" id="text" placeholder="手机号" name="ip">
+    </div>
+    <div class="txt">
+        <span class="icon iconfont icon-mima"></span>
+        <input type="password" id="psd" placeholder="密码，区分大小写" name="ip">
+        <span  class="icon iconfont icon-x" id="x"></span>
+        <span  class="icon iconfont icon-yanjing" id="eye"></span>
+    </div>
+    <div class="login" id="login">登录</div>
+    <div class="two">
+        <a href="file://192.168.1.123/Web/bw1602/day39/%E6%AF%9B%E7%9B%9B%E9%93%AD/day-39/registered.html" class="reg">快速注册</a>
+        <a href="file://192.168.1.123/Web/bw1602/day39/%E6%AF%9B%E7%9B%9B%E9%93%AD/day-39/password.html" class="fot">忘记密码</a>
+    </div>
+    <div class="login-other">
+        <div class="wz">
+            <div class="wz-1"></div>
+            <div class="wz-2">其他登录方式</div>
+            <div class="wz-1"></div>
+        </div>
+        <div class="logo">
+            <span><a href="#" class="icon iconfont icon-weixin"></a></span>
+            <span><a href="#" class="icon iconfont icon-qq"></a></span>
+            <span><a href="#" class="icon iconfont icon-sina"></a></span>
+        </div>
+    </div>
+</content>
+
+<script src="js/login.js"></script>
+<script>
+    new function () {
+        var _self = this;
+        _self.width = 750; // 设置默认最大宽度
+        _self.fontSize = 100; // 默认字体大小
+        _self.widthProportion = function () {
+            var p = (document.body && document.body.clientWidth || document.getElementsByTagName("html")[0].offsetWidth) / _self.width;
+            return p;
+        };
+        _self.changePage = function () {
+            document.getElementsByTagName("html")[0].setAttribute("style", "font-size:" + _self.widthProportion() * _self.fontSize + "px !important");
+        };
+        _self.changePage();
+        window.addEventListener('resize', function () {
+            _self.changePage();
+        }, false);
+    };
+
+
+</script>
+</body>
+</html>

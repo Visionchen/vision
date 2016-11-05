@@ -1,0 +1,24 @@
+html body{width: 100%;height: 100%}
+*{margin: 0;padding: 0}
+.head{width: 100%;height: .88rem;box-sizing: border-box;padding: 0 .3rem ;border-bottom: .01rem solid #dddddd;font-family: "微软雅黑"}
+.head .icon-fanhui{font-size: .5rem;height: 100%;line-height: .88rem;float: left;color:#999999}
+.head-text{font-size: .36rem;line-height: .88rem;width:1.55rem;float: left;margin-left:2.15rem }
+.main{width: 100%;box-sizing: border-box;padding: .6rem 0 .4rem .3rem}
+.main-phone{box-sizing: border-box;width: 100%;height:.8rem;padding: .2rem 0 .2rem .05rem ;border-bottom: .02rem solid #dddddd;margin-bottom: .6rem }
+.main-phone .icon-shouji{color:#999999;font-size: .6rem;line-height: .3rem;float: left;}
+.main-input{font-weight: bold;color: #333333;float: left;width:3rem;font-size: .28rem;box-sizing: border-box;border: 0 none;outline: none;padding: 0 .3rem}
+.main-input3{font-weight: bold;color: #333333;float: left;width:4.8rem;font-size: .28rem;box-sizing: border-box;border: 0 none;outline: none;padding: 0 .3rem}
+.main-phone1{position: relative;box-sizing: border-box;width: 100%;height:.8rem;padding: .2rem 0 .2rem .05rem ;border-bottom: .01rem solid #dddddd;margin-bottom: .6rem }
+.main-phone1 .icon-anquan{color:#999999;font-size: .6rem;line-height: .3rem;float: left;}
+.main-input1{font-weight: bold;color: #333333;float: left;width:2rem;font-size: .28rem;box-sizing: border-box;border: 0 none;outline: none;padding: 0 .3rem}
+.main-btn{float: right;padding: .15rem .3rem;font-size: .28rem;position: absolute;bottom: .2rem;right: .3rem;
+    background: #1e93ed;border-radius: .15rem;color: white;outline: none;border: 0 none;font-family: "微软雅黑"}
+.main-phone .icon-suo{color:#999999;font-size: .6rem;line-height: .3rem;float: left;}
+.main-phone .icon-shanchu{font-size: .4rem;line-height: .3rem;float: left;margin-left: .2rem;color: #999999;display: none}
+.main-phone .icon-keshi{color:#999999;font-size: .6rem;line-height: .3rem;float: right;margin-right: .3rem}
+.main-phone .icon-keshi:hover{color: blue}
+.register{display: block;width: 6.9rem;height: .9rem;box-sizing: border-box;margin: 0 auto 0;font-size: .32rem;text-align:center;color: white;
+    background: #dddddd;line-height: .9rem;border-radius: .2rem;font-family: "微软雅黑" ;text-decoration: none}
+
+
+#phoneText{font-size: .3rem;line-height: .2rem;float: left;color: #999999;font-family: "微软雅黑"}

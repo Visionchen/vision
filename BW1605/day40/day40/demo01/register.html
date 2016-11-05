@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>注册</title>
+    <link rel="stylesheet" href="fontimg/iconfont.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="head">
+    <a class="iconfont icon-fanhui" href="index.html" style="display: block;text-decoration: none"></a>
+    <div class="head-text">快速注册</div>
+</div>
+<form action="http://www.baidu.com/s">
+    <div class="main">
+        <div class="main-phone">
+            <div class="iconfont icon-shouji"></div>
+            <input type="text" class="main-input" placeholder="手机号" id="txt"><span id="phoneText"></span>
+        </div>
+        <div class="main-phone1">
+            <div class="iconfont icon-anquan"></div>
+            <input type="text" class="main-input1" placeholder="验证码" id="proving">
+            <input type="button" class="main-btn" value="发送" id="send">
+        </div>
+        <div class="main-phone">
+            <div class="iconfont icon-suo"></div>
+            <input type="password" class="main-input3" placeholder="请设置密码，区分大小写" id="pwd">
+            <span class="iconfont icon-shanchu" id="del"></span><span class="iconfont icon-keshi" id="eye"></span>
+        </div>
+
+    </div>
+</form>
+<a  class="register" id="entry" disabled="disabled">注册</a>
+
+
+<script>
+    window.onload = function () {
+
+
+        var send = document.getElementById('send');
+        var del = document.querySelector('#del');
+        var pwd = document.querySelector('#pwd');
+        var eye = document.querySelector('#eye');
+        var ent = document.querySelector('#entry');
+        var proving = document.querySelector('#proving');
+        var txt = document.querySelector('#txt');
+        var phone=document.querySelector('#phoneText');
+        var time = 60;
+        var timer;
+        var exp = /^1(3|4|5|7|8)\d{9}$/;
+
+        txt.focus();
+        txt.onblur = function () {
+            if (exp.test(txt.value)) {
+                send.removeAttribute('disabled');
+                phone.innerHTML=''
+            } else {
+                ent.removeAttribute('href');
+                send.setAttribute('disabled', true);
+                phone.innerHTML='请输入正确的手机号码'
+            }
+        };
+
+
+        send.onclick = function () {
+            clearInterval(timer);
+            timer = setInterval(function () {
+                if (time == 0) {
+                    clearInterval(timer);
+                    send.removeAttribute('disabled');
+                    send.value = '重新发送';
+                    send.style.background = '#1e93ed';
+                    time = 60;
+                } else {
+                    time--;
+                    send.setAttribute('disabled', true);
+                    send.value = '发送中（' + time + 's）';
+                    send.style.background = '#bfbfbf'
+                }
+            }, 1000);
+        };
+        del.onclick = function () {
+            pwd.value = '';
+            del.style.display = 'none';
+            pwd.focus();
+        };
+        pwd.onkeyup = function () {
+            del.style.display = 'block';
+            if (txt.value != '' && pwd.value != '' && proving.value != '') {
+                ent.style.background = '#d80066';
+                ent.setAttribute('href','https://www.duba.com/?f=wf_1_ch&--type=0')
+            } else {
+                ent.style.background = '#dddddd';
+                ent.removeAttribute('href')
+            }
+        };
+        txt.onkeyup = function () {
+            if (txt.value != '' && pwd.value != '' && proving.value != '') {
+                ent.style.background = '#d80066';
+                ent.setAttribute('href','https://www.duba.com/?f=wf_1_ch&--type=0')
+            } else {
+                ent.style.background = '#dddddd';
+                ent.removeAttribute('href')
+            }
+        };
+        proving.onkeyup = function () {
+            if (txt.value != '' && pwd.value != '' && proving.value != '') {
+                ent.style.background = '#d80066';
+                ent.setAttribute('href','https://www.duba.com/?f=wf_1_ch&--type=0')
+            } else {
+                ent.style.background = '#dddddd';
+                ent.removeAttribute('href')
+            }
+        };
+        var flag = true;
+        eye.onclick = function () {
+            if (flag) {
+                pwd.setAttribute('type', 'text');
+            } else {
+                pwd.setAttribute('type', 'password');
+            }
+            flag = !flag;
+        };
+
+
+        new function () {
+            var _self = this;
+            _self.width = 750; // 设置默认最大宽度
+            _self.fontSize = 100; // 默认字体大小
+            _self.widthProportion = function () {
+                var p = (document.body && document.body.clientWidth || document.getElementsByTagName("html")[0].offsetWidth) / _self.width;
+                return p;
+            };
+            _self.changePage = function () {
+                document.getElementsByTagName("html")[0].setAttribute("style", "font-size:" + _self.widthProportion() * _self.fontSize + "px !important");
+            };
+            _self.changePage();
+            window.addEventListener('resize', function () {
+                _self.changePage();
+            }, false);
+        };
+    };
+</script>
+</body>
+</html>

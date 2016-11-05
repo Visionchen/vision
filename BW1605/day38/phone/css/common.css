@@ -1,0 +1,36 @@
+
+body{font-size:12px; font-weight: bold}
+ul,li,ol{list-style-type:none;}
+img{vertical-align:top;border:0 none;}
+a{text-decoration:none;}
+.cf:after{content:'';display:table;clear:both;}
+.cf{*zoom:1}
+* {margin:0; padding:0;}
+body {width: 100%;height: 100%;background-color: #f4f4f4;}
+.contain ul{ width: 100%;height: 0.79rem;border-bottom: 0.01rem solid #e8e8e8;background-color: white;}
+.contain ul li{float: left;font-size: 0.3rem}
+.li-1{width: 0.21rem;height: 0.36rem;padding: 0.2rem 0.26rem;}
+.li-2{text-align: center;line-height: 0.8rem;width: 4.7rem}
+.li-3{width: 0.38rem;height: 0.33rem;padding: 0.23rem 0.26rem }
+.content{width: 6rem;height: 2.5rem;background-color: white;margin: 0.2rem; border: 0.01rem solid #f4f4f4;border-radius: 0.1rem}
+.vouchers{width:100%;height: 2.5rem; background:url(../imgs/bg.png);background-size: cover;position: relative ;overflow: hidden}
+.code{border: 0.01rem solid #d5d5d5;border-bottom-right-radius: 0.1rem;border-bottom-left-radius: 0.1rem;width: 5.96rem;height: 3.75rem;border-top: 0 none;margin: -0.2rem 0.2rem 0.2rem 0.21rem;display: none;background-color: white;}
+.code-con{padding: 0.4rem 1.89rem 0rem 1.89rem;}
+.img-1{width: 2.21rem;height: 2.21rem;}
+.code-text{text-align: center;padding: 0.3rem 0;font-size: 0.2rem;color: #d5d5d5;}
+.use{width: 100%;background-color: white;height: 2.41rem;border-bottom: 0.01rem solid #dddddd;border-top: 0.01rem solid #dddddd;font-size: 0.25rem;color: #333333}
+.use-1{background-color: white;height: 0.79rem;margin: 0 0.2rem;}
+.use-2{background-color: white;height: 0.79rem;border-bottom: 0.01rem solid #dddddd;border-top: 0.01rem solid #dddddd;margin: 0 0.2rem;}
+.use-text{float: left;line-height: 0.79rem;text-indent: 0.2rem;vertical-align: middle}
+.use-go img{width: 0.11rem;height: 0.21rem;float: right;vertical-align: middle;padding: .25rem .3rem;}
+.input{margin: 0.6rem 0.2rem 2.85rem;background-color: #ff7f02;height: 0.8rem;border-radius: 0.1rem;color: white;display: block;line-height: 0.8rem;text-align: center;font-size: 0.3rem;}
+.logo{padding: 0.25rem 0 0 0.25rem;}
+.logo img{width: 0.63rem;height: 0.63rem;vertical-align: middle}
+.logo span{font-size: 0.25rem;color: white;text-indent: 0.13rem;vertical-align: middle}
+.gift{padding: 0.35rem 0 0 0;}
+.gift img{float: left;padding: 0 0.38rem 0 0.89rem;width: 0.76rem;height: 0.76rem;}
+.gift-text{float: left;color: white;padding: 0 0 0 0.38rem;border-left: 0.01rem solid #96d9bf}
+.gift-text-1{font-size: 0.35rem}
+.gift-text-2{font-size: 0.2rem}
+.git{width: 1.42rem;height: 0.41rem;background-color: #d7fcd2;color: #279560;line-height: 0.41rem;text-align: center;transform: rotate(45deg);-ms-transform: rotate(45deg); /* IE 9 */-webkit-transform: rotate(45deg); position: absolute;right: -0.4rem;top: 0.15rem;box-shadow: 0.01rem 0.02rem 0.02rem ;font-size: .2rem}
+.my-bag{color: #2f45ca;font-size: 0.26rem;display: block;text-align: center;margin-top: .6rem}

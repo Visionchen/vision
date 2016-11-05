@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>find</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../login/css/find.css">
+    <link rel="stylesheet" href="icon/iconfont.css">
+</head>
+<body>
+<div class="contain">
+    <ul class="cf">
+        <li class="li-1"><a href="login.html"><i class="icon iconfont">&#xe66e;</i></a></li>
+        <li class="li-2">找回密码</li>
+    </ul>
+</div>
+<ul >
+    <li class="phone"><i class="icon iconfont size">&#xe613;</i><input type="text" class="phone-num" id="phone-num1" placeholder="请输入手机号"></li>
+    <li class="phone"><i class="icon iconfont size">&#xe866;</i><input type="text" class="phone-num" placeholder="短信验证码"> <span class="span"><span class="btn" onclick="Countdown(this)"  id="bt" >获取验证码</span></span></li>
+
+
+    <li class="phone">
+        <i class="icon iconfont size">&#xe6e3;</i><input type="password"  class="phone-num" id="phone-num2" placeholder="请设置密码，区分大小写"> <i class="icon iconfont" id="eye">&#xe620;</i>
+    </li>
+</ul>
+<a href="javascript:;" id="btn-3">重置密码</a>
+<script src="jquery.min.js"></script>
+<script>
+    $(function () {
+        var flag = true;
+        $('#eye').click(function () {
+            if (flag == true){
+                $(this).css("color","#1e93ed");
+                $('#phone-num2').attr('type','text');
+                $('#phone-num2').focus();
+            }else{
+                $(this).css("color","#999999");
+                $('#phone-num2').attr('type','password');
+                $('#phone-num2').focus();
+            }
+            flag = !flag;
+        });
+    },jQuery);
+    /////////
+    var bt = document.getElementById('bt');
+//    var bt_3 = document.getElementById('btn-3');
+    var i = 60;
+    function Countdown(obj){
+        var phone_num1 = document.getElementById('phone-num1').value;
+
+        var reg = /^1[34578]\d{9}$/;
+        if(reg.test(phone_num1)){
+
+            if(i == -1){
+                i = 60;
+                obj.setAttribute("onclick",'Countdown(this)');
+                obj.innerHTML="重新发送";
+                obj.style.backgroundColor = '#1e93ed';
+            }
+            else{
+                obj.setAttribute("onclick","");
+                obj.innerHTML= '已发送'+'('+i+'s)';
+                obj.style.backgroundColor = '#bfbfbf';
+
+                i--;
+                setTimeout(function(){
+                    Countdown(obj)
+                },100);
+                var btn_3 = document.getElementById('btn-3');
+                btn_3.style.backgroundColor = '#ed0070';
+            }
+
+        }   else{
+            alert("手机号码有误，请重填");
+        }
+
+    }
+    //////////////////////////////////
+    new function () {
+        var _self = this;
+        _self.width = 750; // 设置默认最大宽度
+        _self.fontSize = 100; // 默认字体大小
+        _self.widthProportion = function () {
+            var p = (document.body && document.body.clientWidth || document.getElementsByTagName("html")[0].offsetWidth) / _self.width;
+            return p;
+        };
+        _self.changePage = function () {
+            document.getElementsByTagName("html")[0].setAttribute("style", "font-size:" + _self.widthProportion() * _self.fontSize + "px !important");
+        };
+        _self.changePage();
+        window.addEventListener('resize', function () {
+            _self.changePage();
+        }, false);
+    };
+</script>
+</body>
+</html>

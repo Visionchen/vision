@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>登录</title>
+    <link rel="stylesheet" href="fontimg/iconfont.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/denglu.css">
+</head>
+<body>
+<div class="head">
+    <div class="iconfont icon-fanhui"></div>
+    <div class="head-text">账号登录</div>
+</div>
+<div class="main">
+    <div class="main-phone">
+        <div class="iconfont icon-shouji"></div>
+        <input type="text" class="main-input" placeholder="手机号" id="txt"><span id="phoneText"></span>
+    </div>
+    <div class="main-phone">
+        <div class="iconfont icon-suo"></div>
+        <input type="password" class="main-input3" placeholder="请设置密码，区分大小写"  id="pwd">
+        <span class="iconfont icon-shanchu" id="del"></span><span class="iconfont icon-keshi" id="eye"></span>
+    </div>
+
+</div>
+<a  class="register" id="entry">登录</a>
+<div class="main-bottom">
+    <a class="main-register" href="register.html">快速注册</a>
+    <a class="main-kw" href="keyword.html">忘记密码？</a>
+</div>
+<div class="footer">
+    <div class="foot-icon"></div>
+    <div class="foot-icon1">其它登录方式</div>
+    <div class="foot-icon2"></div>
+</div>
+<div class="footer-log">
+    <span class="iconfont icon-weixin"></span>
+    <span class="iconfont icon-qq-copy"></span>
+    <span class="iconfont icon-xinlang1"></span>
+</div>
+
+
+
+<script>
+    var del=document.querySelector('#del');
+    var pwd=document.querySelector('#pwd');
+    var txt=document.querySelector('#txt');
+    var eye=document.querySelector('#eye');
+    var ent=document.querySelector('#entry');
+    var phone=document.querySelector('#phoneText');
+    var exp=/^1(3|4|5|7|8)\d{9}$/;
+
+    txt.focus();
+    txt.onblur = function () {
+        if (exp.test(txt.value)) {
+
+            phone.innerHTML=''
+        } else {
+            ent.removeAttribute('href');
+
+            phone.innerHTML='请输入正确的手机号码';
+        }
+    };
+
+    txt.onkeyup=function () {
+        if(txt.value!=''&& pwd.value!=''){
+            ent.style.background='#d80066';
+            ent.setAttribute('href','https://www.duba.com/?f=wf_1_ch&--type=0')
+        }else {
+            ent.style.background='#dddddd';
+            ent.removeAttribute('href')
+        }
+    };
+    del.onclick=function () {
+        pwd.value='';
+        del.style.display='none';
+        pwd.focus();
+    };
+    pwd.onkeyup=function () {
+        del.style.display = 'block';
+        if(txt.value!=''&& pwd.value!=''){
+            ent.style.background='#d80066';
+            ent.setAttribute('href','https://www.duba.com/?f=wf_1_ch&--type=0')
+        }else {
+            ent.style.background='#dddddd';
+            ent.removeAttribute('href')
+        }
+    };
+    var flag=true;
+    eye.onclick=function () {
+        if(flag){
+            pwd.setAttribute('type','text');
+        }else {
+            pwd.setAttribute('type','password');
+        }
+        flag=!flag;
+    };
+
+
+
+
+
+
+
+    new function () {
+        var _self = this;
+        _self.width = 750; // 设置默认最大宽度
+        _self.fontSize = 100; // 默认字体大小
+        _self.widthProportion = function () {
+            var p = (document.body && document.body.clientWidth || document.getElementsByTagName("html")[0].offsetWidth) / _self.width;
+            return p;
+        };
+        _self.changePage = function () {
+            document.getElementsByTagName("html")[0].setAttribute("style", "font-size:" + _self.widthProportion() * _self.fontSize + "px !important");
+        };
+        _self.changePage();
+        window.addEventListener('resize', function () {
+            _self.changePage();
+        }, false);
+    };
+</script>
+</body>
+</html>
