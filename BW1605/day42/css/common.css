@@ -1,0 +1,16 @@
+*{margin:0;padding:0;}
+body,html{box-sizing: border-box;}
+ul,li,ol{list-style-type:none;}
+img{vertical-align:top;border:0 none;}
+a{text-decoration:none;}
+.cf:after{content:'';display:table;clear:both;}
+.cf{*zoom:1}
+body p{margin: 0;padding: 0;}
+.kong{width: 100%;height: 90px;}
+.kon{width: 100%;height: 50px;}
+
+div.bar-na{background:#3E8CE1;height: 50px;width: 100%;}
+.my-icon1 {width: 140px;height: 43px; display:inline-block;padding-left:10px;margin-top:5px;}
+.pul-left{float: left}
+.pul-right{float: right;margin-right:20px; }
+div span a{color: white;font-size: 14px;line-height: 50px;}

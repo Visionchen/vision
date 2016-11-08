@@ -1,0 +1,26 @@
+#first-ul{width: 98%;height:30px;margin: 20px auto; }
+#first-ul li{box-sizing: border-box;float: left;width: 33%;line-height: 30px;text-align: center;border: 1px solid #3E8CE1;color: #3E8CE1;height:30px;font-size: 14px;}
+#second-ul{position: relative;}
+#second-ul li{position: absolute;display: none;width: 100%}
+#first-ul li.focus{background-color: #3E8CE1;color:white;}
+nav a span.my-icon2{width: 30px;height: 30px;background: url("../imgs/foot_icons.png")0px -29px no-repeat;background-size: 119px;}
+nav a span.my-icon3{width: 30px;height: 30px;background: url("../imgs/foot_icons.png")-31px 0 no-repeat;background-size: 119px;}
+nav a span.my-icon4{width: 30px;height: 30px;background: url("../imgs/foot_icons.png")-62px -29px no-repeat;background-size: 119px;}
+nav a span.my-icon5{width: 30px;height: 30px;background: url("../imgs/foot_icons.png")-93px -29px no-repeat;background-size: 119px;}
+
+.resource-title {height: 50px;line-height: 50px;font-size: 18px;border-bottom: 1px dashed #cccccc;color: #7D6666;font-weight: bold;}
+.contain-li{margin: 8px 8px 0 8px;}
+.o-li{width: 100%;height: 125px;background-color: white;margin-bottom: 10px;}
+.all-span{margin: 8px 0 0 0;display: flex;justify-content: space-between;}
+/*.span-1{width: 20%;}*/
+/*.span-2{width: 22%;}*/
+/*.span-3{width: 30%;text-align: center}*/
+.all-span span{height: 25px;display: inline-block;font-size: 14px;color: #FA6B0D;}
+.percent{width: 82%;height: 10px;background-color: #E2E2E2;float: left;margin-top: 5px;}
+.percent-cont{width: 33%;height: 10px;background-color: #3E8CE1;}
+.percent-cont1{width: 15%;height: 10px;background-color: #3E8CE1;}
+.percent-num{float: right;font-size: 12px;color: #9FA8BE}
+.state{font-size: 14px;color: #7D6666;}
+.state-text{float: left;}
+.state-time{float: right;}
+.go{text-align: center;color: #7D6666;font-size: 14px;margin-bottom: 10px;}
