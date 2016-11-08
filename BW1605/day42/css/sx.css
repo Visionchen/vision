@@ -5,7 +5,7 @@
 .top-right{float: right;padding-right: 20px;font-size: 16px;line-height: 40px;}
 
 
-nav a span.my-icon2{width: 30px;height: 30px;background: url("../imgs/foot_icons.png")3px 0 no-repeat;background-size: 119px;}
+nav a span.my-icon2{width: 30px;height: 30px;background: url("../imgs/foot_icons.png")3px 2px no-repeat;background-size: 119px;}
 nav a span.my-icon3{width: 30px;height: 30px;background: url("../imgs/foot_icons.png")-31px -29px no-repeat;background-size: 119px;}
 nav a span.my-icon4{width: 30px;height: 30px;background: url("../imgs/foot_icons.png")-62px -29px no-repeat;background-size: 119px;}
 nav a span.my-icon5{width: 30px;height: 30px;background: url("../imgs/foot_icons.png")-93px -29px no-repeat;background-size: 119px;}
@@ -34,7 +34,7 @@ div span a{color: white;font-size: 14px;line-height: 50px;}
 .over-u{width: 21%;height: 5px;background-color: #3E8CE1;border-radius: 5px;}
 .over-val{float: left;margin: 6px 0 0 0;}
 a.a-input{background-color: #0a8ddf;color: white;width: 80px;height: 30px;line-height: 30px;display: inline-block;border-radius: 8px;margin:0 auto;text-align: center;box-sizing: border-box;}
-.it{display: block;margin: 20px auto;width:40%;height: 30px; border-radius: 10px;border:1px solid #3E8CE1;line-height: 30px;text-align: center;color: #7D6666;}
+.it{display: block;margin: 20px auto;width:40%;height: 30px; border-radius: 50px;border:1px solid #3E8CE1;line-height: 30px;text-align: center;color: #7D6666;}
 .bot{display: block;margin: 10px auto;width:60%;height: 30px; line-height: 30px;text-align: center;color: #7D6666;font-size: 12px;}
 .change{display: inline-block;width:50%;height: 30px; line-height: 30px;text-align: center;color: #7D6666;}
 .change{display: inline-block;width:50%;height: 30px; line-height: 30px;text-align: center;color: #7D6666;}
