@@ -1,5 +1,5 @@
 *{margin:0;padding:0;}
-body{font-size:12px; font-family: "Microsoft YaHei";font-weight: bold}
+body,html{box-sizing: border-box;}
 ul,li,ol{list-style-type:none;}
 img{vertical-align:top;border:0 none;}
 a{text-decoration:none;}

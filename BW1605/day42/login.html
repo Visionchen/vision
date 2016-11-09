@@ -2,14 +2,14 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>注册</title>
+    <title>登录</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/rename.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/swiper-3.4.0.min.css">
-    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
-    <style>html,body{max-width: 640px; margin: 0 auto;background-color: #F7F8F8;color: #7D6666}</style>
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <style>html,body{ margin: 0 auto;background-color: #F7F8F8;color: #7D6666}</style>
 </head>
 <body>
 <div class="page-group">
@@ -30,7 +30,7 @@
                 <span class="icon my-icon4"></span>
                 <span class="tab-label">我的财富</span>
             </a>
-            <a class="tab-item external" href="#">
+            <a class="tab-item external" href="contact us.html">
                 <span class="icon my-icon5"></span>
                 <span class="tab-label">关于善行创投</span>
             </a>
@@ -40,28 +40,29 @@
 
         <div class="content" style="width:100%;height: 100%;background-color:#F7F8F8">
             <div class="bar-na cf">
-                <a href="#" class="my-icon1 pul-left"><img src="imgs/logo.png" style="width:120px; height:40px"></a>
+                <a href="shanxing.html" class="my-icon1 pul-left"><img src="imgs/logo.png" style="width:120px; height:40px"></a>
             </div>
-            <div class="wx_login_box">
+            <div class="login_box">
                 <form action="#" id="form1" method="post">
-                    <div class="sx_pinkColor">必须提供校验码.</div>
                     <input type="hidden" name="_z" value="/user/mobile/myWealth.htm" />
                     <div class="input_box">
-                        <span class="user_icon"></span><input type="text"  placeholder="用户名/手机号码" name="accountName" value="" class="wx_icon_user input_text">
+                        <span class="user_icon"></span><input type="text"  placeholder="用户名/手机号码" name="userName" value="" class="wx_icon_user input_text">
                     </div>
                     <div class="input_box">
                         <span class="passwd_icon"></span><input type="password"  placeholder="请输入密码"   name="password" class="wx_icon_pw input_text" >
                     </div>
-                    <!--<div class="wx_login_check_code">-->
-                        <!--<span class="code_icon"></span><input type="tel"  placeholder="请输入验证码" id="code" name="verifyCode"   class="input_text" value="" >-->
-                        <!--<span class="vcode"> <img id="codeNum" src="/user/loginVerify.htm" class="verifyImg" onclick='this.src="/user/loginVerify.htm?"+Math.random()' style="width:109px;height:43px;" title="换一张" alt="验证码"></span> </div>-->
+                    <div class="input_box">
+                        <span class="code_icon"></span><input type="tel"  placeholder="请输入验证码" id="code" name="verifyCode"   class="input_text" value="" >
+                        <!--<span class="code_img"><img src="#" style="width:109px;height:43px;"></span>-->
+                        <span class="vcode"> <img id="codeNum" src="imgs/loginVerify.htm" class="verifyImg" onclick='this.src="imgs/loginVerify.htm?"+Math.random()' style="width:109px;height:41px;" title="换一张" alt="验证码"></span> </div>
 
 
-                    <!--<a href="javascript:void(0);" onclick="resubmit();" id="wx_loginSubmit" tabindex="4" class="btn_wap wx_btn_orange"> 立即登录 </a>-->
-                    <!--<div class="xn_login_blow">-->
-                        <!--<a class="fpwd" href="/mobile/dismePassword.html"> 找回密码？ </a>-->
-                        <!--<span class="xn_noAccount">还没有账户？ <a class="wx_reg_now" href="/mobile/register.html"> 立即注册 </a> </span>-->
-                    <!--</div>-->
+                    <a href="#" onclick="resubmit();" id="wx_loginSubmit" tabindex="4" class="btn-login"> 立即登录 </a>
+                    <div class="login_bot cf">
+                        <a class="login_bot-l" href="find.html"> 找回密码？</a>
+                        <div class="login_bot-r">还没有账户？<a  href="reg.html" class="login-reg external">立即注册</a></div>
+                    </div>
+                    <div class="bot"><a href="#" class="change">切换到电脑版</a><a href="#" class="change">下载善行创投app</a></div>
                 </form>
             </div>
 
@@ -86,9 +87,9 @@
 <!--<script>$.init()</script>-->
 <script src="js/swiper-3.4.0.min.js"></script>
 <script src="js/zepto.min.js"></script>
-<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
-<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
-<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
 <script src="js/sx.js"></script>
 <script>
 

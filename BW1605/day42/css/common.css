@@ -7,6 +7,7 @@ a{text-decoration:none;}
 .cf{*zoom:1}
 body p{margin: 0;padding: 0;}
 .kong{width: 100%;height: 90px;}
+.k{width: 100%;height: 60px;}
 .kon{width: 100%;height: 50px;}
 
 div.bar-na{background:#3E8CE1;height: 50px;width: 100%;}
@@ -14,3 +15,8 @@ div.bar-na{background:#3E8CE1;height: 50px;width: 100%;}
 .pul-left{float: left}
 .pul-right{float: right;margin-right:20px; }
 div span a{color: white;font-size: 14px;line-height: 50px;}
+
+.bot{display: block;margin: 10px auto;width:100%;height: 30px; line-height: 30px;text-align: center;color: #7D6666;font-size: 12px;}
+.change{display: inline-block;width:50%;height: 30px; line-height: 30px;text-align: center;color: #7D6666;}
+.change{display: inline-block;width:50%;height: 30px; line-height: 30px;text-align: center;color: #7D6666;}
+
