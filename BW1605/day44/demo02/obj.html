@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var p1 = new Object();
+        p1.name = 'tom';
+        p1.age = 18;
+        p1.eat = function() {
+            alert(this.name);
+        };
+
+        var p2 = {
+            name: 'LiLei',
+            age:20,
+            eat: function() {
+                alert(this.name);
+            }
+        }
+
+        var p3 = {
+            name: 'HanMeiMei',
+            age:21,
+            eat: function() {
+                alert(this.name);
+            }
+        }
+
+        var p4 = {
+            name: 'Jim',
+            age:22,
+            eat: function() {
+                alert(this.name);
+            }
+        }
+
+
+
+
+    </script>
+</body>
+</html>

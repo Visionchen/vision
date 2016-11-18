@@ -71,7 +71,7 @@
 //    }
 //    alert(Math.max.apply(null, arrNum));
 
-var str = "ruiyourbedmyworldu";
+var str = "tree";
 var obj = {};//对象
 for (var i = 0, length = str.length; i < length; i++) {
     var char = str.charAt(i);
@@ -82,19 +82,20 @@ for (var i = 0, length = str.length; i < length; i++) {
     }
 }
 
-console.log(obj); //输出的是完整的对象，记录着每一个字符及其出现的次数
+console.log(obj[str]); //输出的是完整的对象，记录着每一个字符及其出现的次数
 //遍历对象，找到出现次数最多的字符的次数
+//console.log(obj);
 var max = 0;
+//for (var j in obj) {
+//    if (max < obj[j]) {
+//        max = obj[j]; //max始终储存次数最大的那个
+//    }
+//}
 for (var j in obj) {
-    if (max < obj[j]) {
-        max = obj[j]; //max始终储存次数最大的那个
-    }
-}
-for (var j in obj) {
-    if (obj[j] == max) {
+    if (obj[j]) {
         console.log(j);
-        console.log("最多的字符是" + j);
-        console.log("出现的次数是" + max);
+//        console.log( j);
+//        console.log("出现的次数是" + max);
     }
 }
 </script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <style>
+    .box {width:200px; margin: 20px auto;}
+    </style>
+</head>
+<body>
+
+<div class="box" ng-controller="firstCtrl">
+    <div class="form-group">
+        <input type="text" class="form-control" ng-model="name1">
+    </div>
+    <div class="info">{{name1 + ' ' + all}}</div>
+</div>
+<div class="box" ng-controller="secondCtrl">
+    <div class="form-group">
+        <input type="text" class="form-control" ng-model="name1">
+    </div>
+    <div class="info">{{name1 + ' ' + all}}</div>
+    <div>
+        <button type="button" ng-click="show()" class="btn btn-primary">点击我试试看</button>
+    </div>
+</div>
+
+<script>
+
+var app = angular.module('myApp', []);
+app.controller('firstCtrl', function($scope, $rootScope) {
+    $scope.name1 = '拉登';
+    $rootScope.all = '地球';
+});
+app.controller('secondCtrl', function($scope) {
+    $scope.name1 = '奥巴马';
+    $scope.show = function() {
+        alert('我们都是好孩子');
+    }
+});
+
+
+</script>
+
+</body>
+</html>

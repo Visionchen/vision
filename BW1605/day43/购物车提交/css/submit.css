@@ -1,0 +1,33 @@
+.content{width: 80%;margin: 20px auto;font-size: 14px;}
+.title{width: 100%;border-bottom:2px solid #0AB3E6;color: #0AB3E6;height: 25px;font-size: 18px;font-weight: bold;}
+.top{width: 100%;height: 40px;line-height: 40px;background-color: #efefef;}
+span{display: inline-block}
+.top span{display: inline-block;text-align: center}
+.input{width: 3%;padding-left: 20px;}
+.top span.first{width: 5%;height: 100%;}
+.second{width: 20%;height: 100%}
+.third{width: 10%;height: 100%}
+.fourth{width: 20%;height: 100%}
+.fifth{width: 10%;height: 100%;color: red;}
+.last{width: 20%;height: 100%}
+.con{width: 100%;height: 130px;background-color: #EDF3F5;position: relative;border:1px solid #dddddd}
+.con li{float: left;}
+.inpu{width: 3%;padding-left: 32px;line-height:130px; }
+.first{width: 5%;height: 100%;text-align: center}
+.number{border: 1px solid #CCCCCC;margin: -10px auto 0;position: relative;top:50%;width: 102px;}
+.reduce{width: 20px;height: 20px;line-height: 20px;text-align: center;float: left;display: block;border-right:1px solid #cccccc;cursor: pointer}
+.num{width:50px;height: 20px;line-height: 20px;float: left ;display: block;outline: 0 none;border: 0 none;background-color:#EDF3F5;padding-left: 10px; }
+.add{width: 20px;height: 20px;line-height: 20px;text-align: center;float: left;display: block;border-left:1px solid #cccccc;cursor: pointer}
+.kuang{width: 80px;height: 80px;background-color: lightyellow;margin-top: -40px;position: relative;top:50%;}
+.lh{line-height: 130px;text-align: center;}
+.lh a{display: inline-block;padding-left: 27px}
+.bot{width: 100%;height: 60px;border:1px solid #efefef;line-height: 60px;margin-top: 20px;}
+.bot a{display: inline-block;width: 150px;height: 100%;background-color: #cccccc;color: white;text-align: center;float: right}
+.y{padding-left: 30px}
+.fl{float: left;display: block;width: 400px;}
+.f{float: left;display: block;width: 40px;}
+.total{color: red;}
+.last a{display: inline-block}
+
+
+

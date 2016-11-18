@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var name = 'window';
+
+        var p1 = new Object();
+        p1.name = 'tom';
+        p1.age = 18;
+        p1.eat = function() {
+            alert(this.name);
+        };
+
+        p1.eat();  // tom
+        var chi = p1.eat;
+        chi();   // window
+        chi.call(p1);
+
+    </script>
+</body>
+</html>

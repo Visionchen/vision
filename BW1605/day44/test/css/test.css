@@ -1,0 +1,12 @@
+.search{background-color:#EDEEF2;border-radius: 6px;width: 94%;height: 30px;margin: 10px auto;border:0 none;outline: 0 none;display: block;text-align: center}
+.message{background-color:#fff;width: 100%;height: 60px; }
+.back{background-color: #EDEEF2}
+.message img{width: 40px;height: 40px;display: block;float: left;margin: 10px 15px;background-color: lightblue;
+    }
+.message-text{float: left;height: 40px;margin: 7px 0;width: 78%}
+.message-title{font-size: 18px;color: black;width: 100%}
+.message-article{font-size: 12px;}
+h1.message-title span{font-size: 14px;color:#7D6666 }
+p .span{font-size: 14px;display: inline-block;width: 50px;height: 20px;background-color: #96D7F0;color: white;line-height:20px;text-align: center;border-radius: 10px;}
+.img{border-radius: 50%;margin-top: 7px;}
+.ko{height:120px;width: 100%;}

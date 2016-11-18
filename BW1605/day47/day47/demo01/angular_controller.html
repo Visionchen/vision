@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-controller="myCtrl">
+    <p><input type="text" ng-model="xing" placeholder="姓"></p>
+    <p><input type="text" ng-model="person.name" placeholder="名"></p>
+    <h2>{{xing + ' ' + ming}}</h2>
+    <h3>{{person.name | uppercase}}</h3>
+</div>
+
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+        $scope.xing = '张';
+        $scope.ming = '三丰';
+        $scope.person = {
+            name: 'duglas',
+            age: 18,
+            gender: 'male'
+        };
+    });
+</script>
+
+</body>
+</html>

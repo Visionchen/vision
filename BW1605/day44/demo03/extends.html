@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+
+function Animal() {
+}
+Animal.prototype.eat = function() {
+    alert('eat');
+}
+
+function Dog() {
+
+}
+Dog.prototype = new Animal();
+Dog.prototype.constructor = Dog;
+
+var dog = new Dog();
+dog.eat();
+
+
+
+
+</script>
+</body>
+</html>

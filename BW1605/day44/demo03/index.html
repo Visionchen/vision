@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+Array.prototype.removeRepeat = function() {
+    for(var i = 0; i < this.length; i++) {
+        for(var j = i + 1; j < this.length; j++) {
+            if(this[i] == this[j]) {
+                this.splice(j, 1);
+                j--;
+            }
+        }
+    }
+
+};
+
+var ary = [3, 1, 2, 4, 3, 3, 3, 1, 6];
+
+console.log(ary);
+
+ary.removeRepeat();
+
+console.log(ary);
+
+
+</script>
+
+
+</body>
+</html>

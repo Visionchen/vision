@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var str = "Aabb";
+		var arr = str.split( "" );
+		//arr = [ A, a, b, b, e, e, r, t ]
+		arr = arr.sort();
+		// console.log( arr );
+		// var newStr = arr.join( "" );	
+
+		//newArr: 存储每种字符出现的次数， 索引是该字符, 值为字符出现的次数
+		var newArr = [];
+		for ( var key in arr ){
+			// newArr[ A ] = 1
+			// newArr[ a ] = 1;
+			// newArr[ b ] = 2;
+			//......
+			if ( newArr[arr[key]]  == undefined ) {
+				newArr[arr[key]] = 1;
+			}else {
+				newArr[arr[key]] += 1;
+			}
+		}
+
+		//newArr: [A: 1, a: 1, b: 2]
+		console.log( newArr );
+
+		var newArr2 = [];
+		var index = 0;
+		for ( var key in newArr ){
+			newArr2[index++] = newArr[key];
+		}
+		
+		newArr2.sort( function( a, b ){
+			return b - a;
+		} );
+
+		//newArr2: [2,1,1]
+		var s = '';
+		for ( var i in newArr2 ){
+			for ( var j in newArr ) {
+				if ( newArr2[i] == newArr[j] ){
+					for ( var k = 0; k < newArr[j]; k++ ) {
+						s += j;
+					}
+					delete newArr[j];
+				}	
+			}
+		}
+		document.write( s );
+
+
+
+
+
+
+
+
+
+
+
+			
+		// newArr.sort( function( a, b ){
+		// 	return a - b;
+		// } );
+		// console.log( newArr );
+
+		// var arr2 = [ 20, 10, 1, 3, 90 ];
+		// arr2.sort( function( a, b ){
+		// 	return a - b;
+		// } );
+		// console.log( arr2 );
+		
+		
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

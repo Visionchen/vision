@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+
+<div class="container" ng-controller="formCtrl">
+    <div class="row">
+        <div class="col-md-6">
+            <form name="myform">
+                <div class="form-group has-error">
+                    <label>用户名</label>
+                    <input type="text" class="form-control" name="username" ng-model="username" required>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <p ng-show="myform.username.$invalid" class="bg-danger">用户名不能为空</p>
+            <p ng-show="myform.username.$valid" class="bg-success"><i class="fa fa-check" aria-hidden="true"></i></p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+var app = angular.module('myApp', []);
+app.controller('formCtrl', function($scope) {
+
+});
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<input type="button" value="click Me" onclick="show()">
+
+<script>
+
+(function() {
+    "use strict";
+
+
+    var btn = document.querySelector('input');
+    btn.addEventListener('click', function() {
+            alert('haha');
+    },false);
+
+})();
+
+function show() {
+    alert('duang');
+}
+
+~function(){
+
+}();
+
+</script>
+
+
+</body>
+</html>

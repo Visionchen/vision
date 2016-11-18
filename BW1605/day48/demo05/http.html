@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-controller="myCtrl">
+    {{result}}
+</div>
+
+
+<script>
+
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $http) {
+
+    $http.get('data.json').success(function(data) {
+        $scope.result = data.name;
+    });
+
+    // $http.get('data.json').then(function(response) {
+    //     $scope.result = response.data.name;
+    // })
+
+});
+
+</script>
+
+
+
+</body>
+</html>

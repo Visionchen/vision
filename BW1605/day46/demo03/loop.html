@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+(function() {
+    'use strict';
+
+    var ary = [8, 3, 8, 4, 8, 1, 0];
+
+    //console.log(f);
+
+    try {
+        //throw new Error('哈哈， 你错了');
+        console.log(f);
+
+    } catch(e) {
+        console.log('我解决了你的错误！' + e);
+    } finally {
+        console.log('不管你有没有错，我都会执行');
+    }
+    var result = ary.every(function(v) {
+        if(v > 3) {
+            return true;
+        }
+    });
+    console.log(result);
+
+
+
+    // var result = ary.some(function(v) {
+    //     if(v > 3) {
+    //         return true;
+    //     }
+    // });
+    // console.log(result);
+
+    // var newAry = ary.filter(function(v) {
+    //     return v > 3;
+    // })
+    // console.log(newAry);
+
+
+    // var newAry = ary.map(function(v) {
+    //     return v + 1;
+    // });
+    // console.log(newAry);
+
+    // ary.forEach(function(v, i, ary) {
+    //     console.log(v + ' - ' + i + ' - ' + ary);
+    // });
+
+
+})();
+
+</script>
+
+</body>
+</html>

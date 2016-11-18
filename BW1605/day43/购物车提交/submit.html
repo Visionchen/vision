@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>submit</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/submit.css">
+</head>
+<body>
+<div class="content">
+    <div class="title">我的购物车(<span>2</span>)</div>
+    <div class="contain">
+        <div class="top">
+            <span class="input"><input type="checkbox" class="choose" name="entire" ></span>
+            <span class="first">全选</span>
+            <span class="second">商品规格</span>
+            <span class="third">价格</span>
+            <span class="fourth">数量</span>
+            <span class="fifth" style="color: black">金额(元)</span>
+            <span class="last">操作</span>
+        </div>
+        <div class="sec-1">
+        <div class="top to" style="background-color: transparent;">
+            <span class="input"><input type="checkbox" name="entire" class="input-1"></span>
+            <span class="first">杭州公司</span>
+        </div>
+        <ul class="con cf one">
+            <li class="inpu"><input type="checkbox" name="entire-child"></li>
+            <li class="first"><div class="kuang"></div></li>
+            <li class="second lh">九阳真经</li>
+            <li class="third lh" >5.00</li>
+            <li class="fourth ">
+                <div class="number cf">
+                    <span class="reduce">-</span>
+                    <input type="text" value="1" class="num">
+                    <span class="add">+</span>
+                </div>
+            </li>
+            <li class="fifth lh jia">5.00</li>
+            <li class="last lh"><a href="javascript:;" class="del">删除</a></li>
+        </ul>
+        <ul class="con cf one">
+            <li class="inpu"><input type="checkbox" name="entire-child"></li>
+            <li class="first"><div class="kuang"></div></li>
+            <li class="second lh">九阳真经</li>
+            <li class="third lh" >5.00</li>
+            <li class="fourth ">
+                <div class="number cf">
+                    <span class="reduce">-</span>
+                    <input type="text" value="1" class="num">
+                    <span class="add">+</span>
+                </div>
+            </li>
+            <li class="fifth lh jia">5.00</li>
+            <li class="last lh"><a href="javascript:;" class="del">删除</a></li>
+        </ul>
+        </div>
+        <div class="sec-1">
+        <div class="top to" style="background-color: transparent;">
+            <span class="input"><input type="checkbox" name="entire" class="input-2"></span>
+            <span class="first">深圳公司</span>
+        </div>
+        <ul class="con cf two">
+            <li class="inpu"><input type="checkbox" name="entire-child"></li>
+            <li class="first"><div class="kuang"></div></li>
+            <li class="second lh">金箍棒</li>
+            <li class="third lh" >10.00</li>
+            <li class="fourth ">
+                <div class="number cf">
+                    <span class="reduce">-</span>
+                    <input type="text" value="1" class="num">
+                    <span class="add">+</span>
+                </div>
+            </li>
+            <li class="fifth lh jia">10.00</li>
+            <li class="last lh"><a href="javascript:;" class="del">删除</a></li>
+        </ul>
+        <ul class="con cf two">
+            <li class="inpu"><input type="checkbox" name="entire-child"></li>
+            <li class="first"><div class="kuang"></div></li>
+            <li class="second lh">金箍棒</li>
+            <li class="third lh" >10.00</li>
+            <li class="fourth ">
+                <div class="number cf">
+                    <span class="reduce">-</span>
+                    <input type="text" value="1" class="num">
+                    <span class="add">+</span>
+                </div>
+            </li>
+            <li class="fifth lh jia">10.00</li>
+            <li class="last lh"><a href="javascript:;" class="del">删除</a></li>
+        </ul>
+        <ul class="con cf two">
+            <li class="inpu"><input type="checkbox" name="entire-child"></li>
+            <li class="first"><div class="kuang"></div></li>
+            <li class="second lh">金箍棒</li>
+            <li class="third lh" >10.00</li>
+            <li class="fourth ">
+                <div class="number cf">
+                    <span class="reduce">-</span>
+                    <input type="text" value="1" class="num">
+                    <span class="add">+</span>
+                </div>
+            </li>
+            <li class="fifth lh jia">10.00</li>
+            <li class="last lh"><a href="javascript:;" class="del">删除</a></li>
+        </ul>
+        </div>
+        <div class="bot cf">
+            <span class="input f y"><input type="checkbox" name="entire" id="choose"></span>
+            <span class="first f">全选</span>
+            <span class="first f">删除</span>
+            <span class="first fl">已选择<span class="bot-num">0</span>件商品</span>
+            <div class="first fl">总价:￥ <span class="total">0.00</span>元</div>
+            <a class="bot-input ">提交订单</a>
+        </div>
+
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function () {
+
+
+    $('.add').click(function () {
+        var i = parseInt($(this).prev('.num').val());
+        var m = parseInt($(this).parent('.number').parent('.fourth').prev().html());
+            i++;
+            $(this).prev('.num').val(i);
+            $(this).parent('.number').parent('.fourth').next('.jia').html(m*i+'.00');
+    });
+    $('.reduce').click(function () {
+        var i = parseInt($(this).next('.num').val());
+        var m = parseInt($(this).parent('.number').parent('.fourth').prev().html());
+        if(i <= 1){
+            $(this).next('.num').val(i);
+            $(this).parent('.number').parent('.fourth').next('.jia').html(m+'.00');
+        }else{
+            i--;
+            $(this).next('.num').val(i);
+            $(this).parent('.number').parent('.fourth').next('.jia').html(m*i+'.00');
+        }
+    });
+    /////////////
+
+
+
+    $('.num').on('keyup',function () {
+
+        var o = $(this).val();
+        var i = parseInt($(this).val());
+        var m = parseInt($(this).parent('.number').parent('.fourth').prev().html());
+//        var reg = /^\d+|1&/;
+        var reg = /^[1-9]{1,100}$/;
+        if(reg.test(o)){
+
+            $(this).parent('.number').parent('.fourth').next('.jia').html(m*i+'.00');
+        }else{
+            $(this).val(1);
+            $(this).parent('.number').parent('.fourth').next('.jia').html(m*1+'.00');
+        }
+
+    });
+
+    ///////////////
+
+    $('.del').click(function () {
+        var p =  $(this).parent('.last').parent('.con').siblings('.con');
+        if( p.length == 0){
+            $(this).parent('.last').parent('.con').parent('.sec-1').remove();
+        }else{
+            $(this).parent('.last').parent('.con').remove();
+        }
+
+    });
+
+    ////////////////////
+    $('.choose').click(function () {
+
+        if($(this).prop('checked')) {
+            $('input[name="entire"]').prop('checked', true);
+        } else {
+            $('input[name="entire"]').prop('checked', false);
+        }
+        if($('.to span input[name="entire"]').prop('checked')) {
+            $('.to span input[name="entire"]').parent('.input').parent('.to').siblings('.con').find('input[name="entire-child"]').prop('checked', true);
+        } else {
+            $('.to span input[name="entire"]').parent('.input').parent('.to').siblings('.con').find('input[name="entire-child"]').prop('checked', false);
+        }
+    });
+    $('#choose').click(function () {
+
+        if($(this).prop('checked')) {
+            $('input[name="entire"]').prop('checked', true);
+        } else {
+            $('input[name="entire"]').prop('checked', false);
+        }
+    });
+
+    $('.to span input[name="entire"]').click(function () {
+
+            if($(this).prop('checked')) {
+                $(this).parent('.input').parent('.to').siblings('.con').find('input[name="entire-child"]').prop('checked', true);
+        } else {
+                $(this).parent('.input').parent('.to').siblings('.con').find('input[name="entire-child"]').prop('checked', false);
+        }
+        //////////////////////////////
+
+
+        ////////////////////////////
+        var flag = true;
+
+        $('.to span input[name="entire"]').each(function () {
+
+            if(!$(this).prop('checked')) {
+                flag = false;
+            }
+        });
+
+        if(flag) {
+            $('.choose').prop('checked', true);
+            $('#choose').prop('checked', true);
+        } else {
+            $('.choose').prop('checked', false);
+            $('#choose').prop('checked', false);
+        }
+    });
+//    $('.one').find('input[name="entire-child"]').click(function () {
+//
+//            var fla = true;
+//
+//            $(this).each(function () {
+//
+//                if(!$(this).prop('checked')) {
+//                    fla = false;
+//                }
+//            });
+//
+//            if(fla) {
+//                $('.input-1').prop('checked', true);
+//            } else {
+//                $('.input-1').prop('checked', false);
+//            }
+//
+//
+//        });
+//    $('.two').find('input[name="entire-child"]').click(function () {
+//
+//        var fla = true;
+//
+//        $(this).each(function () {
+//
+//            if(!$(this).prop('checked')) {
+//                fla = false;
+//            }
+//        });
+//
+//        if(fla) {
+//            $('.input-1').prop('checked', true);
+//        } else {
+//            $('.input-1').prop('checked', false);
+//        }
+
+
+//    })
+
+
+
+    })
+
+
+
+</script>
+</body>
+</html>

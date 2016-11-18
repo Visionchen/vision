@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+            this.eat = function(food) {
+                alert(this.name + '正在吃' + food);
+            }
+        }
+
+        var p1 = new Person('tom', 23);
+        //p1.eat('米饭');
+
+        var p2 = new Person('jim', 22);
+        //p2.eat('面条');
+
+        console.log(p1 instanceof Person);
+        console.log(p1 instanceof Object);
+        console.log(p1 instanceof Array);
+
+
+
+        function add(a, b) {
+            return a + b;
+        }
+
+
+        var add = new Function('a', 'b', 'return a + b;');
+
+
+
+        // // 工厂模式
+        // function getPerson(name, age) {
+        //     var obj = new Object();
+        //     obj.name = name;
+        //     obj.age = age;
+        //     obj.eat = function() {
+        //         alert(this.name);
+        //     };
+        // }
+        //
+        // var p1 = getPerson('tom', 23);
+        // var p2 = getPerson('jim', 24);
+
+    </script>
+
+</body>
+</html>

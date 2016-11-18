@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+
+
+
+
+    <script>
+        var name = 'window';
+        var p = {
+            name: 'person',
+            say: function() {
+                console.log(this.name); // person
+
+                var s = function() {
+                    console.log(this.name);
+                    
+                };
+
+                s(); // window
+                s.apply(this); // person
+            }
+        }
+
+        p.say();
+
+
+
+        // var name = 'window';
+        // var p = {
+        //     name: 'person',
+        //     say: function() {
+        //         console.log(this.name);
+        //     }
+        // }
+        //
+        // var o = {
+        //     name: 'object'
+        // }
+        // // p.say(); // person
+        // // p.say.apply(o); // object
+        // // p.say.apply(null); // window
+        // // var s = p.say;
+        // // s(); // window
+    </script>
+</body>
+
+</html>

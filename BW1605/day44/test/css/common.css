@@ -1,0 +1,11 @@
+*{margin:0;padding:0;}
+body,html{box-sizing: border-box;}
+ul,li,ol{list-style-type:none;}
+img{vertical-align:top;border:0 none;}
+a{text-decoration:none;}
+.cf:after{content:'';display:table;clear:both;}
+.cf{*zoom:1}
+body p{margin: 0;padding: 0;}
+body h1{margin: 0;padding: 0;}
+
+

@@ -6,28 +6,66 @@
     <link rel="stylesheet" href="text.css">
 </head>
 <body>
-<!-- 头部 -->
-<input type="text" placeholder="请输入用户名">
-<div id="head">
-</div>
-<!--END 头部 -->
-<!-- 主容器 -->
-<div id="container">
-    <!-- 左侧主显区 -->
-    <div id="content">
-    </div>
-    <!-- END 左侧主显区 -->
-    <!-- 右侧边栏 -->
-    <div id="side">
-    </div>
-    <!-- END 右侧边栏 -->
-</div>
-<!-- END 主容器 -->
-<div class="clear"></div>
-<!-- 底部 -->
-<div id="foot">
-</div>
-<!-- END 底部 -->
+<!--&lt;!&ndash; 头部 &ndash;&gt;-->
+<!--<input type="text" placeholder="请输入用户名">-->
+<!--<div id="head">-->
+<!--</div>-->
+<!--&lt;!&ndash;END 头部 &ndash;&gt;-->
+<!--&lt;!&ndash; 主容器 &ndash;&gt;-->
+<!--<div id="container">-->
+    <!--&lt;!&ndash; 左侧主显区 &ndash;&gt;-->
+    <!--<div id="content">-->
+    <!--</div>-->
+    <!--&lt;!&ndash; END 左侧主显区 &ndash;&gt;-->
+    <!--&lt;!&ndash; 右侧边栏 &ndash;&gt;-->
+    <!--<div id="side">-->
+    <!--</div>-->
+    <!--&lt;!&ndash; END 右侧边栏 &ndash;&gt;-->
+<!--</div>-->
+<!--&lt;!&ndash; END 主容器 &ndash;&gt;-->
+<!--<div class="clear"></div>-->
+<!--&lt;!&ndash; 底部 &ndash;&gt;-->
+<!--<div id="foot">-->
+<!--</div>-->
+<!--&lt;!&ndash; END 底部 &ndash;&gt;-->
+<script>
+    var array=["abcdeafab","abcdabcd","adadad"];
+    var statArray=new Array();
+
+    for(var index in array){
+        var stat={};
+        var value=array[index];
+        for(var i=0,j=value.length;i<j;i++){
+            var str=value.charAt(i);
+            if(!stat[str]){
+                stat[str]=1;
+            } else{
+                stat[str]++;
+            }
+        }
+        statArray.push(stat);
+    }
+
+    var resultArray=new Array();
+
+    for(var index in statArray){
+        var temp=new Array();
+        var stat=statArray[index];
+        for(var key in stat){
+            temp.push(stat[key]);
+        }
+        temp.sort(comp).reverse();
+        resultArray.push([temp,array[index]]);
+    }
+    resultArray.sort(comp).reverse();
+
+    for(var i in resultArray) {
+        console.log(resultArray[i][1]);
+    }
+    function comp(a,b){
+       return a-b;
+    }
+</script>
 </body>
 </html>
 

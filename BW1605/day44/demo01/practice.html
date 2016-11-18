@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        html,body {width: 100%;font-family: "Microsoft YaHei";color: #666;}
+
+        .content {
+            width: 90%;
+            border: 1px solid #b0b0b0;
+            margin: 50px auto;
+        }
+        .content:after {
+            display: table;
+            content: '';
+            clear: both;
+        }
+        .commodity {
+            list-style: none;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .commodity li {
+            display: flex;
+            margin: 10px 0;
+        }
+        .term-top {
+            height: 45px;
+            line-height: 45px;
+            background: #f8f8f8;
+            border-top: 3px solid #1e93ed;
+        }
+        .term-top div {
+            width: 12%;
+        }
+        .commodity li .input {
+            width: 45px;
+            height: 45px;
+            text-align: center;
+        }
+        .term-top div:nth-child(2) {
+            width: 10%;
+        }
+        .term-top div:nth-child(3) {
+            width: 20%;
+        }
+        .term-top div:nth-child(6) {
+            width: 15%;
+        }
+        .commodity .company {
+            height: 50px;
+            line-height: 50px;
+        }
+        .product {
+            height: 122px;
+            background: #f4f4f4;
+            border: 1px solid #b0b0b0;
+            line-height: 122px;
+        }
+        .pic {
+            width: 100px;
+            height: 100px;
+            margin: 10px 10px 10px 0;
+            background: #2aabd2;
+        }
+        .specification {
+            width: 20%;
+            line-height: 30px;
+            padding-top: 31px;
+        }
+        .price {
+            width: 15%;
+        }
+        .tax {
+            width: 10%;
+        }
+        .number {
+            width: 15%;
+        }
+        .calculation {
+            height: 50px;
+            line-height: 100px;
+        }
+        .calculation span {
+            padding: 0 10px;
+            border: 1px solid #b0b0b0;
+        }
+        .money {
+            width: 13%;
+        }
+        .have {
+            height: 60px;
+            line-height: 60px;
+        }
+        .del p:nth-child(1) {
+            height: 50px;
+            line-height: 100px;
+        }
+        .del p:nth-child(2) {
+            height: 60px;
+            line-height: 60px;
+        }
+        .last {
+            height: 60px;
+            line-height: 60px;
+            border: 1px solid #b0b0b0;
+        }
+        .charging p {
+            display: block;
+            height: 50%;
+            line-height: 30px;
+        }
+        .commodity li.last {
+            justify-content: space-around;
+            position: relative;
+        }
+        .commodity li.last .input {
+            position: absolute;
+            left: 0;
+        }
+        .commodity li.last p {
+            position: relative;
+            left: -80px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="content">
+    <p class="num">我的购物车（<span>0</span>）</p>
+    <ul class="commodity">
+        <li class="term-top">
+            <div class="input">
+                <input type="checkbox" name="all" class="all">
+            </div>
+            <div>全选</div>
+            <div>商品规格</div>
+            <div>价格</div>
+            <div>是否含税</div>
+            <div>数量</div>
+            <div>金额（元）</div>
+            <div>操作</div>
+        </li>
+        <li class="company">
+            <p class="input">
+                <input type="checkbox" name="all" class="first-all">
+            </p>
+            <p>杭州蓝润中空玻璃有限公司</p>
+        </li>
+        <li class="product">
+            <div class="input">
+                <input type="checkbox" name="alone" class="first-product">
+            </div>
+            <div class="pic"></div>
+            <div class="specification">
+                <p>钢化玻璃</p>
+                <p>120*80mm</p>
+            </div>
+            <div class="price">
+                5000.00
+            </div>
+            <div class="tax">
+                是
+            </div>
+            <div class="number">
+                <div class="calculation">
+                    <span class="reduce">-</span><span class="quantity">5</span><span class="plus">+</span>
+                </div>
+                <div class="have">有货</div>
+            </div>
+            <div class="money">
+                30000.00
+            </div>
+            <div class="del">
+                <p>删除</p>
+                <p>加入收藏夹</p>
+            </div>
+        </li>
+        <li class="company">
+            <p class="input">
+                <input type="checkbox" name="all" class="second-all">
+            </p>
+            <p>杭州蓝润中空玻璃有限公司</p>
+        </li>
+        <li class="product">
+            <div class="input">
+                <input type="checkbox" name="alone"  class="second-product">
+            </div>
+            <div class="pic"></div>
+            <div class="specification">
+                <p>钢化玻璃</p>
+                <p>120*80mm</p>
+            </div>
+            <div class="price">
+                5000.00
+            </div>
+            <div class="tax">
+                是
+            </div>
+            <div class="number">
+                <div class="calculation">
+                    <span class="reduce">-</span><span class="quantity">5</span><span class="plus">+</span>
+                </div>
+                <div class="have">有货</div>
+            </div>
+            <div class="money">
+                30000.00
+            </div>
+            <div class="del">
+                <p>删除</p>
+                <p>加入收藏夹</p>
+            </div>
+        </li>
+        <li class="product">
+            <div class="input">
+                <input type="checkbox" name="alone" class="second-product">
+            </div>
+            <div class="pic"></div>
+            <div class="specification">
+                <p>钢化玻璃</p>
+                <p>120*80mm</p>
+            </div>
+            <div class="price">
+                5000.00
+            </div>
+            <div class="tax">
+                是
+            </div>
+            <div class="number">
+                <div class="calculation">
+                    <span class="reduce">-</span><span class="quantity">5</span><span class="plus">+</span>
+                </div>
+                <div class="have">有货</div>
+            </div>
+            <div class="money">
+                30000.00
+            </div>
+            <div class="del">
+                <p>删除</p>
+                <p>加入收藏夹</p>
+            </div>
+        </li>
+        <li class="product">
+            <div class="input">
+                <input type="checkbox" name="alone" class="second-product">
+            </div>
+            <div class="pic"></div>
+            <div class="specification">
+                <p>钢化玻璃</p>
+                <p>120*80mm</p>
+            </div>
+            <div class="price">
+                5000.00
+            </div>
+            <div class="tax">
+                是
+            </div>
+            <div class="number">
+                <div class="calculation">
+                    <span class="reduce">-</span><span class="quantity">5</span><span class="plus">+</span>
+                </div>
+                <div class="have">有货</div>
+            </div>
+            <div class="money">
+                30000.00
+            </div>
+            <div class="del">
+                <p>删除</p>
+                <p>加入收藏夹</p>
+            </div>
+        </li>
+        <li class="product">
+            <div class="input">
+                <input type="checkbox" name="alone" class="second-product">
+            </div>
+            <div class="pic"></div>
+            <div class="specification">
+                <p>钢化玻璃</p>
+                <p>120*80mm</p>
+            </div>
+            <div class="price">
+                5000.00
+            </div>
+            <div class="tax">
+                是
+            </div>
+            <div class="number">
+                <div class="calculation">
+                    <span class="reduce">-</span><span class="quantity">5</span><span class="plus">+</span>
+                </div>
+                <div class="have">有货</div>
+            </div>
+            <div class="money">
+                30000.00
+            </div>
+            <div class="del">
+                <p>删除</p>
+                <p>加入收藏夹</p>
+            </div>
+        </li>
+        <li class="product">
+            <div class="input">
+                <input type="checkbox" name="alone" class="second-product">
+            </div>
+            <div class="pic"></div>
+            <div class="specification">
+                <p>钢化玻璃</p>
+                <p>120*80mm</p>
+            </div>
+            <div class="price">
+                5000.00
+            </div>
+            <div class="tax">
+                是
+            </div>
+            <div class="number">
+                <div class="calculation">
+                    <span class="reduce">-</span><span class="quantity">5</span><span class="plus">+</span>
+                </div>
+                <div class="have">有货</div>
+            </div>
+            <div class="money">
+                30000.00
+            </div>
+            <div class="del">
+                <p>删除</p>
+                <p>加入收藏夹</p>
+            </div>
+        </li>
+        <li class="last">
+            <div class="input">
+                <input type="checkbox" name="alone" class="last-all">
+            </div>
+            <p>删除</p>
+            <div class="current">已选<span id="chooseNum">1</span>件商品</div>
+            <div class="charging">
+                <p>总价：￥<span>3000.00</span></p>
+                <p>税费：￥<span>0.00</span></p>
+            </div>
+            <div class="btn">提交</div>
+        </li>
+    </ul>
+</div>
+
+
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script>
+//chooseNum
+$(function() {
+    $('.second-product').click(function() {
+        $(this).parent().siblings('.number').find('.quantity').attr('data-checked', $(this).prop('checked'));
+        var allNum = 0;
+        $('.quantity').each(function() {
+            if($(this).attr('data-checked') == 'true') {
+                allNum += parseInt($(this).text());
+            }
+        });
+        $('#chooseNum').text(allNum);
+    });
+});
+</script>
+</body>
+</html>

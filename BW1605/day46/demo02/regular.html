@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+(function() {
+    "use strict";
+
+    // 不能使用delete删除变量
+    var a = 3;
+    delete a;
+
+
+    // // 不能再函数中使用arguments.callee
+    // function fn() {
+    //     console.log(arguments.length);  // 函数自身的引用
+    // }
+    // fn(1);
+
+
+    // 不能再函数中使用caller
+    // function fn() {
+    //     console.log(fn.caller);  // 获取调用者的引用
+    // }
+    // function fx() {
+    //     fn();
+    // }
+    // fx();
+    // 1. 严格模式不允许使用with语句
+    // with(Math) {
+    //     console.log(ceil(4.5));
+    //     console.log(floor(4.5));
+    //     console.log(round(4.5));
+    //     console.log(parseInt(random() * 10) + 1);
+    // }
+
+    // 2. eval有自己的作用域
+    // var a = 3;
+    // eval('var a = 5; console.log(a);');   // function fn() {var a = 5;}
+    // console.log(a);
+
+    // 3. this默认不指向window对象
+    // var name = 'duglos';
+    // function Person() {
+    //     console.log(this.name);
+    // }
+    //
+    // //var p = new Person();
+    // Person();
+
+
+
+
+
+})();
+
+
+</script>
+
+
+</body>
+</html>

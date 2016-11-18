@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+
+<div class="container" ng-controller="formCtrl">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <div class="form-group">
+                    <label>用户名</label>
+                    <input type="text" class="form-control" ng-model="userName">
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <p class="bg-success">{{userName | lowercase}}</p>
+            <p>{{ 168888 | currency }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <demo></demo>
+            <div class="demo"></div>
+            <!-- directive:demo -->
+            <div demo></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <people></people>
+            <people></people>
+        </div>
+    </div>
+</div>
+
+<script>
+
+var app = angular.module('myApp', []);
+app.controller('formCtrl', function($scope) {
+    $scope.userName = 'Lao Mao';
+    $scope.peopleList = [
+        {name: 'jim', age: 23},
+        {name: 'tom', age: 24},
+        {name: 'jack', age: 25},
+        {name: 'lucy', age: 21}
+    ];
+});
+
+app.directive('people', function() {
+    return {
+        templateUrl: 'people-list.html',
+        replace: true
+    }
+});
+
+app.directive('demo', function() {
+
+    return {
+        restrict: 'ECMA',
+        template: '<h1>我们都是duang</h1>',
+        replace: true
+
+    };
+
+});
+
+
+</script>
+
+</body>
+</html>

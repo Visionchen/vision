@@ -8,19 +8,21 @@
 <script>
     var ary = ['tom', 'jim', 'liLei', 'lucy'];
 //    var s = join(ary);
-//    alert(s);
-//    function join(ary, s) {
-//// 如果用户没有传入 s  参数， 则默认以 逗号 拼接字符串
-//        if (s == undefined) {
-//            s = ',';
-//        }
-//        var str = '';
-//        for (var i = 0; i < ary.length - 1; i++) {
-//            str += ary[i] + s;
-//        }
+
+    function join(ary, s) {
+// 如果用户没有传入 s  参数， 则默认以 逗号 拼接字符串
+        ary = ['tom', 'jim', 'liLei', 'lucy'];
+        if (s == undefined) {
+            s = ',';
+        }
+        var str = '';
+        for (var i = 0; i < ary.length - 1; i++) {
+            str += ary[i] + s;
+        }
 //        str += ary[ary.length - 1];
-//        return str;
-//    }
+        return ary;
+    }
+    alert(ary);
 </script>
 </body>
 </html>

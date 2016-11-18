@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+(function() {
+    'use strict';
+
+    var ary = [8, 3, 8, 4, 8, 1, 0];
+    // 普通for循环
+    for(var i = 0, len = ary.length; i < len; i++) {
+        console.log(ary[i]);
+    }
+    console.log('-------------------华丽的分割线---------------------')
+    // for in
+    for(var i in ary) {
+        console.log(ary[i]);
+    }
+    console.log('-------------------华丽的分割线---------------------')
+    // for of   (ES6 = ES2015)
+    for(var v of ary) {
+        console.log(v);
+    }
+
+})();
+
+
+</script>
+
+
+</body>
+</html>
