@@ -1,0 +1,1 @@
+function getStyle(t,e){var n;return n=t.currentStyle?t.currentStyle[e]:getComputedStyle(t,null)[e]}function $(t){return document.getElementById(t)}function tu(){document.write("aahju")}
